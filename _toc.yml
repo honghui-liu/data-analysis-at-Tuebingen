@@ -7,3 +7,4 @@ chapters:
 - file: notebooks/NuSTAR_walkthrough.ipynb
 #- file: notebooks
 #- file: markdown-notebooks
+- file: about
