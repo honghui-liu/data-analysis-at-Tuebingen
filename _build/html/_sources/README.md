@@ -50,7 +50,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 *Updated on 30 Oct 2025.*
 
 ### Contact
-Dr. Honghui Liu: honghui.liu@uni-tuebingen.de
-Dr. Menglei Zhou: menglei.zhou@astro.uni-tuebingen.de
-Dr. Youli Tuo: youli.tuo@astro.uni-tuebingen.de
+Dr. Honghui Liu: honghui.liu**at**uni-tuebingen.de;
+Dr. Menglei Zhou: menglei.zhou**at**astro.uni-tuebingen.de;
+Dr. Youli Tuo: youli.tuo**at**astro.uni-tuebingen.de.
 
