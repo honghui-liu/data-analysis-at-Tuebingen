@@ -2,8 +2,8 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: "X-ray data analysis workshop at Tuebingen"
-author: "Menglei Zhou & Honghui Liu"
-logo: logo.png
+author: "Menglei Zhou, Honghui Liu & Youli Tuo"
+logo: logo1.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
