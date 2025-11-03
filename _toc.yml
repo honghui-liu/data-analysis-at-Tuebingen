@@ -5,6 +5,6 @@ format: jb-book
 root: intro
 chapters:
 - file: notebooks/NuSTAR_walkthrough.ipynb
-#- file: notebooks
+- file: notebooks/spectral_fitting.ipynb
 #- file: markdown-notebooks
 - file: about

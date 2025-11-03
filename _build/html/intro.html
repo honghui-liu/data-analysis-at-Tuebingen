@@ -57,11 +57,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="0. Prerequisites" href="notebooks/NuSTAR_walkthrough.html" />
+    <link rel="next" title="HEASOFT, CALDB and NuSTAR data reduction" href="notebooks/NuSTAR_walkthrough.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,8 +184,10 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/NuSTAR_walkthrough.html"><strong>0. Prerequisites</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/NuSTAR_walkthrough.html">HEASOFT, CALDB and NuSTAR data reduction</a></li>
 
+
+<li class="toctree-l1"><a class="reference internal" href="notebooks/spectral_fitting.html">Spectral fitting with PyXSPEC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="about.html">About This Website</a></li>
 </ul>
 
@@ -425,15 +429,17 @@ document.write(`
 <li><p>Next: Walkthrough of Insight-HXMT data analysis</p></li>
 <li><p>Next: Bayesian analysis</p></li>
 </ul>
-<p><em>Updated on 30 Oct 2025.</em></p>
+<p><em>Updated on 03 Nov 2025.</em></p>
 </section>
 <section id="tutorials-scripts">
 <h2>Tutorials &amp; scripts<a class="headerlink" href="#tutorials-scripts" title="Link to this heading">#</a></h2>
 <p>See tutorials below for data reduction and analysis.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/NuSTAR_walkthrough.html"><strong>0. Prerequisites</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/NuSTAR_walkthrough.html#access-to-the-observational-data-of-high-energy-astrophysics"><strong>1. Access to the observational data of high energy astrophysics</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/NuSTAR_walkthrough.html">HEASOFT, CALDB and NuSTAR data reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/NuSTAR_walkthrough.html#prerequisites"><strong>0. Prerequisites</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/NuSTAR_walkthrough.html#access-to-the-observational-data-of-high-energy-astrophysics-archive"><strong>1. Access to the observational data of high energy astrophysics archive</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/spectral_fitting.html">Spectral fitting with PyXSPEC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="about.html">About This Website</a></li>
 </ul>
 </div>
@@ -475,7 +481,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>0. Prerequisites</strong></p>
+        <p class="prev-next-title">HEASOFT, CALDB and NuSTAR data reduction</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
