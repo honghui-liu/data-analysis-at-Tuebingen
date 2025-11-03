@@ -27,7 +27,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - Next: Walkthrough of Insight-HXMT data analysis
 - Next: Bayesian analysis
 
-*Updated on 30 Oct 2025.*
+*Updated on 03 Nov 2025.*
 
 ## Tutorials & scripts
 
