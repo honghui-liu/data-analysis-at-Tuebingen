@@ -18,7 +18,7 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-spec = fits.open('/mnt/e/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.pha')
+spec = fits.open('/mnt/d/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.pha')
 spec.info()
 ------------------
 
@@ -26,7 +26,7 @@ spec.info()
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
 Cell [0;32mIn[2], line 1[0m
-[0;32m----> 1[0m spec [38;5;241m=[39m fits[38;5;241m.[39mopen([38;5;124m'[39m[38;5;124m/mnt/e/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.pha[39m[38;5;124m'[39m)
+[0;32m----> 1[0m spec [38;5;241m=[39m fits[38;5;241m.[39mopen([38;5;124m'[39m[38;5;124m/mnt/d/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.pha[39m[38;5;124m'[39m)
 [1;32m      2[0m spec[38;5;241m.[39minfo()
 
 File [0;32m~/anaconda/anaconda3/lib/python3.12/site-packages/astropy/io/fits/hdu/hdulist.py:223[0m, in [0;36mfitsopen[0;34m(name, mode, memmap, save_backup, cache, lazy_load_hdus, ignore_missing_simple, use_fsspec, fsspec_kwargs, decompress_in_memory, **kwargs)[0m
@@ -103,5 +103,5 @@ File [0;32m~/anaconda/anaconda3/lib/python3.12/site-packages/astropy/io/fits/fi
 [1;32m    655[0m [38;5;66;03m# BZ2File does not support seek when the file is open for writing, but[39;00m
 [1;32m    656[0m [38;5;66;03m# when opening a file for write, bz2.BZ2File always truncates anyway.[39;00m
 
-[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/mnt/e/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.pha'
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/mnt/d/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.pha'
 
