@@ -18,6 +18,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Lecturers: Menglei Zhou & Honghui Liu
     - Setting up HEASOFT, calibration data base, dealing with NuSTAR data (spectra and lightcurve), data fitting in XSPEC.
 - 12.11.2025: Walkthrough of NICER data analysis + Basic concepts of spectral fitting (Part II)
+    - NICER pipelines, background filtering, simulating spectra in XSPEC
 - 19.11.2025: Timing analysis — from light curves to power spectra
 - 26.11.2025: Polarization analysis — handling IXPE data
 
@@ -27,7 +28,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - Next: Walkthrough of Insight-HXMT data analysis
 - Next: Bayesian analysis
 
-*Updated on 03 Nov 2025.*
+*Updated on 13 Nov 2025.*
 
 ## Tutorials & scripts
 

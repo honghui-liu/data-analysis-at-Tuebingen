@@ -184,9 +184,8 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="NuSTAR_walkthrough.html"><strong>HEASOFT, CALDB and NuSTAR data reduction</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="spectral_fitting.html">Spectral fitting with PyXSPEC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spectral_fitting.html"><strong>Spectral fitting with PyXSPEC</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>NICER data reduction and Spectral fitting</strong></a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About This Website</a></li>
 </ul>
 
@@ -383,8 +382,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>NICER data reduction and Spectral fitting</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">0. Prerequisites</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">0. Prerequisites</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-simultaneous-nicer-observations-of-cyg-x-1-corresponding-to-the-nustar-data-we-have-analyzed">1. Find the simultaneous NICER observations of Cyg X-1 corresponding to the NuSTAR data we have analyzed</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-nicerl2-indir-clobber-yes-to-produce-the-level-2-data">2. Run <code class="docutils literal notranslate"><span class="pre">nicerl2</span> <span class="pre">indir=./</span> <span class="pre">clobber=yes</span></code> to produce the level 2 data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#produce-level-3-data">3. Produce level 3 data</a><ul class="nav section-nav flex-column">
@@ -399,9 +397,6 @@ document.write(`
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -415,9 +410,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="nicer-data-reduction-and-spectral-fitting">
 <h1><strong>NICER data reduction and Spectral fitting</strong><a class="headerlink" href="#nicer-data-reduction-and-spectral-fitting" title="Link to this heading">#</a></h1>
 <p>contact: <a class="reference external" href="mailto:menglei&#46;zhou&#37;&#52;&#48;astro&#46;uni-tuebingen&#46;de">menglei<span>&#46;</span>zhou<span>&#64;</span>astro<span>&#46;</span>uni-tuebingen<span>&#46;</span>de</a>, <a class="reference external" href="mailto:honghui&#46;liu&#37;&#52;&#48;uni-tuebingen&#46;de">honghui<span>&#46;</span>liu<span>&#64;</span>uni-tuebingen<span>&#46;</span>de</a></p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="prerequisites">
-<h1>0. Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h1>
+<section id="prerequisites">
+<h2>0. Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
 <p><strong>0.1. Setting up the $CALDB environment:</strong></p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">$CALDB</span></code></p></li>
@@ -430,6 +424,7 @@ document.write(`
 <li><p>run <code class="docutils literal notranslate"><span class="pre">nigeodown</span></code> (this command should be executed each time before data processing to keep the geomagnetic data updated)</p></li>
 <li><p>see <a class="reference external" href="https://heasarc.gsfc.nasa.gov/docs/nicer/analysis_threads/nicer-setup/">https://heasarc.gsfc.nasa.gov/docs/nicer/analysis_threads/nicer-setup/</a> for more information</p></li>
 </ol>
+</section>
 <section id="find-the-simultaneous-nicer-observations-of-cyg-x-1-corresponding-to-the-nustar-data-we-have-analyzed">
 <h2>1. Find the simultaneous NICER observations of Cyg X-1 corresponding to the NuSTAR data we have analyzed<a class="headerlink" href="#find-the-simultaneous-nicer-observations-of-cyg-x-1-corresponding-to-the-nustar-data-we-have-analyzed" title="Link to this heading">#</a></h2>
 <p>Go to <a class="reference external" href="https://heasarc.gsfc.nasa.gov/cgi-bin/W3Browse/w3browse.pl">https://heasarc.gsfc.nasa.gov/cgi-bin/W3Browse/w3browse.pl</a> to search for data.</p>
@@ -570,7 +565,7 @@ Otherwise, Poisson noise will not be applied.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Spectral fitting with PyXSPEC</p>
+        <p class="prev-next-title"><strong>Spectral fitting with PyXSPEC</strong></p>
       </div>
     </a>
     <a class="right-next"
@@ -598,8 +593,7 @@ Otherwise, Poisson noise will not be applied.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>NICER data reduction and Spectral fitting</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">0. Prerequisites</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">0. Prerequisites</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-simultaneous-nicer-observations-of-cyg-x-1-corresponding-to-the-nustar-data-we-have-analyzed">1. Find the simultaneous NICER observations of Cyg X-1 corresponding to the NuSTAR data we have analyzed</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-nicerl2-indir-clobber-yes-to-produce-the-level-2-data">2. Run <code class="docutils literal notranslate"><span class="pre">nicerl2</span> <span class="pre">indir=./</span> <span class="pre">clobber=yes</span></code> to produce the level 2 data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#produce-level-3-data">3. Produce level 3 data</a><ul class="nav section-nav flex-column">
@@ -614,9 +608,6 @@ Otherwise, Poisson noise will not be applied.</p>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
