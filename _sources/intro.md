@@ -20,6 +20,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - 12.11.2025: Walkthrough of NICER data analysis + Basic concepts of spectral fitting (Part II)
     - NICER pipelines, background filtering, simulating spectra in XSPEC
 - 19.11.2025: Timing analysis — from light curves to power spectra
+    - NICER event file, light curves, Fast Fourier Transformation, power density spectra, quasi-periodic oscillations, root-mean-squared (RMS)
 - 26.11.2025: Polarization analysis — handling IXPE data
 
 - Next: Pulsar timing
@@ -28,7 +29,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - Next: Walkthrough of Insight-HXMT data analysis
 - Next: Bayesian analysis
 
-*Updated on 13 Nov 2025.*
+*Updated on 17 Nov 2025.*
 
 ## Tutorials & scripts
 
