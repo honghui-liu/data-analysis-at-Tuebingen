@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -63,7 +63,7 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="About This Website" href="../about.html" />
+    <link rel="next" title="Simulating spectra with PyXSPEC" href="Spectral_simulation.html" />
     <link rel="prev" title="Spectral fitting with PyXSPEC" href="spectral_fitting.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -186,6 +186,8 @@
 <li class="toctree-l1"><a class="reference internal" href="NuSTAR_walkthrough.html"><strong>HEASOFT, CALDB and NuSTAR data reduction</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="spectral_fitting.html"><strong>Spectral fitting with PyXSPEC</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>NICER data reduction and Spectral fitting</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Spectral_simulation.html"><strong>Simulating spectra with PyXSPEC</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Timing_analysis.html"><strong>Timing Analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About This Website</a></li>
 </ul>
 
@@ -409,7 +411,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="nicer-data-reduction-and-spectral-fitting">
 <h1><strong>NICER data reduction and Spectral fitting</strong><a class="headerlink" href="#nicer-data-reduction-and-spectral-fitting" title="Link to this heading">#</a></h1>
-<p>contact: <a class="reference external" href="mailto:menglei&#46;zhou&#37;&#52;&#48;astro&#46;uni-tuebingen&#46;de">menglei<span>&#46;</span>zhou<span>&#64;</span>astro<span>&#46;</span>uni-tuebingen<span>&#46;</span>de</a>, <a class="reference external" href="mailto:honghui&#46;liu&#37;&#52;&#48;uni-tuebingen&#46;de">honghui<span>&#46;</span>liu<span>&#64;</span>uni-tuebingen<span>&#46;</span>de</a></p>
+<p>contact: menglei.zhou&lt;at&gt;astro.uni-tuebingen.de, honghui.liu&lt;at&gt;uni-tuebingen.de</p>
 <section id="prerequisites">
 <h2>0. Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
 <p><strong>0.1. Setting up the $CALDB environment:</strong></p>
@@ -455,7 +457,7 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">nicerl3-spect</span> <span class="pre">indir=./</span> <span class="pre">suffix=_spec</span> <span class="pre">gtifile=good.gti</span> <span class="pre">bkgmodeltype=scorpeon</span> <span class="pre">bkgformat=file</span> <span class="pre">clobber=yes</span></code></p>
 <p>This resolves most issues.</p>
 <p><strong>Notes:</strong></p>
-<p>It is always important to inspect NICER light curves to minimize the impact of background. If you are unsure about the cleanliness of your science products, you can always contact the NICER team—for example, Jack Steiner (<a class="reference external" href="mailto:jsteiner&#37;&#52;&#48;cfa&#46;harvard&#46;edu">jsteiner<span>&#64;</span>cfa<span>&#46;</span>harvard<span>&#46;</span>edu</a>), who is very nice and helpful.</p>
+<p>It is always important to inspect NICER light curves to minimize the impact of background. If you are unsure about the cleanliness of your science products, you can always contact the NICER team—for example, Jack Steiner (jsteiner&#64;cfa.harvard.edu), who is very nice and helpful.</p>
 </section>
 <section id="light-curves">
 <h3>3.2. Light curves<a class="headerlink" href="#light-curves" title="Link to this heading">#</a></h3>
@@ -569,11 +571,11 @@ Otherwise, Poisson noise will not be applied.</p>
       </div>
     </a>
     <a class="right-next"
-       href="../about.html"
+       href="Spectral_simulation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">About This Website</p>
+        <p class="prev-next-title"><strong>Simulating spectra with PyXSPEC</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

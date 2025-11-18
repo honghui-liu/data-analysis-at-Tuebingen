@@ -406,7 +406,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="timing-analysis">
 <h1><strong>Timing Analysis</strong><a class="headerlink" href="#timing-analysis" title="Link to this heading">#</a></h1>
-<p>contact: <a class="reference external" href="mailto:menglei&#46;zhou&#37;&#52;&#48;astro&#46;uni-tuebingen&#46;de">menglei<span>&#46;</span>zhou<span>&#64;</span>astro<span>&#46;</span>uni-tuebingen<span>&#46;</span>de</a></p>
+<p>contact: menglei.zhou&#64;astro.uni-tuebingen.de</p>
 <section id="prerequisites">
 <h2>0. Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
 <p>Installation <code class="docutils literal notranslate"><span class="pre">Stingray</span></code> package using <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code></p>
@@ -540,46 +540,50 @@ gti (MJD)      : [[1925.0365625  1925.05368056]
 <h2>2. Some basic knowledge on Fourier Transform<a class="headerlink" href="#some-basic-knowledge-on-fourier-transform" title="Link to this heading">#</a></h2>
 <p>Better refer to <a class="reference external" href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform"><strong>Wikipedia: Discrete Fourier Transform</strong></a>, <a class="reference external" href="https://pure.uva.nl/ws/files/2212461/47104_Fourier_techniques.pdf"><strong>van der Klis (1988)</strong></a>, or the PhD thesis of <a class="reference external" href="https://publikationen.uni-tuebingen.de/xmlui/handle/10900/48443"><strong>Katja Pottschmidt (2002)</strong></a>.</p>
 <p>In brief: we have a light curve <span class="math notranslate nohighlight">\(x(t) = [x(t_0), x(t_1), x(t_2), x(t_3), \dots, x(t_{N-1})]\)</span>,
-the <strong>discrete Fourier transform (DFT)</strong> can be computed with
-$<span class="math notranslate nohighlight">\(
+the <strong>discrete Fourier transform (DFT)</strong> can be computed with</p>
+<div class="math notranslate nohighlight">
+\[
     X_j = \sum_{k=0}^{N-1} x_k \exp\left( -\frac{2 \pi {\bf i} j k}{N} \right) \, ,
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span>x_k<span class="math notranslate nohighlight">\( denotes the \)</span>(k+1)<span class="math notranslate nohighlight">\(-th component \)</span>x(t_k)$.</p>
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(x_k\)</span> denotes the <span class="math notranslate nohighlight">\((k+1)\)</span>-th component <span class="math notranslate nohighlight">\(x(t_k)\)</span>.</p>
 <p>The corresponding Fourier frequencies are given by</p>
 <div class="math notranslate nohighlight">
 \[
     f_j = \cfrac{j}{T} = \cfrac{j}{N \cdot \Delta t} \, , 
 \]</div>
-<p>The flux decomposition as a function of frequency can be expressed as
-$<span class="math notranslate nohighlight">\(
+<p>The flux decomposition as a function of frequency can be expressed as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{align}
     x_k &amp; = \cfrac{1}{N} \sum_{j=0}^{N-1} X_j \exp\left( \frac{2 \pi {\bf i} j k}{N} \right) \\
         &amp; = \cfrac{1}{N} \sum_{j=0}^{N-1} X_j \exp\left( 2 \pi {\bf i} \cdot f_j \cdot \Delta t \cdot k \right) \, , \\
 \end{align}
-\)</span>$
-which defines the <strong>inverse discrete Fourier transform (IDFT)</strong>.</p>
+\end{split}\]</div>
+<p>which defines the <strong>inverse discrete Fourier transform (IDFT)</strong>.</p>
 <p>We notice that <span class="math notranslate nohighlight">\(\exp\left( \frac{2 \pi {\bf i} j k}{N} \right) = \exp\left[ - \frac{2 \pi {\bf i} \left( N - j \right) k}{N} \right]\)</span>, which implies that frequencies corresponding to indices <span class="math notranslate nohighlight">\(j &gt; N/2\)</span> are typically considered negative frequencies. Since each pair of positive and negative frequencies results in DFT components that are complex conjugates when <span class="math notranslate nohighlight">\(x_k\)</span> is real, we discard the negative frequencies and focus solely on the positive ones.</p>
 <p>Practically, we prefer to set <span class="math notranslate nohighlight">\(N\)</span> as a power of 2 to enable the <strong>Fast Fourier Transform (FFT)</strong>. In this case, <span class="math notranslate nohighlight">\(N\)</span> is even. The minimum nonzero frequency is given by <span class="math notranslate nohighlight">\(f_\text{min} = 1/T = 1/(N \Delta t)\)</span>, while the highest physical frequency, known as the <em><strong>Nyquist frequency</strong></em>,
 is <span class="math notranslate nohighlight">\(f_\text{max} = 1/(2\Delta t)\)</span>.</p>
 </section>
 <section id="produce-the-power-spectrum-from-a-light-curve">
 <h2>3. Produce the power spectrum from a light curve<a class="headerlink" href="#produce-the-power-spectrum-from-a-light-curve" title="Link to this heading">#</a></h2>
-<p>The <strong>power spectral density (PSD)</strong> is a real quantity to represent the squared magnitude of the complex products of DFT of a time series:
-$<span class="math notranslate nohighlight">\(
+<p>The <strong>power spectral density (PSD)</strong> is a real quantity to represent the squared magnitude of the complex products of DFT of a time series:</p>
+<div class="math notranslate nohighlight">
+\[
     P(\nu_j) = X^{*}_j X_j = {\left| X_j \right|}^2
-\)</span>$</p>
+\]</div>
 <p>The uncertainties of the PSD are on the same order of magnitude as the PSD values themselves. However, these uncertainties can be reduced by averaging over more samples (as the mean value of the power scales with <span class="math notranslate nohighlight">\(1/\sqrt{N}\)</span>, in which <span class="math notranslate nohighlight">\(N\)</span> is the sample
 number). We can average the PSDs not only across multiple segments of a long light curve but also within different frequency bins to reduce the uncertainties of the PSD.</p>
-<p>Three commonly-seen norms in the power spectrum:
-$<span class="math notranslate nohighlight">\(
+<p>Three commonly-seen norms in the power spectrum:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
     P_\text{Normalized} (\nu_j) = 
     \begin{cases}
         1 \cdot X^{*}_j X_j \, , &amp; \text{unnormalized} \, ,\\
         \frac{2}{R \cdot T} \cdot X^{*}_j X_j \, , &amp; \text{Leahy norm} \, ,\\
         \frac{2}{R^2 \cdot T} \cdot X^{*}_j X_j \, , &amp; \text{fractional rms norm} \, ,\\
     \end{cases}
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span>R<span class="math notranslate nohighlight">\( is the mean count rate and \)</span>T$ denotes the length of the segment.</p>
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(R\)</span> is the mean count rate and <span class="math notranslate nohighlight">\(T\)</span> denotes the length of the segment.</p>
 <p><strong>Q</strong>: Why the normalization of power spectrum matters?</p>
 <p><strong>A</strong>: The expected power and Poisson noise levels differ under each normalization. For convenience, we often choose different normalizations for different tasks—for example, comparing power spectra between two sources or subtracting white noise.</p>
 <div class="math notranslate nohighlight">
@@ -605,7 +609,7 @@ source’s mean count rate, enabling direct comparison of timing properties acro
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>93it [00:00, 7734.58it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>93it [00:00, 8519.42it/s]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AveragedPowerspectrum
@@ -701,11 +705,12 @@ type           : powerspectrum
 </section>
 <section id="produce-the-cross-spectrum-from-two-simultaneous-light-curves">
 <h2>4. Produce the cross spectrum from two simultaneous light curves<a class="headerlink" href="#produce-the-cross-spectrum-from-two-simultaneous-light-curves" title="Link to this heading">#</a></h2>
-<p>Let <span class="math notranslate nohighlight">\(x_k\)</span> and <span class="math notranslate nohighlight">\(y_k\)</span> be two light curves with identical time resolution (<span class="math notranslate nohighlight">\(\Delta t\)</span>) and total duration (<span class="math notranslate nohighlight">\(T\)</span>). The cross spectrum between the two light curves is defined as
-$<span class="math notranslate nohighlight">\(
+<p>Let <span class="math notranslate nohighlight">\(x_k\)</span> and <span class="math notranslate nohighlight">\(y_k\)</span> be two light curves with identical time resolution (<span class="math notranslate nohighlight">\(\Delta t\)</span>) and total duration (<span class="math notranslate nohighlight">\(T\)</span>). The cross spectrum between the two light curves is defined as</p>
+<div class="math notranslate nohighlight">
+\[
 C(\nu_j) = X_j^* Y_j \, ,
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span>X_j<span class="math notranslate nohighlight">\( and \)</span>Y_j<span class="math notranslate nohighlight">\( are the DFTs of \)</span>x_k<span class="math notranslate nohighlight">\( and \)</span>y_k$, respectively. Unlike the PSDs, the cross spectrum is generally a complex quantity. When multiple segments of equal length are available, the cross spectrum can be averaged across segments to improve statistical robustness.</p>
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(X_j\)</span> and <span class="math notranslate nohighlight">\(Y_j\)</span> are the DFTs of <span class="math notranslate nohighlight">\(x_k\)</span> and <span class="math notranslate nohighlight">\(y_k\)</span>, respectively. Unlike the PSDs, the cross spectrum is generally a complex quantity. When multiple segments of equal length are available, the cross spectrum can be averaged across segments to improve statistical robustness.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select the photons within 1 - 5 keV range</span>
@@ -751,7 +756,7 @@ where \)</span>X_j<span class="math notranslate nohighlight">\( and \)</span>Y_j
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>93it [00:00, 4001.38it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>93it [00:00, 3836.67it/s]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AveragedCrossspectrum
@@ -798,15 +803,17 @@ type           : crossspectrum
 <section id="phase-lag-and-time-lag">
 <h2>5. Phase lag and Time lag<a class="headerlink" href="#phase-lag-and-time-lag" title="Link to this heading">#</a></h2>
 <p>In practice, the real and imaginary components of the cross spectrum do not have straightforward physical interpretations on their own. Therefore, any physical conclusions drawn from either component should be made with caution.</p>
-<p>However, the phase lag between two light curves can be defined using the argument of the cross spectrum:
-$<span class="math notranslate nohighlight">\(
+<p>However, the phase lag between two light curves can be defined using the argument of the cross spectrum:</p>
+<div class="math notranslate nohighlight">
+\[
     \phi (\nu_j) = \text{arg} \left[C (\nu_j) \right] \, .
-\)</span>$</p>
-<p>This phase lag <span class="math notranslate nohighlight">\(\phi (\nu_j)\)</span> can be related to its corresponding Fourier frequency <span class="math notranslate nohighlight">\(\nu_j\)</span> to yield the time lag:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>This phase lag <span class="math notranslate nohighlight">\(\phi (\nu_j)\)</span> can be related to its corresponding Fourier frequency <span class="math notranslate nohighlight">\(\nu_j\)</span> to yield the time lag:</p>
+<div class="math notranslate nohighlight">
+\[
     \delta t (\nu_j) = \frac{\phi (\nu_j)}{2 \pi \nu_j} \, ,
-\)</span><span class="math notranslate nohighlight">\(
-which represents the time delay, at each frequency band \)</span>\nu_j<span class="math notranslate nohighlight">\(, between the two light curves \)</span>x_k<span class="math notranslate nohighlight">\( and \)</span>y_k$.</p>
+\]</div>
+<p>which represents the time delay, at each frequency band <span class="math notranslate nohighlight">\(\nu_j\)</span>, between the two light curves <span class="math notranslate nohighlight">\(x_k\)</span> and <span class="math notranslate nohighlight">\(y_k\)</span>.</p>
 <p>It is important to note that phase lags are inherently limited to the range <span class="math notranslate nohighlight">\(\left(−\pi, \pi \right]\)</span> due to their periodic nature. Consequently, the corresponding time lags <span class="math notranslate nohighlight">\(\delta t (\nu_j)\)</span> also have a bounded absolute value, especially at low frequencies where small changes in phase can result in large variations in <span class="math notranslate nohighlight">\(\delta t\)</span>. As a result, it is not always straightforward to connect measured phase or time lags directly to specific physical processes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
