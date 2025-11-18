@@ -186,6 +186,8 @@
 <li class="toctree-l1"><a class="reference internal" href="NuSTAR_walkthrough.html"><strong>HEASOFT, CALDB and NuSTAR data reduction</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Spectral fitting with PyXSPEC</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="NICER_walkthrough.html"><strong>NICER data reduction and Spectral fitting</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Spectral_simulation.html"><strong>Simulating spectra with PyXSPEC</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Timing_analysis.html">Timing Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About This Website</a></li>
 </ul>
 
@@ -427,18 +429,31 @@ document.write(`
 <h2>Load data into XSPEC<a class="headerlink" href="#load-data-into-xspec" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xspec</span><span class="o">.</span><span class="n">AllData</span><span class="p">(</span><span class="s2">&quot;1:1 fpma_grp50.pha&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;../data/&quot;</span><span class="p">)</span>
+<span class="n">xspec</span><span class="o">.</span><span class="n">AllData</span><span class="p">(</span><span class="s2">&quot;1:1 fpma_grp50.pha&quot;</span><span class="p">)</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;../notebooks/&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error: cannot read spectrum file fpma_grp50.pha
-terminated at user request
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>New filename ( &quot;none&quot; or &quot;/*&quot; to return to the XSPEC prompt): No such file: .pha
-New filename ( &quot;none&quot; or &quot;/*&quot; to return to the XSPEC prompt): No such file: .pha
-New filename ( &quot;none&quot; or &quot;/*&quot; to return to the XSPEC prompt): 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: RMF DETNAM keyword (DET0) is not consistent with that in spectrum (NONE)
+
+1 spectrum  in use
+ 
+Spectral Data File: fpma_grp50.pha  Spectrum 1
+Net count rate (cts/s) for Spectrum:1  1.945e+02 +/- 1.135e-01 (99.7 % total)
+ Assigned to Data Group 1 and Plot Group 1
+  Noticed Channels:  1-646
+  Telescope: NuSTAR Instrument: FPMA  Channel Type: PI
+  Exposure Time: 1.519e+04 sec
+  Filtering Keys: 
+    Stokes: 0
+ Using fit statistic: chi
+ Using Background File                nu30801012002A01_bk.pha
+  Background Exposure Time: 1.519e+04 sec
+ Using Response (RMF) File            nu30801012002A01_sr.rmf for Source 1
+ Using Auxiliary Response (ARF) File  nu30801012002A01_sr.arf
 </pre></div>
 </div>
 </div>
@@ -463,31 +478,8 @@ New filename ( &quot;none&quot; or &quot;/*&quot; to return to the XSPEC prompt)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>***XSPEC Error:  no data loaded 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No such file: .pha
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">Exception</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Ignore uneffective energy ranges</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># The exact energy range to use depends on the intrument and</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># also the data. For example, for NuSTAR, the effective energy</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># range is 3.0-79.0 keV. However, depending on the data, the </span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># background may dominate over the signal above a certain </span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># energy.</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">xspec</span><span class="o">.</span><span class="n">AllData</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="s2">&quot;1: **-3.0 79.0-**&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~/heasoft/heasoft-6.35.2/aarch64-apple-darwin24.6.0/lib/python/xspec/data.py:579,</span> in <span class="ni">DataManager.ignore</span><span class="nt">(self, ignoreRange)</span>
-<span class="g g-Whitespace">    </span><span class="mi">577</span>         <span class="n">ignoreArgs</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;**:&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">578</span>     <span class="n">ignoreArgs</span> <span class="o">+=</span> <span class="n">ignoreRange</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">579</span>     <span class="n">_pyXspec</span><span class="o">.</span><span class="n">doXspecCmd</span><span class="p">(</span><span class="n">ignoreArgs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">580</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">581</span>     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Error: Argument to ignore function must be a string.&quot;</span><span class="p">)</span>
-
-<span class="ne">Exception</span>: Error executing command: ignore
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    35 channels (1-35) ignored in spectrum #     1
+    70 channels (577-646) ignored in spectrum #     1
 </pre></div>
 </div>
 </div>
@@ -525,7 +517,10 @@ joern.wilms@fau.de
 
 http://pulsar.sternwarte.uni-erlangen.de/wilms/research/tbabs/
 
-PLEASE NOTICE:
+PLEASE NOTI
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CE:
 To get the model described by the above paper
 you will also have to set the abundances:
    abund wilm
@@ -574,8 +569,9 @@ Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
 Test statistic : Chi-Squared              1.495996e+06     using 541 bins.
  Null hypothesis probability of 0.000000e+00 with 537 degrees of freedom
  Current data and model not fit yet.
-
-Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
 
 Test statistic : Chi-Squared              1.495996e+06     using 541 bins.
  Null hypothesis probability of 0.000000e+00 with 537 degrees of freedom
@@ -638,7 +634,10 @@ Test statistic : Chi-Squared              1.412720e+06     using 541 bins.
  Null hypothesis probability of 0.000000e+00 with 537 degrees of freedom
  Current data and model not fit yet.
                                    Parameters
-Chi-Squared  |beta|/N    Lvl          1:nH       2:Gamma        3:kT_e        7:norm
+Chi-Squared  |beta|/N    Lvl          1:nH       
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2:Gamma        3:kT_e        7:norm
 570676       289670       -3      0.973020       2.74758       191.055       6.79607
 240244       230461       -3       1.57327       2.99467       78.6918       22.0427
 145629       176760        0       1.82804       2.99776       25.8726       21.4214
@@ -650,7 +649,10 @@ Chi-Squared  |beta|/N    Lvl          1:nH       2:Gamma        3:kT_e        7:
 96970.1      4270.85       0       1.99999       2.99509       10.9193       20.9558
 96649.2      2931.89       0       2.00000       2.99458       10.8073       20.9245
 96373.6      2345.54       0       2.00000       2.99395       10.7089       20.8958
-96125.6      2338.13       0       2.00000       2.99323       10.6208       20.8690
+96125.6      2338.13       0       2.00000       2.99
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>323       10.6208       20.8690
 95896.1      2613.64       0       2.00000       2.99247       10.5409       20.8435
 95678.7      2964.77       0       2.00000       2.99166       10.4667       20.8192
 95469.6      3313.63       0       2.00000       2.99083       10.3974       20.7956
@@ -773,7 +775,10 @@ Model Model Component  Parameter  Unit     Value
    9    3   compTT     norm                1.00000      +/-  0.0          
   10    4   gaussian   LineE      keV      6.50000      +/-  0.0          
   11    4   gaussian   Sigma      keV      0.100000     +/-  0.0          
-  12    4   gaussian   norm                1.00000      +/-  0.0          
+  12    4  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> gaussian   norm                1.00000      +/-  0.0          
 ________________________________________________________________________
 
 
@@ -874,7 +879,10 @@ Chi-Squared  |beta|/N    Lvl          1:nH         2:Tin        3:norm          
 834.947      909.798      -1   7.81909e-06       2.34168       7.20097      0.667991       4.14253      0.402226       6.17343       1.06757     0.0208363
 834.165      913.319      -1   3.72384e-06       2.34251       7.18948      0.667526       4.14229      0.402547       6.16970       1.07063     0.0209631
 833.347      913.887      -1   1.68206e-06       2.34332       7.17802      0.667075       4.14202      0.402878       6.16613       1.07358     0.0210863
-832.489      912.05       -1   6.66720e-07       2.34412       7.16661      0.666636       4.14173      0.403215       6.16271       1.07644     0.0212060
+832.489      912.05       -1   6.66720e-07       2.34412       7.16661   
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   0.666636       4.14173      0.403215       6.16271       1.07644     0.0212060
 831.611      906.997      -1   1.62966e-07       2.34491       7.15523      0.666210       4.14142      0.403558       6.15942       1.07920     0.0213227
 830.708      900.536      -1   3.82341e-08       2.34568       7.14387      0.665795       4.14110      0.403906       6.15625       1.08187     0.0214367
 829.798      891.798      -1   7.40396e-09       2.34645       7.13255      0.665391       4.14076      0.404257       6.15319       1.08448     0.0215482
@@ -1001,48 +1009,45 @@ Test statistic : Chi-Squared                  729.06     using 541 bins.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit statistic  : Chi-Squared                  819.66     using 541 bins.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit statistic  : Chi-Squared                  833.66     using 541 bins.
 
-Test statistic : Chi-Squared                  819.66     using 541 bins.
- Null hypothesis probability of 1.63e-14 with 533 degrees of freedom
+Test statistic : Chi-Squared                  833.66     using 541 bins.
+ Null hypothesis probability of 1.30e-15 with 533 degrees of freedom
  Current data and model not fit yet.
                                    Parameters
 Chi-Squared  |beta|/N    Lvl         2:Tin        3:norm          5:T0          6:kT        9:norm      10:LineE      11:Sigma       12:norm
-715.58       2001.21      -3       1.39954       127.771       2.05431       3.63842      0.127634       6.28870       1.18015     0.0206567
-715.247      177.776      -4       1.38490       132.563       2.03405       3.63898      0.130763       6.24144       1.21238     0.0222691
-713.785      765.155      -4       1.37469       136.237       2.02091       3.63951      0.132874       6.21395       1.23483     0.0234177
-713.177      402.846      -4       1.36693       139.112       2.01164       3.63940      0.134448       6.19011       1.25427     0.0243999
-712.866      233.892      -4       1.36092       141.389       2.00484       3.63913      0.135645       6.17065       1.27006     0.0252186
-712.693      139.98       -4       1.35621       143.206       1.99968       3.63883      0.136574       6.15486       1.28272     0.0258915
-712.592      85.0678      -4       1.35250       144.660       1.99569       3.63856      0.137303       6.14210       1.29281     0.0264396
-712.53       53.1189      -4       1.34955       145.826       1.99257       3.63833      0.137878       6.13181       1.30085     0.0268844
-712.505      33.0805      -5       1.34286       148.468       1.98466       3.63830      0.139248       6.10984       1.31599     0.0277853
-712.433      167.138      -6       1.33981       149.745       1.98170       3.63798      0.139825       6.09864       1.32474     0.0282964
-712.425      37.6317      -7       1.33879       150.178       1.98102       3.63768      0.139995       6.09413       1.32876     0.0285154
+732.121      906.411      -2       2.61771       3.80262      0.663713       3.87863      0.494730       6.00000       1.35731     0.0368547
+726.9        380.989      -3       2.61840       3.79787      0.660119       3.87897      0.498763       6.00000       1.34029     0.0365952
+726.863      36.8728      -4       2.61942       3.79492      0.659646       3.87799      0.499273       6.00000       1.33828     0.0366215
+726.862      1.24817      -5       2.61933       3.79604      0.659614       3.87804      0.499261       6.00000       1.33797     0.0366135
+726.862      2.6477
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8       2       2.61933       3.79604      0.659614       3.87804      0.499261       6.00000       1.33797     0.0366135
 ==========================================================================================
  Variances and Principal Axes
                  2        3        5        6        9       10       11       12  
- 2.3058E-08|  0.5075   0.0008   0.0173   0.0424   0.7542   0.0031  -0.0010   0.4142  
- 1.5506E-07|  0.6196   0.0013  -0.1487  -0.0722  -0.6410  -0.0055  -0.0111   0.4216  
- 3.3301E-07|  0.5929   0.0015   0.0053   0.0090   0.0420  -0.0158   0.0161  -0.8038  
- 5.3443E-05| -0.0730  -0.0026  -0.7655  -0.5735   0.1298   0.1147   0.2158  -0.0565  
- 3.9314E-04| -0.0101  -0.0010   0.0339  -0.4141   0.0378  -0.5741  -0.7044  -0.0127  
- 7.3413E-04| -0.0403  -0.0047  -0.5924   0.6838   0.0141  -0.4134  -0.0919  -0.0189  
- 5.3956E-03|  0.0042  -0.0083   0.1985  -0.1583  -0.0107  -0.6972   0.6697   0.0292  
- 1.8877E+02| -0.0025   0.9999  -0.0029   0.0000   0.0005  -0.0080   0.0050   0.0003  
+ 5.7454E-08| -0.2038  -0.0338  -0.5045  -0.1062  -0.4301  -0.0028   0.0053  -0.7116  
+ 4.4112E-07|  0.2009   0.0292   0.4047   0.1221   0.5459  -0.0085   0.0243  -0.6938  
+ 4.8274E-06|  0.7789   0.0580   0.1497   0.2805  -0.5316   0.0320   0.0498  -0.0523  
+ 2.7344E-05|  0.4058   0.0397  -0.7445   0.1697   0.4806   0.0829   0.0636   0.0941  
+ 2.0545E-04|  0.1620   0.1349   0.0468  -0.6263   0.0142   0.2063   0.7200   0.0035  
+ 3.9966E-04| -0.3215  -0.0909   0.0198   0.6779  -0.0490   0.1974   0.6220   0.0147  
+ 3.1719E-02| -0.0117  -0.1445   0.0488  -0.0434  -0.0098   0.9460  -0.2819  -0.0178  
+ 7.4825E-02| -0.1304   0.9725  -0.0056   0.1128  -0.0272   0.1253  -0.0898  -0.0063  
 ------------------------------------------------------------------------------------------
 
 ================================================================================================
   Covariance Matrix
         1           2           3           4           5           6           7           8   
-   1.137e-03  -4.628e-01   1.381e-03  -2.761e-05  -2.371e-04   3.700e-03  -2.305e-03  -1.505e-04
-  -4.628e-01   1.887e+02  -5.531e-01   3.151e-03   9.614e-02  -1.509e+00   9.480e-01   6.195e-02
-   1.381e-03  -5.531e-01   2.123e-03  -4.582e-04  -3.042e-04   3.844e-03  -2.039e-03  -1.400e-04
-  -2.761e-05   3.151e-03  -4.582e-04   5.634e-04   7.717e-06   4.526e-04  -4.941e-04  -2.956e-05
-  -2.371e-04   9.614e-02  -3.042e-04   7.717e-06   5.127e-05  -7.406e-04   4.343e-04   2.905e-05
-   3.700e-03  -1.509e+00   3.844e-03   4.526e-04  -7.406e-04   1.495e-02  -9.912e-03  -5.969e-04
-  -2.305e-03   9.480e-01  -2.039e-03  -4.941e-04   4.343e-04  -9.912e-03   7.385e-03   4.207e-04
-  -1.505e-04   6.195e-02  -1.400e-04  -2.956e-05   2.905e-05  -5.969e-04   4.207e-04   2.567e-05
+   1.331e-03  -9.420e-03   2.798e-05  -1.190e-03   2.797e-04  -1.590e-03   9.252e-04   6.731e-05
+  -9.420e-03   7.143e-02  -6.313e-04   8.364e-03  -1.935e-03   4.779e-03  -5.242e-03  -3.787e-04
+   2.798e-05  -6.313e-04   9.373e-05  -1.183e-04  -1.398e-05   1.413e-03  -3.879e-04  -2.680e-05
+  -1.190e-03   8.364e-03  -1.183e-04   1.277e-03  -2.301e-04  -2.168e-04  -2.934e-04  -2.500e-05
+   2.797e-04  -1.935e-03  -1.398e-05  -2.301e-04   6.740e-05  -5.504e-04   2.609e-04   1.934e-05
+  -1.590e-03   4.779e-03   1.413e-03  -2.168e-04  -5.504e-04   2.958e-02  -9.221e-03  -5.920e-04
+   9.252e-04  -5.242e-03  -3.879e-04  -2.934e-04   2.609e-04  -9.221e-03   3.385e-03   2.060e-04
+   6.731e-05  -3.787e-04  -2.680e-05  -2.500e-05   1.934e-05  -5.920e-04   2.060e-04   1.363e-05
 ------------------------------------------------------------------------------------------------
 
 ========================================================================
@@ -1050,24 +1055,24 @@ Model TBabs&lt;1&gt;(diskbb&lt;2&gt; + compTT&lt;3&gt; + gaussian&lt;4&gt;) Sour
 Model Model Component  Parameter  Unit     Value
  par  comp
    1    1   TBabs      nH         10^22    0.120000     frozen
-   2    2   diskbb     Tin        keV      1.33879      +/-  3.37162E-02  
-   3    2   diskbb     norm                150.178      +/-  13.7385      
+   2    2   diskbb     Tin        keV      2.61933      +/-  3.64855E-02  
+   3    2   diskbb     norm                3.79604      +/-  0.267267     
    4    3   compTT     Redshift            0.0          frozen
-   5    3   compTT     T0         keV      1.98102      +/-  4.60775E-02  
-   6    3   compTT     kT         keV      3.63768      +/-  2.37359E-02  
+   5    3   compTT     T0         keV      0.659614     +/-  9.68163E-03  
+   6    3   compTT     kT         keV      3.87804      +/-  3.57334E-02  
    7    3   compTT     taup                3.00000      frozen
    8    3   compTT     approx              1.00000      frozen
-   9    3   compTT     norm                0.139995     +/-  7.16064E-03  
-  10    4   gaussian   LineE      keV      6.09413      +/-  0.122262     
-  11    4   gaussian   Sigma      keV      1.32876      +/-  8.59370E-02  
-  12    4   gaussian   norm                2.85154E-02  +/-  5.06639E-03  
+   9    3   compTT     norm                0.499261     +/-  8.20952E-03  
+  10    4   gaussian   LineE      keV      6.00000      +/-  0.171995     
+  11    4   gaussian   Sigma      keV      1.33797      +/-  5.81808E-02  
+  12    4   gaussian   norm                3.66135E-02  +/-  3.69231E-03  
 ________________________________________________________________________
 
 
-Fit statistic  : Chi-Squared                  712.43     using 541 bins.
+Fit statistic  : Chi-Squared                  726.86     using 541 bins.
 
-Test statistic : Chi-Squared                  712.43     using 541 bins.
- Null hypothesis probability of 2.91e-07 with 533 degrees of freedom
+Test statistic : Chi-Squared                  726.86     using 541 bins.
+ Null hypothesis probability of 4.16e-08 with 533 degrees of freedom
 </pre></div>
 </div>
 </div>
@@ -1084,17 +1089,17 @@ Test statistic : Chi-Squared                  712.43     using 541 bins.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Chi-Squared    Delta            LineE
                  Chi-Squared            10
 
-          712.72     0.29437    0           6
-          712.43   0.0045085    1         6.1
-          713.11      0.6812    2         6.2
-          715.42      2.9927    3         6.3
-          720.57      8.1444    4         6.4
-          730.73      18.306    5         6.5
-          749.38      36.952    6         6.6
-          780.42      67.999    7         6.7
-           825.4      112.98    8         6.8
-          881.89      169.46    9         6.9
-          945.42         233   10           7
+          726.86 -3.4838e-05    0           6
+          737.18      10.316    1         6.1
+          752.25       25.39    2         6.2
+          774.06      47.194    3         6.3
+          805.29      78.427    4         6.4
+          849.26       122.4    5         6.5
+          909.28      182.42    6         6.6
+           987.5      260.64    7         6.7
+          1083.9         357    8         6.8
+            1196      469.09    9         6.9
+          1319.6      592.72   10           7
 </pre></div>
 </div>
 </div>
@@ -1109,8 +1114,8 @@ Test statistic : Chi-Squared                  712.43     using 541 bins.
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Parameter   Confidence Range (2.706)
-     2      1.29289      1.39642    (-0.0458832,0.0576526)
-     3      128.789       163.06    (-21.4014,12.8694)
+     2      2.56056      2.68294    (-0.0587717,0.0636018)
+     3       3.3571      4.28997    (-0.438943,0.493922)
 </pre></div>
 </div>
 </div>

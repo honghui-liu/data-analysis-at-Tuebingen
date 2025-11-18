@@ -184,9 +184,10 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>HEASOFT, CALDB and NuSTAR data reduction</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="spectral_fitting.html">Spectral fitting with PyXSPEC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spectral_fitting.html"><strong>Spectral fitting with PyXSPEC</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="NICER_walkthrough.html"><strong>NICER data reduction and Spectral fitting</strong></a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="Spectral_simulation.html"><strong>Simulating spectra with PyXSPEC</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Timing_analysis.html">Timing Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About This Website</a></li>
 </ul>
 
@@ -528,106 +529,31 @@ You can download them here: <a class="reference external" href="https://drive.go
 <h4>5.2.1. Spectrum file<a class="headerlink" href="#spectrum-file" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spec</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;/mnt/d/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.pha&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spec</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;../data/nu91002320002A01_sr.pha&#39;</span><span class="p">)</span>
 <span class="n">spec</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">spec</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;/mnt/d/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.pha&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">spec</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-
-<span class="nn">File ~/anaconda/anaconda3/lib/python3.12/site-packages/astropy/io/fits/hdu/hdulist.py:223,</span> in <span class="ni">fitsopen</span><span class="nt">(name, mode, memmap, save_backup, cache, lazy_load_hdus, ignore_missing_simple, use_fsspec, fsspec_kwargs, decompress_in_memory, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Empty filename: </span><span class="si">{</span><span class="n">name</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">223</span> <span class="k">return</span> <span class="n">HDUList</span><span class="o">.</span><span class="n">fromfile</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">224</span>     <span class="n">name</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">225</span>     <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">226</span>     <span class="n">memmap</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">227</span>     <span class="n">save_backup</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">228</span>     <span class="n">cache</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">229</span>     <span class="n">lazy_load_hdus</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">230</span>     <span class="n">ignore_missing_simple</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">231</span>     <span class="n">use_fsspec</span><span class="o">=</span><span class="n">use_fsspec</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">232</span>     <span class="n">fsspec_kwargs</span><span class="o">=</span><span class="n">fsspec_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">233</span>     <span class="n">decompress_in_memory</span><span class="o">=</span><span class="n">decompress_in_memory</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">234</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">235</span> <span class="p">)</span>
-
-<span class="nn">File ~/anaconda/anaconda3/lib/python3.12/site-packages/astropy/io/fits/hdu/hdulist.py:487,</span> in <span class="ni">HDUList.fromfile</span><span class="nt">(cls, fileobj, mode, memmap, save_backup, cache, lazy_load_hdus, ignore_missing_simple, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">468</span> <span class="nd">@classmethod</span>
-<span class="g g-Whitespace">    </span><span class="mi">469</span> <span class="k">def</span> <span class="nf">fromfile</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">470</span>     <span class="bp">cls</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">478</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">479</span> <span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">481</span><span class="sd">     Creates an `HDUList` instance from a file-like object.</span>
-<span class="g g-Whitespace">    </span><span class="mi">482</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">485</span><span class="sd">     documentation for details of the parameters accepted by this method).</span>
-<span class="g g-Whitespace">    </span><span class="mi">486</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">487</span>     <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_readfrom</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">488</span>         <span class="n">fileobj</span><span class="o">=</span><span class="n">fileobj</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">489</span>         <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">490</span>         <span class="n">memmap</span><span class="o">=</span><span class="n">memmap</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">491</span>         <span class="n">save_backup</span><span class="o">=</span><span class="n">save_backup</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">492</span>         <span class="n">cache</span><span class="o">=</span><span class="n">cache</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">493</span>         <span class="n">ignore_missing_simple</span><span class="o">=</span><span class="n">ignore_missing_simple</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">494</span>         <span class="n">lazy_load_hdus</span><span class="o">=</span><span class="n">lazy_load_hdus</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">495</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">496</span>     <span class="p">)</span>
-
-<span class="nn">File ~/anaconda/anaconda3/lib/python3.12/site-packages/astropy/io/fits/hdu/hdulist.py:1169,</span> in <span class="ni">HDUList._readfrom</span><span class="nt">(cls, fileobj, data, mode, memmap, cache, lazy_load_hdus, ignore_missing_simple, use_fsspec, fsspec_kwargs, decompress_in_memory, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1166</span> <span class="k">if</span> <span class="n">fileobj</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1167</span>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="n">_File</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1168</span>         <span class="c1"># instantiate a FITS file object (ffo)</span>
-<span class="ne">-&gt; </span><span class="mi">1169</span>         <span class="n">fileobj</span> <span class="o">=</span> <span class="n">_File</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1170</span>             <span class="n">fileobj</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1171</span>             <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1172</span>             <span class="n">memmap</span><span class="o">=</span><span class="n">memmap</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1173</span>             <span class="n">cache</span><span class="o">=</span><span class="n">cache</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1174</span>             <span class="n">use_fsspec</span><span class="o">=</span><span class="n">use_fsspec</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1175</span>             <span class="n">fsspec_kwargs</span><span class="o">=</span><span class="n">fsspec_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1176</span>             <span class="n">decompress_in_memory</span><span class="o">=</span><span class="n">decompress_in_memory</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1177</span>         <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1178</span>     <span class="c1"># The Astropy mode is determined by the _File initializer if the</span>
-<span class="g g-Whitespace">   </span><span class="mi">1179</span>     <span class="c1"># supplied mode was None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1180</span>     <span class="n">mode</span> <span class="o">=</span> <span class="n">fileobj</span><span class="o">.</span><span class="n">mode</span>
-
-<span class="nn">File ~/anaconda/anaconda3/lib/python3.12/site-packages/astropy/io/fits/file.py:218,</span> in <span class="ni">_File.__init__</span><span class="nt">(self, fileobj, mode, memmap, overwrite, cache, use_fsspec, fsspec_kwargs, decompress_in_memory)</span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_open_fileobj</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">overwrite</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">217</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)):</span>
-<span class="ne">--&gt; </span><span class="mi">218</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_open_filename</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">overwrite</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_open_filelike</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">overwrite</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda/anaconda3/lib/python3.12/site-packages/astropy/io/fits/file.py:651,</span> in <span class="ni">_File._open_filename</span><span class="nt">(self, filename, mode, overwrite)</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">650</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_try_read_compressed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">magic</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="n">ext</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">651</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">IO_FITS_MODES</span><span class="p">[</span><span class="n">mode</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">652</span>     <span class="bp">self</span><span class="o">.</span><span class="n">close_on_error</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="g g-Whitespace">    </span><span class="mi">654</span> <span class="c1"># Make certain we&#39;re back at the beginning of the file</span>
-<span class="g g-Whitespace">    </span><span class="mi">655</span> <span class="c1"># BZ2File does not support seek when the file is open for writing, but</span>
-<span class="g g-Whitespace">    </span><span class="mi">656</span> <span class="c1"># when opening a file for write, bz2.BZ2File always truncates anyway.</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/mnt/d/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.pha&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Filename: ../data/nu91002320002A01_sr.pha
+No.    Name      Ver    Type      Cards   Dimensions   Format
+  0  PRIMARY       1 PrimaryHDU     504   (105, 105)   float32   
+  1  SPECTRUM      1 BinTableHDU    468   4096R x 2C   [J, J]   
+  2  GTI           1 BinTableHDU     57   13R x 2C   [1D, 1D]   
+  3  REG00101      1 BinTableHDU     84   1R x 6C   [1PD(1), 1PD(1), 16A, 1PD(1), 1PD(0), 1PI(1)]   
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bkg_spec</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;/mnt/d/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_bk.pha&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bkg_spec</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;../data/nu91002320002A01_bk.pha&#39;</span><span class="p">)</span>
 <span class="n">bkg_spec</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Filename: /mnt/d/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_bk.pha
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Filename: ../data/nu91002320002A01_bk.pha
 No.    Name      Ver    Type      Cards   Dimensions   Format
   0  PRIMARY       1 PrimaryHDU     504   (143, 143)   float32   
   1  SPECTRUM      1 BinTableHDU    468   4096R x 2C   [J, J]   
@@ -658,7 +584,7 @@ No.    Name      Ver    Type      Cards   Dimensions   Format
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6cd1a18716d42bf8131e92afe82d5e223706630658009ef22b7b0dfa53baf6cd.png" src="../_images/6cd1a18716d42bf8131e92afe82d5e223706630658009ef22b7b0dfa53baf6cd.png" />
+<img alt="../_images/534bfd2c13d3e222fd267fb1e0af11da56756b6adf68acfe71a0c250f6460a77.png" src="../_images/534bfd2c13d3e222fd267fb1e0af11da56756b6adf68acfe71a0c250f6460a77.png" />
 </div>
 </div>
 </section>
@@ -667,13 +593,13 @@ No.    Name      Ver    Type      Cards   Dimensions   Format
 <h3>5.2.2. Response Matrix Files (RMFs)<a class="headerlink" href="#response-matrix-files-rmfs" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;/mnt/d/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.rmf&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;../data/nu91002320002A01_sr.rmf&#39;</span><span class="p">)</span>
 <span class="n">resp</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Filename: /mnt/d/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.rmf
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Filename: ../data/nu91002320002A01_sr.rmf
 No.    Name      Ver    Type      Cards   Dimensions   Format
   0  PRIMARY       1 PrimaryHDU      14   ()      
   1  EBOUNDS       1 BinTableHDU     58   4096R x 3C   [J, E, E]   
@@ -692,7 +618,7 @@ No.    Name      Ver    Type      Cards   Dimensions   Format
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8c4ce1c110000d55b1ac6f621698c164f93d683effcb79242fca8fcef238e10f.png" src="../_images/8c4ce1c110000d55b1ac6f621698c164f93d683effcb79242fca8fcef238e10f.png" />
+<img alt="../_images/f36cf0f080314fec8a1a62caef587448f5b257d21ad411e648c5bf5cf66a3316.png" src="../_images/f36cf0f080314fec8a1a62caef587448f5b257d21ad411e648c5bf5cf66a3316.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.03999996 0.03999996 0.04000008 ... 0.03999329 0.03999329 0.04000854]
 </pre></div>
 </div>
@@ -735,20 +661,20 @@ No.    Name      Ver    Type      Cards   Dimensions   Format
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b23a43451cfe1a36a5777fdf524b9acb8ee09b93fa1a0ebddb7c3cb95c7d65c7.png" src="../_images/b23a43451cfe1a36a5777fdf524b9acb8ee09b93fa1a0ebddb7c3cb95c7d65c7.png" />
+<img alt="../_images/9206fd7ad5b3907fa8ec1506f3fdf7a6ccc3ce0b8de42a374f851bba96622116.png" src="../_images/9206fd7ad5b3907fa8ec1506f3fdf7a6ccc3ce0b8de42a374f851bba96622116.png" />
 </div>
 </div>
 <section id="ancillary-response-files-arfs">
 <h4>5.2.3. Ancillary Response Files (ARFs)<a class="headerlink" href="#ancillary-response-files-arfs" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arf</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;/mnt/d/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.arf&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arf</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;../data/nu91002320002A01_sr.arf&#39;</span><span class="p">)</span>
 <span class="n">arf</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Filename: /mnt/d/DATA/NuSTAR/CygX-1/91002320002/products/nu91002320002A01_sr.arf
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Filename: ../data/nu91002320002A01_sr.arf
 No.    Name      Ver    Type      Cards   Dimensions   Format
   0  PRIMARY       1 PrimaryHDU      12   ()      
   1  SPECRESP      1 BinTableHDU     88   4096R x 3C   [E, E, E]   
@@ -770,7 +696,7 @@ No.    Name      Ver    Type      Cards   Dimensions   Format
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7a1280147fade321bbad2a6dce9b849b2f7f58698d59ab3d9b4cd308cd72e176.png" src="../_images/7a1280147fade321bbad2a6dce9b849b2f7f58698d59ab3d9b4cd308cd72e176.png" />
+<img alt="../_images/a8aa9156eb05d4457f5ca4d9b3206fbe612b57533d77d434d3b2b4ba21372143.png" src="../_images/a8aa9156eb05d4457f5ca4d9b3206fbe612b57533d77d434d3b2b4ba21372143.png" />
 </div>
 </div>
 </section>
@@ -867,7 +793,7 @@ then define a model to observe the difference.)</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Spectral fitting with PyXSPEC</p>
+        <p class="prev-next-title"><strong>Spectral fitting with PyXSPEC</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
