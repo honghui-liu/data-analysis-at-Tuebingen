@@ -18,18 +18,23 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Lecturers: Menglei Zhou & Honghui Liu
     - Setting up HEASOFT, calibration data base, dealing with NuSTAR data (spectra and lightcurve), data fitting in XSPEC.
 - 12.11.2025: Walkthrough of NICER data analysis + Basic concepts of spectral fitting (Part II)
-    - NICER pipelines, background filtering, simulating spectra in XSPEC
+    - NICER pipelines, background filtering, simulating spectra in XSPEC.
 - 19.11.2025: Timing analysis — from light curves to power spectra
-    - NICER event file, light curves, Fast Fourier Transformation, power density spectra, quasi-periodic oscillations, root-mean-squared (RMS)
+    - NICER event file, light curves, Fast Fourier Transformation, power density spectra, quasi-periodic oscillations, root-mean-squared (RMS), phase lag and time lag.
 - 26.11.2025: Polarization analysis — handling IXPE data
+    - Detection principles, statistics (STOKES parameters), data reduction of IXPE data
+- 03.12.2025: Pulsar timing
+    - Lecture: Youli Tuo
+- 10.12.2025: Introduction to reflection modeling — the relxill family
+    - Lecture: Honghui Liu
 
-- Next: Pulsar timing
-- Next: Introduction to reflection modeling — the relxill family
+**Christmas break until 13.01.2026**
+
 - Next: Walkthrough of XMM-Newton data analysis
 - Next: Walkthrough of Insight-HXMT data analysis
 - Next: Bayesian analysis
 
-*Updated on 17 Nov 2025.*
+*Updated on 22 Nov 2025.*
 
 ## Tutorials & scripts
 
