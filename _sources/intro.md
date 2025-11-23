@@ -25,7 +25,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - NICER event file, light curves, Fast Fourier Transformation, power density spectra, quasi-periodic oscillations, root-mean-squared (RMS), phase lag and time lag.
 - 26.11.2025: Polarization analysis — handling IXPE data
     - Lecturers: Menglei Zhou & Honghui Liu
-    - Detection principles, statistics (STOKES parameters), reduction of IXPE data, background treatment, (un-)weighted analysis, PCUBE, XSPEC fitting (POLCONST, POLLIN, etc).
+    - Detection principles, statistics (STOKES parameters), reduction of IXPE data, background treatment, (un-)weighted analysis, PCUBE, XSPEC fitting (POLCONST, POLLIN, etc), MDP99.
 - 03.12.2025: Pulsar timing
     - Lecturers: Youli Tuo & Menglei Zhou & Honghui Liu
 - 10.12.2025: Introduction to reflection modeling — the relxill family
