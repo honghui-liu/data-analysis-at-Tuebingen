@@ -28,7 +28,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Detection principles, statistics (STOKES parameters), reduction of IXPE data, background treatment, (un-)weighted analysis, PCUBE, XSPEC fitting (POLCONST, POLLIN, etc), MDP99.
 - 03.12.2025: Pulsar timing
     - Lecturers: Youli Tuo & Menglei Zhou & Honghui Liu
-- 10.12.2025: **Talk by Tarjar Rissadt:** Dark matter search with eROSITA data
+- 10.12.2025: **Talk by Tarjar Risstad:** Dark matter search with eROSITA data
 
 
 **Christmas break until 13.01.2026**
