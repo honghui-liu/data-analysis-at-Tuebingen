@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -188,6 +188,7 @@
 <li class="toctree-l1"><a class="reference internal" href="NICER_walkthrough.html"><strong>NICER data reduction and Spectral fitting</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Spectral_simulation.html"><strong>Simulating spectra with PyXSPEC</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Timing_analysis.html"><strong>Timing Analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Polarimetirc_analysis.html">Polarimetric Analysis Walkthrough</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About This Website</a></li>
 </ul>
 
@@ -519,10 +520,7 @@ joern.wilms@fau.de
 
 http://pulsar.sternwarte.uni-erlangen.de/wilms/research/tbabs/
 
-PLEASE NOTI
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CE:
+PLEASE NOTICE:
 To get the model described by the above paper
 you will also have to set the abundances:
    abund wilm
@@ -571,13 +569,15 @@ Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
 Test statistic : Chi-Squared              1.495996e+06     using 541 bins.
  Null hypothesis probability of 0.000000e+00 with 537 degrees of freedom
  Current data and model not fit yet.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
+
+Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
 
 Test statistic : Chi-Squared              1.495996e+06     using 541 bins.
  Null hypothesis probability of 0.000000e+00 with 537 degrees of freedom
- Current data and model not fit yet.
+ Current data
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> and model not fit yet.
 
 Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
 
@@ -636,7 +636,10 @@ Test statistic : Chi-Squared              1.412720e+06     using 541 bins.
  Null hypothesis probability of 0.000000e+00 with 537 degrees of freedom
  Current data and model not fit yet.
                                    Parameters
-Chi-Squared  |beta|/N    Lvl          1:nH       2:Gamma        3:kT_e        7:norm
+Chi-Squared  |beta|/N    Lvl          1:nH       
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2:Gamma        3:kT_e        7:norm
 570676       289670       -3      0.973020       2.74758       191.055       6.79607
 240244       230461       -3       1.57327       2.99467       78.6918       22.0427
 145629       176760        0       1.82804       2.99776       25.8726       21.4214
@@ -838,7 +841,10 @@ Chi-Squared  |beta|/N    Lvl          1:nH         2:Tin        3:norm          
 104948       45568.7       4   9.47775e-12       2.60529       10.3839     0.0715729       6.21874    0.00838279       6.70973       18.0022    0.00565519
 104945       45568.7       3   4.22538e-12       2.60529       10.3839     0.0716992       6.21925    0.00840007       6.70883       18.0021    0.00565445
 104916       45569.5       2   9.37337e-13       2.60529       10.3843     0.0729523       6.22423    0.00857150       6.69988       18.0011    0.00564700
-104622       45577.1       1   4.33144e-13       2.60529       10.3881     0.0845471       6.25880     0.0101613       6.61372       17.9920    0.00557229
+104622       45577.1       1   4.33144e-13       2.60529       10.3881     0.0845471       6.25880     0.0101613       6.61372   
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    17.9920    0.00557229
 102326       45664.8       0   1.53625e-13       2.60456       10.4119      0.146649       5.92806     0.0188338       6.05748       17.9949    0.00484013
 99341.8      44018.6       0   5.88804e-14       2.58907       10.4010      0.282304       3.34790     0.0399459       6.56107       18.8594   0.000863151
 73252.8      16938.7       0   2.89884e-14       2.58894       10.4314      0.459256       4.21840     0.0866352       6.88365       19.2490   0.000659460
@@ -1040,10 +1046,7 @@ Chi-Squared  |beta|/N    Lvl         2:Tin        3:norm          5:T0          
    2.797e-04  -1.935e-03  -1.398e-05  -2.301e-04   6.740e-05  -5.504e-04   2.609e-04   1.934e-05
   -1.590e-03   4.779e-03   1.413e-03  -2.168e-04  -5.504e-04   2.958e-02  -9.221e-03  -5.920e-04
    9.252e-04  -5.242e-03  -3.879e-04  -2.934e-04   2.609e-04  -9.221e-03   3.385e-03   2.060e-04
-   6.731e-05  -3.787e-04  -2.680e-05  -2.500e-05
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   1.934e-05  -5.920e-04   2.060e-04   1.363e-05
+   6.731e-05  -3.787e-04  -2.680e-05  -2.500e-05   1.934e-05  -5.920e-04   2.060e-04   1.363e-05
 ------------------------------------------------------------------------------------------------
 
 ========================================================================
@@ -1122,6 +1125,32 @@ Test statistic : Chi-Squared                  726.86     using 541 bins.
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save the fit</span>
 <span class="n">xspec</span><span class="o">.</span><span class="n">Xset</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;savefit.xcm&quot;</span><span class="p">,</span> <span class="n">info</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>savefit.xcm exists. Replace? (y/n) 
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">Exception</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># save the fit</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">xspec</span><span class="o">.</span><span class="n">Xset</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;savefit.xcm&quot;</span><span class="p">,</span> <span class="n">info</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/heasoft/heasoft-6.35.2/aarch64-apple-darwin24.6.0/lib/python/xspec/xset.py:695,</span> in <span class="ni">XspecSettings.save</span><span class="nt">(self, fileName, info)</span>
+<span class="g g-Whitespace">    </span><span class="mi">692</span>     <span class="n">fileName</span> <span class="o">+=</span> <span class="s2">&quot;.xcm&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">693</span> <span class="n">saveArgs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">695</span> <span class="n">_pyXspec</span><span class="o">.</span><span class="n">doXspecCmd</span><span class="p">(</span><span class="n">saveArgs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">697</span> <span class="c1"># If doXspecCmd didn&#39;t raise an exception, assume save file has</span>
+<span class="g g-Whitespace">    </span><span class="mi">698</span> <span class="c1"># been written to disk.  Add a PyXspec identifier to top of file.</span>
+<span class="g g-Whitespace">    </span><span class="mi">699</span> 
+<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="c1"># The key here is the &#39;inplace&#39; specifier.  While iterating through</span>
+<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="c1"># the FileInput object, standard output is automatically rerouted</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># to the file given by &#39;fileName&#39;.  </span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="n">saveFile</span> <span class="o">=</span> <span class="n">fileinput</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="ne">Exception</span>: Error executing command: save
 </pre></div>
 </div>
 </div>
