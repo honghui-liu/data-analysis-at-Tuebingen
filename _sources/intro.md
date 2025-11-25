@@ -35,10 +35,14 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 
 - Next: Walkthrough of XMM-Newton data analysis
 - Next: Walkthrough of Insight-HXMT data analysis
-- Next: Bayesian analysis
-- Next: High-resolution X-ray spectroscopy
+- Next: Data analysis for extended sources (e.g., SNR, bubbles, Galactic center, galaxy clusters)
+- Next: MCMC simulations and Bayesian analysis with XSPEC
+- Next: High-resolution X-ray spectroscopy (XMM/RGS, Chandra/HETG, XRISM)
+- Next: Multi-wavelength analysis
+- Next: Coded masking
+- Next: How to write an observational proposal?
 
-*Updated on 22 Nov 2025.*
+*Updated on 25 Nov 2025.*
 
 ## Tutorials & scripts
 
