@@ -26,16 +26,18 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - 26.11.2025: Polarization analysis — handling IXPE data
     - Lecturers: Menglei Zhou & Honghui Liu
     - Detection principles, statistics (STOKES parameters), reduction of IXPE data, background treatment, (un-)weighted analysis, PCUBE, XSPEC fitting (POLCONST, POLLIN, etc), MDP99.
-- 03.12.2025: Pulsar timing
+- 03.12.2025: Pulsar timing (Part I)
     - Lecturers: Youli Tuo & Menglei Zhou & Honghui Liu
-    - Barycenter correction, binary correction, pulse search, lightcurve folding
-- 10.12.2025: **Talk by Tarjar Risstad:** Dark matter search with eROSITA data
+    - Barycenter correction, binary correction, pulse search, lightcurve folding (pulse profiles), phase-resolved spectroscopy
+- 10.12.2025: (1) **Talk by Tarjar Risstad:** Dark matter search with eROSITA data; (2) X-ray reflection spectroscopy
+    - Lecturers: Honghui Liu & Menglei Zhou
 
 
 **Christmas break until 13.01.2026**
 
-- Next: Introduction to reflection modeling — the relxill family
-    - Lecturers: Honghui Liu & Menglei Zhou
+- Next: Pulsar timing (Part II)
+    - Lecturers: Menglei Zhou & Honghui Liu
+    - Phase-resolved spectroscopy, phase-resolved X-ray polarimetric analysis, RVM model for X-ray pulsars 
 - Next: Walkthrough of XMM-Newton data analysis
 - Next: Walkthrough of Insight-HXMT data analysis
 - Next: Data analysis for extended sources (e.g., SNR, bubbles, Galactic center, galaxy clusters)
@@ -45,7 +47,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - Next: Coded masking
 - Next: How to write an observational proposal?
 
-*Updated on 25 Nov 2025.*
+*Updated on 03 Dec 2025.*
 
 ## Tutorials & scripts
 
