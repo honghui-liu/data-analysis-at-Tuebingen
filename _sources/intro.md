@@ -32,7 +32,6 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - 10.12.2025: (1) **Talk by Tarjar Risstad:** Dark matter search with eROSITA data; (2) X-ray reflection spectroscopy
     - Lecturers: Honghui Liu & Menglei Zhou
 
-
 **Christmas break until 13.01.2026**
 
 - Next: Pulsar timing (Part II)
