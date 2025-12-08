@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -397,7 +397,20 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-reflection-model">Full reflection model</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hands-on">Hands-on</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hands-on">Hands-on</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ingore-uneffective-energy-ranges">Ingore uneffective energy ranges</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-data">View the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-a-simple-continuum-model">Load a simple continuum model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perform-a-fit">Perform a fit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-residuals">View the residuals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-relxill-package">Load the RELXILL package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perform-a-reflection-fitting">Perform a reflection fitting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-model-and-residuals">View the model and residuals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-error-command">Run <code class="docutils literal notranslate"><span class="pre">error</span></code> command</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-advice">Some advice</a></li>
 </ul>
             </nav>
         </div>
@@ -775,6 +788,9 @@ ________________________________________________________________________
 </div>
 </div>
 </div>
+<section id="load-data">
+<h3>Load data<a class="headerlink" href="#load-data" title="Link to this heading">#</a></h3>
+<p>From FPMA and FPMB</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;../data/&quot;</span><span class="p">)</span>
@@ -839,6 +855,9 @@ Test statistic : Chi-Squared              2.139095e+10     using 748 bins.
 </div>
 </div>
 </div>
+</section>
+<section id="ingore-uneffective-energy-ranges">
+<h3>Ingore uneffective energy ranges<a class="headerlink" href="#ingore-uneffective-energy-ranges" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xspec</span><span class="o">.</span><span class="n">AllData</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="s2">&quot;*: **-3.0 79.0-**&quot;</span><span class="p">)</span>
@@ -862,6 +881,9 @@ Test statistic : Chi-Squared              2.010561e+10     using 544 bins.
 </div>
 </div>
 </div>
+</section>
+<section id="view-the-data">
+<h3>View the data<a class="headerlink" href="#view-the-data" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Plot to see the raw data</span>
@@ -875,8 +897,11 @@ Test statistic : Chi-Squared              2.010561e+10     using 544 bins.
 ***Warning: Fit is not current.
 </pre></div>
 </div>
-<img alt="../_images/83edb922ff42fe623ad6d1a8fa4880dbc5adf4b3911104fb1440276b9481dafe.svg" src="../_images/83edb922ff42fe623ad6d1a8fa4880dbc5adf4b3911104fb1440276b9481dafe.svg" /></div>
+<img alt="../_images/b11f49fbf2362fccb2082d2372764d4e144b242a138e1fa1157060af8af40d1b.svg" src="../_images/b11f49fbf2362fccb2082d2372764d4e144b242a138e1fa1157060af8af40d1b.svg" /></div>
 </div>
+</section>
+<section id="load-a-simple-continuum-model">
+<h3>Load a simple continuum model<a class="headerlink" href="#load-a-simple-continuum-model" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">xspec</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="s2">&quot;const*tbabs*(diskbb+cutoffpl)&quot;</span><span class="p">)</span>
@@ -937,6 +962,9 @@ Test statistic : Chi-Squared                770504.1     using 544 bins.
 </div>
 </div>
 </div>
+</section>
+<section id="perform-a-fit">
+<h3>Perform a fit<a class="headerlink" href="#perform-a-fit" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xspec</span><span class="o">.</span><span class="n">AllModels</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">setPars</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;1.0 -0.1&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s2">&quot;0.6 -0.1&quot;</span><span class="p">})</span>
@@ -1018,10 +1046,7 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm    5:PhoIndex    6:High
 116114       34982.6      -1       1.75893       25.5419       1.10402       19.4271      0.706510      0.965953
 72832.2      64571.9      -1       1.73058       31.0072       1.13051       23.8503      0.655759      0.967524
 43573.4      61922.3      -1       1.71046       35.4125       1.14912       29.1011      0.618058      0.968803
-32566.9    
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  45127.8      -2       1.63075       46.9049       1.18619       40.0305      0.570724      0.971466
+32566.9      45127.8      -2       1.63075       46.9049       1.18619       40.0305      0.570724      0.971466
 17737        138917       -3       1.52871       58.9393       1.24449       46.6699      0.671629      0.971576
 12313.3      77677.8      -3       1.50247       63.2269       1.29545       51.4560      0.758163      0.971530
 11716.5      25431.9      -3       1.48888       63.5938       1.33858       56.2380      0.835489      0.971470
@@ -1057,10 +1082,7 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm    5:PhoIndex    6:High
   -2.699e-03  -7.502e-01   1.809e-02   7.054e+00   4.645e-02   6.215e-06
   -3.337e-05  -3.847e-03   1.333e-04   4.645e-02   3.580e-04  -1.754e-07
   -2.467e-08  -9.063e-06   2.175e-08   6.215e-06  -1.754e-07   3.875e-07
-------------------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>------------------------------------------------
+------------------------------------------------------------------------
 
 ========================================================================
 Model constant&lt;1&gt;*TBabs&lt;2&gt;(diskbb&lt;3&gt; + cutoffpl&lt;4&gt;) Source No.: 1   Active/On
@@ -1095,6 +1117,9 @@ Test statistic : Chi-Squared                11003.95     using 544 bins.
 </div>
 </div>
 </div>
+</section>
+<section id="view-the-residuals">
+<h3>View the residuals<a class="headerlink" href="#view-the-residuals" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">plot_eeuf_ra</span><span class="p">(</span><span class="n">nspec</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">naddmodel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">delchi</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1110,9 +1135,12 @@ Test statistic : Chi-Squared                11003.95     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 43.792224447732075)
 </pre></div>
 </div>
-<img alt="../_images/759adc9f36fbdb93e31e0096083a7f674472c494d2b0f93ddb9fdd447345956e.svg" src="../_images/759adc9f36fbdb93e31e0096083a7f674472c494d2b0f93ddb9fdd447345956e.svg" /></div>
+<img alt="../_images/40277d2de43217d004877f6297da5ce79d3866efbb07add59182a7b2ae1fa789.svg" src="../_images/40277d2de43217d004877f6297da5ce79d3866efbb07add59182a7b2ae1fa789.svg" /></div>
 </div>
 <p>In the plot above, we can see that when fitting the data without a reflection model, there are large residuals around the <strong>iron line</strong> region (6-7 keV) and the <strong>Compton hump</strong> region (20-30 keV). To resolve these residuals, we should include a full reflection model (see below).</p>
+</section>
+<section id="load-the-relxill-package">
+<h3>Load the RELXILL package<a class="headerlink" href="#load-the-relxill-package" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load RELXILL model package</span>
@@ -1149,7 +1177,10 @@ Model Model Component  Parameter  Unit     Value
    8    5   relxill    Index1              3.00000      frozen
    9    5   relxill    Index2              3.00000      frozen
   10    5   relxill    Rbr                 15.0000      frozen
-  11    5   relxill    a                   0.998000     +/-  0.0          
+  11    5   relxill    a                   0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.998000     +/-  0.0          
   12    5   relxill    Incl       deg      30.0000      +/-  0.0          
   13    5   relxill    Rin                 -1.00000     frozen
   14    5   relxill    Rout                400.000      frozen
@@ -1265,10 +1296,7 @@ Model Model Component  Parameter  Unit     Value
    8    5   relxill    Index1              3.00000      +/-  0.0          
    9    5   relxill    Index2              3.00000      = p8
   10    5   relxill    Rbr                 15.0000      frozen
-  11    5   relxill    a                   0.998000     +/-  0.0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          
+  11    5   relxill    a                   0.998000     +/-  0.0          
   12    5   relxill    Incl       deg      30.0000      +/-  0.0          
   13    5   relxill    Rin                 -1.00000     frozen
   14    5   relxill    Rout                400.000      frozen
@@ -1306,6 +1334,9 @@ ________________________________________________________________________
 </div>
 </div>
 </div>
+</section>
+<section id="perform-a-reflection-fitting">
+<h3>Perform a reflection fitting<a class="headerlink" href="#perform-a-reflection-fitting" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xspec</span><span class="o">.</span><span class="n">Fit</span><span class="o">.</span><span class="n">renorm</span><span class="p">()</span>
@@ -1338,7 +1369,10 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:In
 24145.1      67944         0       2.22830       2.40096      0.260872       3.29515      0.998000       41.5968       2.01003       3.17558      0.761759       999.911     0.0986221      0.971879
 23718.2      66415.3       0       2.21493       2.38884      0.267236       3.29965      0.998000       41.9095       2.00886       3.17814      0.760083       999.980     0.0986175      0.971802
 23293.8      66896.8       0       2.20145       2.37695      0.273367       3.30410      0.998000       42.2143       2.00768       3.18062      0.758781       999.997     0.0986104      0.971742
-22889.5      66716         0       2.18795       2.36568      0.279315       3.30846      0.998000       42.5153       2.00647       3.18303      0.757789       999.999     0.0986019      0.971699
+22889.5      66716      
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   0       2.18795       2.36568      0.279315       3.30846      0.998000       42.5153       2.00647       3.18303      0.757789       999.999     0.0986019      0.971699
 22495.7      66655.8       0       2.17442       2.35509      0.285076       3.31282      0.998000       42.8112       2.00524       3.18537      0.757081       1000.00     0.0985917      0.971665
 22115.8      66347         0       2.16088       2.34533      0.290652       3.31720      0.998000       43.0955       2.00399       3.18765      0.756653       1000.00     0.0985796      0.971636
 21770.2      65791.5       0       2.14738       2.33662      0.296049       3.32160      0.998000       43.3655       2.00272       3.18988      0.756495       1000.00     0.0985654      0.971610
@@ -1410,10 +1444,7 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:In
 776.61       61.1541      -3      0.509676       5107.62       2.47033       2.69734      0.998000       32.1957       1.90480       3.25515       4.60828       1000.00     0.0259797      0.972154
 770.314      4798.09      -4      0.520185       4421.73       2.45019       2.65082      0.998000       31.0568       1.90178       3.26431       4.55292       1000.00     0.0252060      0.972159
 766.295      3530.42      -5      0.521616       4392.81       2.44918       2.64014      0.998000       30.5865       1.90128       3.26594       4.55168       1000.00     0.0249752      0.972158
-766.279      2.50699      -6      0.521913       4375.81       2.44990       2.63873      0.998000       30.5174       1.90131       3.26575       4.55245       1000.00     0.0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>249473      0.972154
+766.279      2.50699      -6      0.521913       4375.81       2.44990       2.63873      0.998000       30.5174       1.90131       3.26575       4.55245       1000.00     0.0249473      0.972154
 766.277      16.8319      -7      0.521946       4374.02       2.45024       2.63912      0.998000       30.5352       1.90136       3.26553       4.55265       1000.00     0.0249583      0.972154
 766.266      6.75624       0      0.521946       4374.03       2.45023       2.63919      0.997671       30.5364       1.90136       3.26553       4.55261       999.282     0.0249580      0.972153
 766.258      87.8721       0      0.521946       4374.08       2.45023       2.63931      0.997455       30.5393       1.90136       3.26552       4.55254       998.945     0.0249576      0.972152
@@ -1512,6 +1543,9 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 </div>
 </div>
 </div>
+</section>
+<section id="view-the-model-and-residuals">
+<h3>View the model and residuals<a class="headerlink" href="#view-the-model-and-residuals" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">plot_eeuf_ra</span><span class="p">(</span><span class="n">nspec</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">naddmodel</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">delchi</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1527,7 +1561,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/eb378a328b4fef2bb1c6c8f5a3677903e3b39bb8cd74f51a7392f0fdb1cdb239.svg" src="../_images/eb378a328b4fef2bb1c6c8f5a3677903e3b39bb8cd74f51a7392f0fdb1cdb239.svg" /></div>
+<img alt="../_images/6c4ff1a184ed45c350d0069eee299942576629077be3209158c2527ff85617e3.svg" src="../_images/6c4ff1a184ed45c350d0069eee299942576629077be3209158c2527ff85617e3.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1544,7 +1578,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/ddba434c98a57036acb03f383a17d693e5ba48df0742aaad39ebad19e5edd336.svg" src="../_images/ddba434c98a57036acb03f383a17d693e5ba48df0742aaad39ebad19e5edd336.svg" /></div>
+<img alt="../_images/e446074a1fb69fcefd2b86e6de0e5000ae4a7b4b5dc379a06fa0b72e24885b4f.svg" src="../_images/e446074a1fb69fcefd2b86e6de0e5000ae4a7b4b5dc379a06fa0b72e24885b4f.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1561,6 +1595,9 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 </div>
 </div>
 </div>
+</section>
+<section id="run-error-command">
+<h3>Run <code class="docutils literal notranslate"><span class="pre">error</span></code> command<a class="headerlink" href="#run-error-command" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Run `error` for each parameter to obtain the uncertainties.</span>
@@ -1590,7 +1627,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/360662403e4e3d29a0cf26107de43771838f81e69474e8091646b5bcbbd3bec2.svg" src="../_images/360662403e4e3d29a0cf26107de43771838f81e69474e8091646b5bcbbd3bec2.svg" /></div>
+<img alt="../_images/8bfdee4282f0ade4ed9e392a6534da3801ff2da53ea217a59e091e36126c0ca9.svg" src="../_images/8bfdee4282f0ade4ed9e392a6534da3801ff2da53ea217a59e091e36126c0ca9.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1604,14 +1641,42 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Plot command list is now empty
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/5ec50d0c2293c88bb8f2a9396f05d69208540f74264f834ff97f9de4194755d0.svg" src="../_images/5ec50d0c2293c88bb8f2a9396f05d69208540f74264f834ff97f9de4194755d0.svg" /></div>
+<img alt="../_images/9655e3c3f8e350f637222e41dcd7b25ea423a0dbab0f8915def87c52fd8d7aff.svg" src="../_images/9655e3c3f8e350f637222e41dcd7b25ea423a0dbab0f8915def87c52fd8d7aff.svg" /></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># An easier way to make plot</span>
+
+<span class="n">xspec</span><span class="o">.</span><span class="n">Plot</span><span class="o">.</span><span class="n">commands</span> <span class="o">=</span> <span class="p">()</span>
+<span class="n">xspec</span><span class="o">.</span><span class="n">Plot</span><span class="o">.</span><span class="n">device</span><span class="o">=</span><span class="s2">&quot;/svg&quot;</span>
+<span class="c1">#xspec.Plot.addCommand(&quot;log y&quot;)</span>
+<span class="n">xspec</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="s2">&quot;eeuf ra&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Plot command list is now empty
+</pre></div>
+</div>
+<img alt="../_images/5369285e9d231ced1d7212c51e77aaa6a0c52ec5cb12e812183f4df572797cb6.svg" src="../_images/5369285e9d231ced1d7212c51e77aaa6a0c52ec5cb12e812183f4df572797cb6.svg" /></div>
+</div>
+</section>
+</section>
+<section id="some-advice">
+<h2>Some advice<a class="headerlink" href="#some-advice" title="Link to this heading">#</a></h2>
+<p>Note that this tutorial only gives an minimal example of reflection fitting. It has no guarantee that the results shown here is the final best-fit. Due to the complexity of reflection models, the fitting can easily be traped in local minimums.</p>
+<p>It is recommended to run <code class="docutils literal notranslate"><span class="pre">steppar</span></code> on each parameter or even pairs of parameters to check for lower minimums. Running <code class="docutils literal notranslate"><span class="pre">error</span></code> command sometimes also helps to find better fit.</p>
+<p>Some guidelines to assess a fitting:</p>
+<ol class="arabic simple">
+<li><p>Are there any residuals in the ratio plot?</p></li>
+<li><p>Are all parameters constrained? How are the parameters degenerated, e.g., MCMC simulation?</p></li>
+<li><p>Are the parameters physically acceptable?</p></li>
+<li><p>Are the parameters consistent with literature? If not, why?</p></li>
+<li><p>Are the results model-dependent? For example, if changing flavors of the reflection model, how does the parameters change?</p></li>
+</ol>
 </section>
 </section>
 
@@ -1689,7 +1754,20 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-reflection-model">Full reflection model</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hands-on">Hands-on</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hands-on">Hands-on</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ingore-uneffective-energy-ranges">Ingore uneffective energy ranges</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-data">View the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-a-simple-continuum-model">Load a simple continuum model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perform-a-fit">Perform a fit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-residuals">View the residuals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-relxill-package">Load the RELXILL package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perform-a-reflection-fitting">Perform a reflection fitting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-model-and-residuals">View the model and residuals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-error-command">Run <code class="docutils literal notranslate"><span class="pre">error</span></code> command</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-advice">Some advice</a></li>
 </ul>
   </nav></div>
 
