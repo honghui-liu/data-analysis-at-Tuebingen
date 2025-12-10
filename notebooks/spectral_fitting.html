@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -579,10 +579,7 @@ Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
 
 Test statistic : Chi-Squared              1.495996e+06     using 541 bins.
  Null hypothesis probability of 0.000000e+00 with 537 degrees of freedom
- Current data
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> and model not fit yet.
+ Current data and model not fit yet.
 
 Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
 
@@ -779,7 +776,10 @@ Model Model Component  Parameter  Unit     Value
    9    3   compTT     norm                1.00000      +/-  0.0          
   10    4   gaussian   LineE      keV      6.50000      +/-  0.0          
   11    4   gaussian   Sigma      keV      0.100000     +/-  0.0          
-  12    4   gaussian   norm                1.00000      +/-  0.0          
+  12    4  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> gaussian   norm                1.00000      +/-  0.0          
 ________________________________________________________________________
 
 
@@ -1024,10 +1024,7 @@ Chi-Squared  |beta|/N    Lvl         2:Tin        3:norm          5:T0          
 726.9        380.989      -3       2.61840       3.79787      0.660119       3.87897      0.498763       6.00000       1.34029     0.0365952
 726.863      36.8728      -4       2.61942       3.79492      0.659646       3.87799      0.499273       6.00000       1.33828     0.0366215
 726.862      1.24817      -5       2.61933       3.79604      0.659614       3.87804      0.499261       6.00000       1.33797     0.0366135
-726.862      2.6477
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8       2       2.61933       3.79604      0.659614       3.87804      0.499261       6.00000       1.33797     0.0366135
+726.862      2.64778       2       2.61933       3.79604      0.659614       3.87804      0.499261       6.00000       1.33797     0.0366135
 ==========================================================================================
  Variances and Principal Axes
                  2        3        5        6        9       10       11       12  
@@ -1067,7 +1064,10 @@ Model Model Component  Parameter  Unit     Value
    7    3   compTT     taup                3.00000      frozen
    8    3   compTT     approx              1.00000      frozen
    9    3   compTT     norm                0.499261     +/-  8.20952E-03  
-  10    4   gaussian   LineE      keV      6.00000      +/-  0.171995     
+  10    4   gaussian   LineE      keV  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    6.00000      +/-  0.171995     
   11    4   gaussian   Sigma      keV      1.33797      +/-  5.81808E-02  
   12    4   gaussian   norm                3.66135E-02  +/-  3.69231E-03  
 ________________________________________________________________________
