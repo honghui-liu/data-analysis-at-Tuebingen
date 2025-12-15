@@ -633,10 +633,14 @@ ________________________________________________________________________
     <span class="c1">#ax.xaxis.set_major_formatter(matplotlib.ticker.ScalarFormatter())</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_formatter</span><span class="p">(</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">NullFormatter</span><span class="p">())</span>
     <span class="n">size</span><span class="o">=</span><span class="mi">18</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;minor&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;minor&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> 
+                   <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;minor&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> 
+                   <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> 
+                   <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;minor&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> 
+                   <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
 
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Energy&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="n">size</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
 
@@ -679,8 +683,8 @@ ________________________________________________________________________
         <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="n">infile</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
          
         
-        <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">xerr</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">yerr</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span>
-                               <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span> 
+        <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">xerr</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">yerr</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> 
+                       <span class="n">lw</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span> 
 
         <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Total&quot;</span><span class="p">)</span>
 
@@ -691,8 +695,8 @@ ________________________________________________________________________
 
         <span class="n">infile</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;temp-</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="n">nspec</span><span class="si">}</span><span class="s2">.txt&quot;</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="n">infile</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-        <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">xerr</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">yerr</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span>
-                               <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span> 
+        <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">xerr</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">yerr</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> 
+                       <span class="n">lw</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span> 
         
     <span class="n">plot_format</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -827,7 +831,10 @@ Net count rate (cts/s) for Spectrum:2  2.538e+02 +/- 1.115e-01 (99.7 % total)
   Noticed Channels:  1-370
   Telescope: NuSTAR Instrument: FPMB  Channel Type: PI
   Exposure Time: 2.05e+04 sec
- Using fit statistic: chi
+ Usi
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ng fit statistic: chi
  Using Background File                nu30101022002B01_bk.pha
   Background Exposure Time: 2.05e+04 sec
  Using Response (RMF) File            nu30101022002B01_sr.rmf for Source 1
@@ -897,7 +904,7 @@ Test statistic : Chi-Squared              2.010561e+10     using 544 bins.
 ***Warning: Fit is not current.
 </pre></div>
 </div>
-<img alt="../_images/8610627f090ccb7d4dc8b3ed845ef394b16fbdb85335c037726366e0965c1d02.svg" src="../_images/8610627f090ccb7d4dc8b3ed845ef394b16fbdb85335c037726366e0965c1d02.svg" /></div>
+<img alt="../_images/5f959338d21b8b8b7564dcde6a8a2a13bdd281d55067f08ef6fcd46d11574640.svg" src="../_images/5f959338d21b8b8b7564dcde6a8a2a13bdd281d55067f08ef6fcd46d11574640.svg" /></div>
 </div>
 </section>
 <section id="load-a-simple-continuum-model">
@@ -998,9 +1005,7 @@ Total fit statistic                         756779.9     with 538 d.o.f.
 Test statistic : Chi-Squared                756779.9     using 544 bins.
  Null hypothesis probability of 0.0e+00 with 538 degrees of freedom
  Current data and model not fit yet.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Solar Abundance Vector set to wilm:  Wilms, J., Allen, A. &amp; McCray, R. ApJ 542 914 (2000) (abundances are set to zero for those elements not included in the paper).
+ Solar Abundance Vector set to wilm:  Wilms, J., Allen, A. &amp; McCray, R. ApJ 542 914 (2000) (abundances are set to zero for those elements not included in the paper).
 
 Fit statistic  : Chi-Squared                376147.1     using 271 bins, spectrum 1, group 1.
                  Chi-Squared                375614.3     using 273 bins, spectrum 2, group 2.
@@ -1035,7 +1040,10 @@ Total fit statistic                         547598.5     with 538 d.o.f.
 
 Test statistic : Chi-Squared                547598.5     using 544 bins.
  Null hypothesis probability of 0.0e+00 with 538 degrees of freedom
- Current data and model not fit yet.
+ Current dat
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a and model not fit yet.
  renorm: no renormalization necessary
                                    Parameters
 Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm    5:PhoIndex    6:HighECut        7:norm      8:factor
@@ -1046,7 +1054,10 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm    5:PhoIndex    6:High
 116114       34982.6      -1       1.75893       25.5419       1.10402       19.4271      0.706510      0.965953
 72832.2      64571.9      -1       1.73058       31.0072       1.13051       23.8503      0.655759      0.967524
 43573.4      61922.3      -1       1.71046       35.4125       1.14912       29.1011      0.618058      0.968803
-32566.9      45127.8      -2       1.63075       46.9049       1.18619       40.0305      0.570724      0.971466
+32566.9    
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  45127.8      -2       1.63075       46.9049       1.18619       40.0305      0.570724      0.971466
 17737        138917       -3       1.52871       58.9393       1.24449       46.6699      0.671629      0.971576
 12313.3      77677.8      -3       1.50247       63.2269       1.29545       51.4560      0.758163      0.971530
 11716.5      25431.9      -3       1.48888       63.5938       1.33858       56.2380      0.835489      0.971470
@@ -1082,7 +1093,10 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm    5:PhoIndex    6:High
   -2.699e-03  -7.502e-01   1.809e-02   7.054e+00   4.645e-02   6.215e-06
   -3.337e-05  -3.847e-03   1.333e-04   4.645e-02   3.580e-04  -1.754e-07
   -2.467e-08  -9.063e-06   2.175e-08   6.215e-06  -1.754e-07   3.875e-07
-------------------------------------------------------------------------
+------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>------------------------------------------------
 
 ========================================================================
 Model constant&lt;1&gt;*TBabs&lt;2&gt;(diskbb&lt;3&gt; + cutoffpl&lt;4&gt;) Source No.: 1   Active/On
@@ -1135,7 +1149,7 @@ Test statistic : Chi-Squared                11003.95     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 43.792224447732075)
 </pre></div>
 </div>
-<img alt="../_images/109bb7c3464cfcf393daffd37c30d5e924ca11e2b180c679496e7bbda0872f85.svg" src="../_images/109bb7c3464cfcf393daffd37c30d5e924ca11e2b180c679496e7bbda0872f85.svg" /></div>
+<img alt="../_images/b4ea197ee00a3c17c9bd899282df5dff31dfa3a8825e968be73843ccc038a0cb.svg" src="../_images/b4ea197ee00a3c17c9bd899282df5dff31dfa3a8825e968be73843ccc038a0cb.svg" /></div>
 </div>
 <p>In the plot above, we can see that when fitting the data without a reflection model, there are large residuals around the <strong>iron line</strong> region (6-7 keV) and the <strong>Compton hump</strong> region (20-30 keV). To resolve these residuals, we should include a full reflection model (see below).</p>
 </section>
@@ -1255,10 +1269,7 @@ Test statistic : Chi-Squared              2.059537e+10     using 544 bins.
  Current data and model not fit yet.
 
 Fit statistic  : Chi-Squared              9.951712e+09     using 271 bins, spectrum 1, group 1.
-                 Ch
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i-Squared              9.897553e+09     using 273 bins, spectrum 2, group 2.
+                 Chi-Squared              9.897553e+09     using 273 bins, spectrum 2, group 2.
 Total fit statistic                       1.984926e+10     with 533 d.o.f.
 
 Test statistic : Chi-Squared              1.984926e+10     using 544 bins.
@@ -1299,7 +1310,10 @@ Model Model Component  Parameter  Unit     Value
    8    5   relxill    Index1              3.00000      +/-  0.0          
    9    5   relxill    Index2              3.00000      = p8
   10    5   relxill    Rbr                 15.0000      frozen
-  11    5   relxill    a                   0.998000     +/-  0.0          
+  11    5   relxill    a                   0.998000     +/-  0.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          
   12    5   relxill    Incl       deg      30.0000      +/-  0.0          
   13    5   relxill    Rin                 -1.00000     frozen
   14    5   relxill    Rout                400.000      frozen
@@ -1331,10 +1345,7 @@ Model Model Component  Parameter  Unit     Value
   39    5   relxill    Afe                 1.00000      = p18
   40    5   relxill    Ecut       keV      300.000      = p19
   41    5   relxill    refl_frac           -1.00000     = p20
-  42    5   relxill    norm                1.0000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      = p21
+  42    5   relxill    norm                1.00000      = p21
 ________________________________________________________________________
 </pre></div>
 </div>
@@ -1395,7 +1406,10 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:In
 10252.1      5540.5       -1       1.45605       7.22509      0.636152       3.74083      0.998000       54.2820       1.92984       3.30174      0.922919       1000.00     0.0954821      0.971523
 9746.6       2973.56      -1       1.43307       9.21337      0.649973       3.78797      0.998000       54.9556       1.92229       3.30312      0.935069       1000.00     0.0951597      0.971507
 9307.66      909.111      -1       1.41593       11.2211      0.662910       3.82751      0.998000       55.6208       1.91540       3.30408      0.941392       1000.00     0.0948461      0.971527
-9264.45      855.925      -2       1.29343       21.7164      0.766017       3.94203      0.998000       58.6066       1.89180       3.29845      0.932441       1000.00     0.0927556      0.971644
+9264.45      855.925      -2       1.29343       21.7164      0.766017       3.94203      0.998000       58.6066       1.89180       3.29845      0.932441       1000.00     0.09275
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>56      0.971644
 7029.07      77769.6      -2       1.25753       33.1717      0.851843       3.90892      0.998000       60.3175       1.88436       3.28657      0.903046       1000.00     0.0911384      0.971795
 6613.3       17299.2      -3       1.09759       48.2793       1.50497       4.19803      0.998000       61.9731       1.92594       3.20036       1.01654       1000.00     0.0832335      0.971879
 4869.98      28650.1      -2       1.04175       66.5281       1.57949       4.62935      0.998000       61.1392       1.91274       3.21330       2.00145       1000.00     0.0827776      0.972002
@@ -1447,7 +1461,10 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:In
 776.61       61.1541      -3      0.509676       5107.62       2.47033       2.69734      0.998000       32.1957       1.90480       3.25515       4.60828       1000.00     0.0259797      0.972154
 770.314      4798.09      -4      0.520185       4421.73       2.45019       2.65082      0.998000       31.0568       1.90178       3.26431       4.55292       1000.00     0.0252060      0.972159
 766.295      3530.42      -5      0.521616       4392.81       2.44918       2.64014      0.998000       30.5865       1.90128       3.26594       4.55168       1000.00     0.0249752      0.972158
-766.279      2.50699      -6      0.521913       4375.81       2.44990       2.63873      0.998000       30.5174       1.90131       3.26575       4.55245       1000.00     0.0249473      0.972154
+766.279      2.50699      -6      0.521913       4375.81       2.44990       2.63873      0.998000       30.5174       1.90131       3.26575       4.55245       1000.00     0.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>249473      0.972154
 766.277      16.8319      -7      0.521946       4374.02       2.45024       2.63912      0.998000       30.5352       1.90136       3.26553       4.55265       1000.00     0.0249583      0.972154
 766.266      6.75624       0      0.521946       4374.03       2.45023       2.63919      0.997671       30.5364       1.90136       3.26553       4.55261       999.282     0.0249580      0.972153
 766.258      87.8721       0      0.521946       4374.08       2.45023       2.63931      0.997455       30.5393       1.90136       3.26552       4.55254       998.945     0.0249576      0.972152
@@ -1493,7 +1510,10 @@ Model Model Component  Parameter  Unit     Value
    1    1   constant   factor              1.00000      frozen
    2    2   TBabs      nH         10^22    0.600000     frozen
    3    3   diskbb     Tin        keV      0.521946     +/-  1.93011E-02  
-   4    3   diskbb     norm                4374.08      +/-  999.262      
+   4    3   diskbb     norm                4374.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8      +/-  999.262      
    5    4   cutoffpl   PhoIndex            1.90136      = p16
    6    4   cutoffpl   HighECut   keV      998.945      = p19
    7    4   cutoffpl   norm                2.45023      +/-  0.165726     
@@ -1564,7 +1584,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/e2139d8583777372af256bc8ec9e72a8514c9203cd18088b163b7f1f00d4fa6b.svg" src="../_images/e2139d8583777372af256bc8ec9e72a8514c9203cd18088b163b7f1f00d4fa6b.svg" /></div>
+<img alt="../_images/ba40045405a3a9d0044a62c9973461bd26a5fb261d31112c9b7b64482dda1db9.svg" src="../_images/ba40045405a3a9d0044a62c9973461bd26a5fb261d31112c9b7b64482dda1db9.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1581,7 +1601,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/665b423866a3a535721f91e7396a52262563e394fb6a8785c00f1f3494d607e0.svg" src="../_images/665b423866a3a535721f91e7396a52262563e394fb6a8785c00f1f3494d607e0.svg" /></div>
+<img alt="../_images/1efdfc0e9253e0280ee183185479441101012ced947f62236669c2d6ff6959fe.svg" src="../_images/1efdfc0e9253e0280ee183185479441101012ced947f62236669c2d6ff6959fe.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1630,7 +1650,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/8e4f2cb6916c935ec5e9d2b0bf244559894a59286d6523523c6c5ebe4bcfdcab.svg" src="../_images/8e4f2cb6916c935ec5e9d2b0bf244559894a59286d6523523c6c5ebe4bcfdcab.svg" /></div>
+<img alt="../_images/11596afddd9dc7e7106d5337ff56ffed7956c74f17e47836073d17f27a0c8e49.svg" src="../_images/11596afddd9dc7e7106d5337ff56ffed7956c74f17e47836073d17f27a0c8e49.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1647,7 +1667,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/b0276665524848339c0e07f98508173ca88c2eea8aa5e95956306d510421aaa9.svg" src="../_images/b0276665524848339c0e07f98508173ca88c2eea8aa5e95956306d510421aaa9.svg" /></div>
+<img alt="../_images/a1e8f4f097258d42b08b33c1cdbfbaff0e77aa810185bec7162ce834ee9060c6.svg" src="../_images/a1e8f4f097258d42b08b33c1cdbfbaff0e77aa810185bec7162ce834ee9060c6.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1664,7 +1684,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Plot command list is now empty
 </pre></div>
 </div>
-<img alt="../_images/64f9be165ff526ebbbf7fc8405918404e3800ed2b79a0012cd78431003d63775.svg" src="../_images/64f9be165ff526ebbbf7fc8405918404e3800ed2b79a0012cd78431003d63775.svg" /></div>
+<img alt="../_images/20a5c4ba0724bc8f8403e4152bd38ec47f2ffc5d25bb93e51255421796c9f456.svg" src="../_images/20a5c4ba0724bc8f8403e4152bd38ec47f2ffc5d25bb93e51255421796c9f456.svg" /></div>
 </div>
 </section>
 </section>

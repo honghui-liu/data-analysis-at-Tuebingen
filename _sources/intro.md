@@ -37,6 +37,8 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - Next: Pulsar timing (Part II)
     - Lecturers: Menglei Zhou & Honghui Liu
     - Phase-resolved spectroscopy, phase-resolved X-ray polarimetric analysis, RVM model for X-ray pulsars 
+- Next: Statistics in X-ray data analysis
+    - Maximum likelihood estimation, chi-squared and C-stat, AICs, DIC
 - Next: Walkthrough of XMM-Newton data analysis
 - Next: Walkthrough of Insight-HXMT data analysis
 - Next: Data analysis for extended sources (e.g., SNR, bubbles, Galactic center, galaxy clusters)
@@ -46,7 +48,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - Next: Coded masking
 - Next: How to write an observational proposal?
 
-*Updated on 03 Dec 2025.*
+*Updated on 15 Dec 2025.*
 
 ## Tutorials & scripts
 
