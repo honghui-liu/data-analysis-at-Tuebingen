@@ -29,6 +29,7 @@ In November 2025, the Institute for Astronomy and Astrophysics at Eberhard Karls
 
 The goal of this workshop is to provide instruction on data reduction and analysis for data from X-ray missions, including NuSTAR, NICER, IXPE, Insight-HXMT, XMM-Newton, Chandra, XRISM. It will also contain lectures about X-ray spectral fitting, timing techniques and polarimetry. No prior experience is required. The workshop will start from the ground level and is relevant for anyone interested in skills of X-ray data reduction and analysis. 
 
+
 ### When & Where?
 
 The workshop will usually be held **weekly** in the afternoon of **Wednesday from 16:00 to 18:00 at A210**, Sand 1, 72076, Tuebingen, Germany. The agenda is below and will be kept updated.
@@ -39,15 +40,45 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Lecturers: Menglei Zhou & Honghui Liu
     - Setting up HEASOFT, calibration data base, dealing with NuSTAR data (spectra and lightcurve), data fitting in XSPEC.
 - 12.11.2025: Walkthrough of NICER data analysis + Basic concepts of spectral fitting (Part II)
+    - Lecturers: Menglei Zhou & Honghui Liu
+    - NICER pipelines, background filtering, simulating spectra in XSPEC.
 - 19.11.2025: Timing analysis — from light curves to power spectra
+    - Lecturers: Menglei Zhou & Honghui Liu
+    - NICER event file, light curves, Fast Fourier Transformation, power density spectra, quasi-periodic oscillations, root-mean-squared (RMS), phase lag and time lag.
 - 26.11.2025: Polarization analysis — handling IXPE data
+    - Lecturers: Menglei Zhou & Honghui Liu
+    - Detection principles, statistics (STOKES parameters), reduction of IXPE data, background treatment, (un-)weighted analysis, PCUBE, XSPEC fitting (POLCONST, POLLIN, etc), MDP99.
+- 03.12.2025: Pulsar timing (Part I)
+    - Lecturers: Youli Tuo & Menglei Zhou & Honghui Liu
+    - Barycenter correction, binary correction, pulse search, lightcurve folding (pulse profiles), phase-resolved spectroscopy
+- 10.12.2025: (1) **Talk by Tarjar Risstad:** Dark matter search with eROSITA data; (2) X-ray reflection spectroscopy
+    - Lecturers: Honghui Liu & Menglei Zhou
 
-- Next: Pulsar timing
-- Next: Introduction to reflection modeling — the relxill family
+**Christmas break until 13.01.2026**
+
+- Next: Pulsar timing (Part II)
+    - Lecturers: Menglei Zhou & Honghui Liu
+    - Phase-resolved spectroscopy, phase-resolved X-ray polarimetric analysis, RVM model for X-ray pulsars 
+- Next: Statistics in X-ray data analysis
+    - Maximum likelihood estimation, chi-squared and C-stat, AICs, DIC
 - Next: Walkthrough of XMM-Newton data analysis
 - Next: Walkthrough of Insight-HXMT data analysis
-- Next: Bayesian analysis
-*Updated on 30 Oct 2025.*
+- Next: Data analysis for extended sources (e.g., SNR, bubbles, Galactic center, galaxy clusters)
+- Next: MCMC simulations and Bayesian analysis with XSPEC
+- Next: High-resolution X-ray spectroscopy (XMM/RGS, Chandra/HETG, XRISM)
+- Next: Multi-wavelength analysis
+- Next: Coded masking
+- Next: How to write an observational proposal?
+
+*Updated on 15 Dec 2025.*
+
+### Tutorials & scripts
+
+See tutorials below for data reduction and analysis.
+
+```{tableofcontents}
+```
+
 
 ### Contact
 Dr. Honghui Liu: honghui.liu**at**uni-tuebingen.de;
