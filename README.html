@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -187,9 +187,10 @@
 <li class="toctree-l1"><a class="reference internal" href="notebooks/Spectral_simulation.html"><strong>Simulating spectra with PyXSPEC</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/Timing_analysis.html"><strong>Timing Analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/Polarimetirc_analysis.html"><strong>Polarimetric Analysis Walkthrough</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/pulsar_timing.html">Pulsar Timing with HENDRICS, Stingray, and PINT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/pulsar_timing.html"><strong>Pulsar Timing with HENDRICS, Stingray, and PINT</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/Reflection_models.html"><strong>X-ray Reflection spectroscopy</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/eROSITA_example.html"><strong>eRosita Data Analysis Workflow</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Statistics.html"><strong>Statistics for X-ray data analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="about.html">About This Website</a></li>
 </ul>
 
@@ -392,6 +393,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what">What?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-where">When &amp; Where?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorials-scripts">Tutorials &amp; scripts</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contact">Contact</a></li>
 </ul>
 </li>
@@ -451,16 +453,63 @@ document.write(`
 <li><p>Setting up HEASOFT, calibration data base, dealing with NuSTAR data (spectra and lightcurve), data fitting in XSPEC.</p></li>
 </ul>
 </li>
-<li><p>12.11.2025: Walkthrough of NICER data analysis + Basic concepts of spectral fitting (Part II)</p></li>
-<li><p>19.11.2025: Timing analysis — from light curves to power spectra</p></li>
-<li><p>26.11.2025: Polarization analysis — handling IXPE data</p></li>
-<li><p>Next: Pulsar timing</p></li>
-<li><p>Next: Introduction to reflection modeling — the relxill family</p></li>
+<li><p>12.11.2025: Walkthrough of NICER data analysis + Basic concepts of spectral fitting (Part II)</p>
+<ul>
+<li><p>Lecturers: Menglei Zhou &amp; Honghui Liu</p></li>
+<li><p>NICER pipelines, background filtering, simulating spectra in XSPEC.</p></li>
+</ul>
+</li>
+<li><p>19.11.2025: Timing analysis — from light curves to power spectra</p>
+<ul>
+<li><p>Lecturers: Menglei Zhou &amp; Honghui Liu</p></li>
+<li><p>NICER event file, light curves, Fast Fourier Transformation, power density spectra, quasi-periodic oscillations, root-mean-squared (RMS), phase lag and time lag.</p></li>
+</ul>
+</li>
+<li><p>26.11.2025: Polarization analysis — handling IXPE data</p>
+<ul>
+<li><p>Lecturers: Menglei Zhou &amp; Honghui Liu</p></li>
+<li><p>Detection principles, statistics (STOKES parameters), reduction of IXPE data, background treatment, (un-)weighted analysis, PCUBE, XSPEC fitting (POLCONST, POLLIN, etc), MDP99.</p></li>
+</ul>
+</li>
+<li><p>03.12.2025: Pulsar timing (Part I)</p>
+<ul>
+<li><p>Lecturers: Youli Tuo &amp; Menglei Zhou &amp; Honghui Liu</p></li>
+<li><p>Barycenter correction, binary correction, pulse search, lightcurve folding (pulse profiles), phase-resolved spectroscopy</p></li>
+</ul>
+</li>
+<li><p>10.12.2025: (1) <strong>Talk by Tarjar Risstad:</strong> Dark matter search with eROSITA data; (2) X-ray reflection spectroscopy</p>
+<ul>
+<li><p>Lecturers: Honghui Liu &amp; Menglei Zhou</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Christmas break until 13.01.2026</strong></p>
+<ul class="simple">
+<li><p>Next: Pulsar timing (Part II)</p>
+<ul>
+<li><p>Lecturers: Menglei Zhou &amp; Honghui Liu</p></li>
+<li><p>Phase-resolved spectroscopy, phase-resolved X-ray polarimetric analysis, RVM model for X-ray pulsars</p></li>
+</ul>
+</li>
+<li><p>Next: Statistics in X-ray data analysis</p>
+<ul>
+<li><p>Maximum likelihood estimation, chi-squared and C-stat, AICs, DIC</p></li>
+</ul>
+</li>
 <li><p>Next: Walkthrough of XMM-Newton data analysis</p></li>
 <li><p>Next: Walkthrough of Insight-HXMT data analysis</p></li>
-<li><p>Next: Bayesian analysis
-<em>Updated on 30 Oct 2025.</em></p></li>
+<li><p>Next: Data analysis for extended sources (e.g., SNR, bubbles, Galactic center, galaxy clusters)</p></li>
+<li><p>Next: MCMC simulations and Bayesian analysis with XSPEC</p></li>
+<li><p>Next: High-resolution X-ray spectroscopy (XMM/RGS, Chandra/HETG, XRISM)</p></li>
+<li><p>Next: Multi-wavelength analysis</p></li>
+<li><p>Next: Coded masking</p></li>
+<li><p>Next: How to write an observational proposal?</p></li>
 </ul>
+<p><em>Updated on 15 Dec 2025.</em></p>
+</section>
+<section id="tutorials-scripts">
+<h3>Tutorials &amp; scripts<a class="headerlink" href="#tutorials-scripts" title="Link to this heading">#</a></h3>
+<p>See tutorials below for data reduction and analysis.</p>
 </section>
 <section id="contact">
 <h3>Contact<a class="headerlink" href="#contact" title="Link to this heading">#</a></h3>
@@ -523,6 +572,7 @@ Dr. Youli Tuo: youli.tuo<strong>at</strong>astro.uni-tuebingen.de.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what">What?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-where">When &amp; Where?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorials-scripts">Tutorials &amp; scripts</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contact">Contact</a></li>
 </ul>
 </li>

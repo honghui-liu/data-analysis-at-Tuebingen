@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -189,9 +189,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Spectral_simulation.html"><strong>Simulating spectra with PyXSPEC</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Timing_analysis.html"><strong>Timing Analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Polarimetirc_analysis.html"><strong>Polarimetric Analysis Walkthrough</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="pulsar_timing.html">Pulsar Timing with HENDRICS, Stingray, and PINT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pulsar_timing.html"><strong>Pulsar Timing with HENDRICS, Stingray, and PINT</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>X-ray Reflection spectroscopy</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="eROSITA_example.html"><strong>eRosita Data Analysis Workflow</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Statistics.html"><strong>Statistics for X-ray data analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About This Website</a></li>
 </ul>
 
@@ -904,7 +905,7 @@ Test statistic : Chi-Squared              2.010561e+10     using 544 bins.
 ***Warning: Fit is not current.
 </pre></div>
 </div>
-<img alt="../_images/5f959338d21b8b8b7564dcde6a8a2a13bdd281d55067f08ef6fcd46d11574640.svg" src="../_images/5f959338d21b8b8b7564dcde6a8a2a13bdd281d55067f08ef6fcd46d11574640.svg" /></div>
+<img alt="../_images/9298198b295b8ac3e6fe0184592d382328837f4b0c0cca5c5d099a924b59648a.svg" src="../_images/9298198b295b8ac3e6fe0184592d382328837f4b0c0cca5c5d099a924b59648a.svg" /></div>
 </div>
 </section>
 <section id="load-a-simple-continuum-model">
@@ -1005,7 +1006,10 @@ Total fit statistic                         756779.9     with 538 d.o.f.
 Test statistic : Chi-Squared                756779.9     using 544 bins.
  Null hypothesis probability of 0.0e+00 with 538 degrees of freedom
  Current data and model not fit yet.
- Solar Abundance Vector set to wilm:  Wilms, J., Allen, A. &amp; McCray, R. ApJ 542 914 (2000) (abundances are set to zero for those elements not included in the paper).
+ Solar Abundance Vector set to wilm:  Wilms, J., Allen, A. &amp; McCray, R. ApJ 542 914 (2000) (abundances are set to zero for those elements not 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>included in the paper).
 
 Fit statistic  : Chi-Squared                376147.1     using 271 bins, spectrum 1, group 1.
                  Chi-Squared                375614.3     using 273 bins, spectrum 2, group 2.
@@ -1024,7 +1028,10 @@ Total fit statistic                         751761.4     with 538 d.o.f.
 Test statistic : Chi-Squared                751761.4     using 544 bins.
  Null hypothesis probability of 0.0e+00 with 538 degrees of freedom
  Current data and model not fit yet.
-Test statistic is set to: Chi-Squared
+Test statisti
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c is set to: Chi-Squared
 
 Fit statistic  : Chi-Squared                376147.1     using 271 bins, spectrum 1, group 1.
                  Chi-Squared                375614.3     using 273 bins, spectrum 2, group 2.
@@ -1040,10 +1047,7 @@ Total fit statistic                         547598.5     with 538 d.o.f.
 
 Test statistic : Chi-Squared                547598.5     using 544 bins.
  Null hypothesis probability of 0.0e+00 with 538 degrees of freedom
- Current dat
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a and model not fit yet.
+ Current data and model not fit yet.
  renorm: no renormalization necessary
                                    Parameters
 Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm    5:PhoIndex    6:HighECut        7:norm      8:factor
@@ -1054,10 +1058,7 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm    5:PhoIndex    6:High
 116114       34982.6      -1       1.75893       25.5419       1.10402       19.4271      0.706510      0.965953
 72832.2      64571.9      -1       1.73058       31.0072       1.13051       23.8503      0.655759      0.967524
 43573.4      61922.3      -1       1.71046       35.4125       1.14912       29.1011      0.618058      0.968803
-32566.9    
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  45127.8      -2       1.63075       46.9049       1.18619       40.0305      0.570724      0.971466
+32566.9      45127.8      -2       1.63075       46.9049       1.18619       40.0305      0.570724      0.971466
 17737        138917       -3       1.52871       58.9393       1.24449       46.6699      0.671629      0.971576
 12313.3      77677.8      -3       1.50247       63.2269       1.29545       51.4560      0.758163      0.971530
 11716.5      25431.9      -3       1.48888       63.5938       1.33858       56.2380      0.835489      0.971470
@@ -1093,10 +1094,7 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm    5:PhoIndex    6:High
   -2.699e-03  -7.502e-01   1.809e-02   7.054e+00   4.645e-02   6.215e-06
   -3.337e-05  -3.847e-03   1.333e-04   4.645e-02   3.580e-04  -1.754e-07
   -2.467e-08  -9.063e-06   2.175e-08   6.215e-06  -1.754e-07   3.875e-07
-------------------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>------------------------------------------------
+------------------------------------------------------------------------
 
 ========================================================================
 Model constant&lt;1&gt;*TBabs&lt;2&gt;(diskbb&lt;3&gt; + cutoffpl&lt;4&gt;) Source No.: 1   Active/On
@@ -1149,7 +1147,7 @@ Test statistic : Chi-Squared                11003.95     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 43.792224447732075)
 </pre></div>
 </div>
-<img alt="../_images/b4ea197ee00a3c17c9bd899282df5dff31dfa3a8825e968be73843ccc038a0cb.svg" src="../_images/b4ea197ee00a3c17c9bd899282df5dff31dfa3a8825e968be73843ccc038a0cb.svg" /></div>
+<img alt="../_images/0cdd8f1f9705cbbcf26310b4501b74cb8bd9463c86ee13e79ead4253901f5615.svg" src="../_images/0cdd8f1f9705cbbcf26310b4501b74cb8bd9463c86ee13e79ead4253901f5615.svg" /></div>
 </div>
 <p>In the plot above, we can see that when fitting the data without a reflection model, there are large residuals around the <strong>iron line</strong> region (6-7 keV) and the <strong>Compton hump</strong> region (20-30 keV). To resolve these residuals, we should include a full reflection model (see below).</p>
 </section>
@@ -1345,7 +1343,10 @@ Model Model Component  Parameter  Unit     Value
   39    5   relxill    Afe                 1.00000      = p18
   40    5   relxill    Ecut       keV      300.000      = p19
   41    5   relxill    refl_frac           -1.00000     = p20
-  42    5   relxill    norm                1.00000      = p21
+  42    5   relxill    norm                1.0000
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      = p21
 ________________________________________________________________________
 </pre></div>
 </div>
@@ -1380,7 +1381,10 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:In
 34879.9      153370       -1       2.30463       2.47087      0.217027       3.25213      0.998000       39.1647       2.01640       3.15826      0.791231       761.959     0.0986573      0.973348
 26749.7      177021        0       2.28580       2.42519      0.220750       3.27480      0.998000       39.7586       2.01616       3.15997      0.783623       952.765     0.0985112      0.971965
 25975.8      10339.7       0       2.27753       2.43427      0.231466       3.27689      0.998000       40.0920       2.01461       3.16383      0.774641       989.051     0.0985884      0.972315
-25569.6      44506.6       0       2.26673       2.43258      0.239995       3.28073      0.998000       40.4616       2.01339       3.16717      0.769645       998.158     0.0986183      0.972281
+25569.6      44506.6       0       2.26673       2.43258      0.239995       3.28073      0.998000       40.4616       2.01339       3.16717      0.769645       998.158     0.0986183
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      0.972281
 25156.9      60833         0       2.25451       2.42452      0.247408       3.28545      0.998000       40.8411       2.01228       3.17016      0.766382       999.120     0.0986258      0.972132
 24657.4      67010.7       0       2.24158       2.41332      0.254295       3.29036      0.998000       41.2344       2.01117       3.17294      0.763835       999.641     0.0986254      0.971989
 24145.1      67944         0       2.22830       2.40096      0.260872       3.29515      0.998000       41.5968       2.01003       3.17558      0.761759       999.911     0.0986221      0.971879
@@ -1406,10 +1410,7 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:In
 10252.1      5540.5       -1       1.45605       7.22509      0.636152       3.74083      0.998000       54.2820       1.92984       3.30174      0.922919       1000.00     0.0954821      0.971523
 9746.6       2973.56      -1       1.43307       9.21337      0.649973       3.78797      0.998000       54.9556       1.92229       3.30312      0.935069       1000.00     0.0951597      0.971507
 9307.66      909.111      -1       1.41593       11.2211      0.662910       3.82751      0.998000       55.6208       1.91540       3.30408      0.941392       1000.00     0.0948461      0.971527
-9264.45      855.925      -2       1.29343       21.7164      0.766017       3.94203      0.998000       58.6066       1.89180       3.29845      0.932441       1000.00     0.09275
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>56      0.971644
+9264.45      855.925      -2       1.29343       21.7164      0.766017       3.94203      0.998000       58.6066       1.89180       3.29845      0.932441       1000.00     0.0927556      0.971644
 7029.07      77769.6      -2       1.25753       33.1717      0.851843       3.90892      0.998000       60.3175       1.88436       3.28657      0.903046       1000.00     0.0911384      0.971795
 6613.3       17299.2      -3       1.09759       48.2793       1.50497       4.19803      0.998000       61.9731       1.92594       3.20036       1.01654       1000.00     0.0832335      0.971879
 4869.98      28650.1      -2       1.04175       66.5281       1.57949       4.62935      0.998000       61.1392       1.91274       3.21330       2.00145       1000.00     0.0827776      0.972002
@@ -1461,10 +1462,7 @@ Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:In
 776.61       61.1541      -3      0.509676       5107.62       2.47033       2.69734      0.998000       32.1957       1.90480       3.25515       4.60828       1000.00     0.0259797      0.972154
 770.314      4798.09      -4      0.520185       4421.73       2.45019       2.65082      0.998000       31.0568       1.90178       3.26431       4.55292       1000.00     0.0252060      0.972159
 766.295      3530.42      -5      0.521616       4392.81       2.44918       2.64014      0.998000       30.5865       1.90128       3.26594       4.55168       1000.00     0.0249752      0.972158
-766.279      2.50699      -6      0.521913       4375.81       2.44990       2.63873      0.998000       30.5174       1.90131       3.26575       4.55245       1000.00     0.0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>249473      0.972154
+766.279      2.50699      -6      0.521913       4375.81       2.44990       2.63873      0.998000       30.5174       1.90131       3.26575       4.55245       1000.00     0.0249473      0.972154
 766.277      16.8319      -7      0.521946       4374.02       2.45024       2.63912      0.998000       30.5352       1.90136       3.26553       4.55265       1000.00     0.0249583      0.972154
 766.266      6.75624       0      0.521946       4374.03       2.45023       2.63919      0.997671       30.5364       1.90136       3.26553       4.55261       999.282     0.0249580      0.972153
 766.258      87.8721       0      0.521946       4374.08       2.45023       2.63931      0.997455       30.5393       1.90136       3.26552       4.55254       998.945     0.0249576      0.972152
@@ -1510,10 +1508,7 @@ Model Model Component  Parameter  Unit     Value
    1    1   constant   factor              1.00000      frozen
    2    2   TBabs      nH         10^22    0.600000     frozen
    3    3   diskbb     Tin        keV      0.521946     +/-  1.93011E-02  
-   4    3   diskbb     norm                4374.0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8      +/-  999.262      
+   4    3   diskbb     norm                4374.08      +/-  999.262      
    5    4   cutoffpl   PhoIndex            1.90136      = p16
    6    4   cutoffpl   HighECut   keV      998.945      = p19
    7    4   cutoffpl   norm                2.45023      +/-  0.165726     
@@ -1584,7 +1579,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/ba40045405a3a9d0044a62c9973461bd26a5fb261d31112c9b7b64482dda1db9.svg" src="../_images/ba40045405a3a9d0044a62c9973461bd26a5fb261d31112c9b7b64482dda1db9.svg" /></div>
+<img alt="../_images/9be47186275db3af9b77ae031e40a83626790d101be781bb2a9fff3840b9fad4.svg" src="../_images/9be47186275db3af9b77ae031e40a83626790d101be781bb2a9fff3840b9fad4.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1601,7 +1596,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/1efdfc0e9253e0280ee183185479441101012ced947f62236669c2d6ff6959fe.svg" src="../_images/1efdfc0e9253e0280ee183185479441101012ced947f62236669c2d6ff6959fe.svg" /></div>
+<img alt="../_images/1d71497c9a539b7ed75a9d410a060c023b720a8b0995952facf5ef3eaf5a4b48.svg" src="../_images/1d71497c9a539b7ed75a9d410a060c023b720a8b0995952facf5ef3eaf5a4b48.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1650,7 +1645,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/11596afddd9dc7e7106d5337ff56ffed7956c74f17e47836073d17f27a0c8e49.svg" src="../_images/11596afddd9dc7e7106d5337ff56ffed7956c74f17e47836073d17f27a0c8e49.svg" /></div>
+<img alt="../_images/33246e59898a45c31041e67b4a67412cc218eb8543772e0a015f21f08ab555ab.svg" src="../_images/33246e59898a45c31041e67b4a67412cc218eb8543772e0a015f21f08ab555ab.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1667,7 +1662,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/a1e8f4f097258d42b08b33c1cdbfbaff0e77aa810185bec7162ce834ee9060c6.svg" src="../_images/a1e8f4f097258d42b08b33c1cdbfbaff0e77aa810185bec7162ce834ee9060c6.svg" /></div>
+<img alt="../_images/6a497e0d2dd7aba7bbdc3dcc5ac41d746f3db76e9a4939c0f740b25e5da806f0.svg" src="../_images/6a497e0d2dd7aba7bbdc3dcc5ac41d746f3db76e9a4939c0f740b25e5da806f0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1684,7 +1679,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Plot command list is now empty
 </pre></div>
 </div>
-<img alt="../_images/20a5c4ba0724bc8f8403e4152bd38ec47f2ffc5d25bb93e51255421796c9f456.svg" src="../_images/20a5c4ba0724bc8f8403e4152bd38ec47f2ffc5d25bb93e51255421796c9f456.svg" /></div>
+<img alt="../_images/71d774bb80d3f83cc417b250505af5596482b0cfe2e8a57973fe96bcfb71e728.svg" src="../_images/71d774bb80d3f83cc417b250505af5596482b0cfe2e8a57973fe96bcfb71e728.svg" /></div>
 </div>
 </section>
 </section>
@@ -1739,7 +1734,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Pulsar Timing with HENDRICS, Stingray, and PINT</p>
+        <p class="prev-next-title"><strong>Pulsar Timing with HENDRICS, Stingray, and PINT</strong></p>
       </div>
     </a>
     <a class="right-next"

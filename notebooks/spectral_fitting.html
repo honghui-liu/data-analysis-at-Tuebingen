@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -189,9 +189,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Spectral_simulation.html"><strong>Simulating spectra with PyXSPEC</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Timing_analysis.html"><strong>Timing Analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Polarimetirc_analysis.html"><strong>Polarimetric Analysis Walkthrough</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="pulsar_timing.html">Pulsar Timing with HENDRICS, Stingray, and PINT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pulsar_timing.html"><strong>Pulsar Timing with HENDRICS, Stingray, and PINT</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Reflection_models.html"><strong>X-ray Reflection spectroscopy</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="eROSITA_example.html"><strong>eRosita Data Analysis Workflow</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Statistics.html"><strong>Statistics for X-ray data analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About This Website</a></li>
 </ul>
 
@@ -575,8 +576,9 @@ Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
 Test statistic : Chi-Squared              1.495996e+06     using 541 bins.
  Null hypothesis probability of 0.000000e+00 with 537 degrees of freedom
  Current data and model not fit yet.
-
-Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
 
 Test statistic : Chi-Squared              1.495996e+06     using 541 bins.
  Null hypothesis probability of 0.000000e+00 with 537 degrees of freedom
@@ -678,7 +680,10 @@ Chi-Squared  |beta|/N    Lvl          1:nH
 91519        4368.87       0       2.00000       2.97152       10.0000       20.1854
 85875.3      4358.25      -1       2.00000       2.90704       10.0000       18.4573
 83739.8      50136.3       0       2.00000       2.90612       10.0000       18.2317
-82861.4      32331.6       0       2.00000       2.90364       10.0000       18.0722
+82861.4      32331.6       0       2.00000       2.90364     
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  10.0000       18.0722
 82376.9      25777.9       0       2.00000       2.90055       10.0000       17.9435
 82049.8      23933.3       0       2.00000       2.89727       10.0000       17.8303
 79847.3      36048.7      -1       2.00000       2.88533       10.0000       17.1118
@@ -777,10 +782,7 @@ Model Model Component  Parameter  Unit     Value
    9    3   compTT     norm                1.00000      +/-  0.0          
   10    4   gaussian   LineE      keV      6.50000      +/-  0.0          
   11    4   gaussian   Sigma      keV      0.100000     +/-  0.0          
-  12    4  
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> gaussian   norm                1.00000      +/-  0.0          
+  12    4   gaussian   norm                1.00000      +/-  0.0          
 ________________________________________________________________________
 
 
@@ -1022,10 +1024,7 @@ Chi-Squared  |beta|/N    Lvl         2:Tin        3:norm          5:T0          
 726.9        380.989      -3       2.61840       3.79787      0.660119       3.87897      0.498763       6.00000       1.34029     0.0365952
 726.863      36.8728      -4       2.61942       3.79492      0.659646       3.87799      0.499273       6.00000       1.33828     0.0366215
 726.862      1.24817      -5       2.61933       3.79604      0.659614       3.87804      0.499261       6.00000       1.33797     0.0366135
-726.862      2.6477
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8       2       2.61933       3.79604      0.659614       3.87804      0.499261       6.00000       1.33797     0.0366135
+726.862      2.64778       2       2.61933       3.79604      0.659614       3.87804      0.499261       6.00000       1.33797     0.0366135
 ==========================================================================================
  Variances and Principal Axes
                  2        3        5        6        9       10       11       12  
@@ -1049,10 +1048,7 @@ Chi-Squared  |beta|/N    Lvl         2:Tin        3:norm          5:T0          
    2.797e-04  -1.935e-03  -1.398e-05  -2.301e-04   6.740e-05  -5.504e-04   2.609e-04   1.934e-05
   -1.590e-03   4.779e-03   1.413e-03  -2.168e-04  -5.504e-04   2.958e-02  -9.221e-03  -5.920e-04
    9.252e-04  -5.242e-03  -3.879e-04  -2.934e-04   2.609e-04  -9.221e-03   3.385e-03   2.060e-04
-   6.731e-05  -3.787e-04  -2.680e-05  -2.500e-05
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   1.934e-05  -5.920e-04   2.060e-04   1.363e-05
+   6.731e-05  -3.787e-04  -2.680e-05  -2.500e-05   1.934e-05  -5.920e-04   2.060e-04   1.363e-05
 ------------------------------------------------------------------------------------------------
 
 ========================================================================
