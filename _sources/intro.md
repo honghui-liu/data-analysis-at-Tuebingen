@@ -34,11 +34,12 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 
 **Christmas break until 13.01.2026**
 
+- 14.01.2026: Statistics in X-ray data analysis
+    - Maximum likelihood estimation, chi-squared and C-stat, confidence intervals, ftest, line detection, AICs, BIC
+    - Lecturers: Honghui Liu & Menglei Zhou
 - Next: Pulsar timing (Part II)
     - Lecturers: Menglei Zhou & Honghui Liu
     - Phase-resolved spectroscopy, phase-resolved X-ray polarimetric analysis, RVM model for X-ray pulsars 
-- Next: Statistics in X-ray data analysis
-    - Maximum likelihood estimation, chi-squared and C-stat, AICs, DIC
 - Next: Walkthrough of XMM-Newton data analysis
 - Next: Walkthrough of Insight-HXMT data analysis
 - Next: Data analysis for extended sources (e.g., SNR, bubbles, Galactic center, galaxy clusters)
