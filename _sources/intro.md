@@ -41,6 +41,8 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Lecturer: Florian Sanzenbacher
 - 28.01.2026: Constructing table models in XSPEC for returning radiation effects
     - Lecturer: Konstantinos Kourmpetis
+- 04.02.2026: From equation of state (EoS) to mass-radius relation of neutron stars
+    - Lecturer: Konstantinos Kourmpetis
 - Next: Pulsar timing (Part II)
     - Lecturers: Menglei Zhou & Honghui Liu
     - Phase-resolved spectroscopy, phase-resolved X-ray polarimetric analysis, RVM model for X-ray pulsars 
