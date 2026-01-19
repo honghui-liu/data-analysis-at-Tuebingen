@@ -37,8 +37,10 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - 14.01.2026: Statistics in X-ray data analysis
     - Maximum likelihood estimation, chi-squared and C-stat, confidence intervals, ftest, line detection, AICs, BIC
     - Lecturers: Honghui Liu & Menglei Zhou
-- 20.01.2026: Phase-resolved analysis for `heartbeat' data
+- 21.01.2026: Phase-resolved analysis for `heartbeat' data
     - Lecturer: Florian Sanzenbacher
+- 28.01.2026: Constructing table models in XSPEC for returning radiation effects
+    - Lecturer: Konstantinos Kourmpetis
 - Next: Pulsar timing (Part II)
     - Lecturers: Menglei Zhou & Honghui Liu
     - Phase-resolved spectroscopy, phase-resolved X-ray polarimetric analysis, RVM model for X-ray pulsars 
