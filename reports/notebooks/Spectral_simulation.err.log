@@ -18,28 +18,18 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Import necessary packages
-
-import numpy as np
-import os
-#import bxa.xspec as bxa
-from IPython.display import display, HTML, Image
-
 import xspec
-
-%load_ext wurlitzer
-import IPython.display
+import os
+import glob
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 8[0m
-[1;32m      5[0m [38;5;66;03m#import bxa.xspec as bxa[39;00m
-[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdisplay[39;00m [38;5;28;01mimport[39;00m display, HTML, Image
-[0;32m----> 8[0m [38;5;28;01mimport[39;00m [38;5;21;01mxspec[39;00m
-[1;32m     10[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124mload_ext[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mwurlitzer[39m[38;5;124m'[39m)
-[1;32m     11[0m [38;5;28;01mimport[39;00m [38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdisplay[39;00m
+Cell [0;32mIn[1], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mxspec[39;00m
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mglob[39;00m
 
 [0;31mModuleNotFoundError[0m: No module named 'xspec'
 

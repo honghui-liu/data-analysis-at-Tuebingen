@@ -193,6 +193,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>X-ray Reflection spectroscopy</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="eROSITA_example.html"><strong>eRosita Data Analysis Workflow</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Statistics.html"><strong>Statistics for X-ray data analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Phase_Resolved_Analysis.html">Phase Resolved Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About This Website</a></li>
 </ul>
 
@@ -454,30 +455,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model package relxill successfully loaded.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> *** loading RELXILL model (version 2.5) *** 
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">xspec</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">xspec</span><span class="o">.</span><span class="n">AllModels</span><span class="o">.</span><span class="n">lmod</span><span class="p">(</span><span class="s2">&quot;relxill&quot;</span><span class="p">,</span> <span class="s1">&#39;/Users/honghui/projects/models/relxill&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">model</span> <span class="o">=</span>  <span class="n">xspec</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="s2">&quot;relxill&quot;</span><span class="p">)</span>
 
-========================================================================
-Model relxill&lt;1&gt; Source No.: 1   Active/Off
-Model Model Component  Parameter  Unit     Value
- par  comp
-   1    1   relxill    Index1              3.00000      frozen
-   2    1   relxill    Index2              3.00000      frozen
-   3    1   relxill    Rbr                 15.0000      frozen
-   4    1   relxill    a                   0.998000     +/-  0.0          
-   5    1   relxill    Incl       deg      30.0000      +/-  0.0          
-   6    1   relxill    Rin                 -1.00000     frozen
-   7    1   relxill    Rout                400.000      frozen
-   8    1   relxill    z                   0.0          frozen
-   9    1   relxill    gamma               2.00000      +/-  0.0          
-  10    1   relxill    logxi               3.10000      +/-  0.0          
-  11    1   relxill    Afe                 1.00000      +/-  0.0          
-  12    1   relxill    Ecut       keV      300.000      frozen
-  13    1   relxill    refl_frac           3.00000      +/-  0.0          
-  14    1   relxill    norm                1.00000      +/-  0.0          
-________________________________________________________________________
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;xspec&#39;
 </pre></div>
 </div>
 </div>
@@ -832,10 +817,7 @@ Net count rate (cts/s) for Spectrum:2  2.538e+02 +/- 1.115e-01 (99.7 % total)
   Noticed Channels:  1-370
   Telescope: NuSTAR Instrument: FPMB  Channel Type: PI
   Exposure Time: 2.05e+04 sec
- Usi
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ng fit statistic: chi
+ Using fit statistic: chi
  Using Background File                nu30101022002B01_bk.pha
   Background Exposure Time: 2.05e+04 sec
  Using Response (RMF) File            nu30101022002B01_sr.rmf for Source 1
@@ -905,7 +887,7 @@ Test statistic : Chi-Squared              2.010561e+10     using 544 bins.
 ***Warning: Fit is not current.
 </pre></div>
 </div>
-<img alt="../_images/9298198b295b8ac3e6fe0184592d382328837f4b0c0cca5c5d099a924b59648a.svg" src="../_images/9298198b295b8ac3e6fe0184592d382328837f4b0c0cca5c5d099a924b59648a.svg" /></div>
+<img alt="../_images/85a1132a8bfc34814f2087991eaba0ac45c23c5417ab85993bbc5d80bbebe13f.svg" src="../_images/85a1132a8bfc34814f2087991eaba0ac45c23c5417ab85993bbc5d80bbebe13f.svg" /></div>
 </div>
 </section>
 <section id="load-a-simple-continuum-model">
@@ -933,10 +915,7 @@ Model Model Component  Parameter  Unit     Value
    8    1   constant   factor              1.00000      = p1
    9    2   TBabs      nH         10^22    1.00000      = p2
   10    3   diskbb     Tin        keV      1.00000      = p3
-  11    3   diskbb    
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> norm                1.00000      = p4
+  11    3   diskbb     norm                1.00000      = p4
   12    4   cutoffpl   PhoIndex            1.00000      = p5
   13    4   cutoffpl   HighECut   keV      15.0000      = p6
   14    4   cutoffpl   norm                1.00000      = p7
@@ -991,140 +970,155 @@ Test statistic : Chi-Squared                770504.1     using 544 bins.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit statistic  : Chi-Squared                379889.1     using 271 bins, spectrum 1, group 1.
-                 Chi-Squared                376890.7     using 273 bins, spectrum 2, group 2.
-Total fit statistic                         756779.9     with 539 d.o.f.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit statistic  : Chi-Squared                  338.28     using 271 bins, spectrum 1, group 1.
+                 Chi-Squared                  343.68     using 273 bins, spectrum 2, group 2.
+Total fit statistic                           681.96     with 532 d.o.f.
 
-Test statistic : Chi-Squared                756779.9     using 544 bins.
- Null hypothesis probability of 0.0e+00 with 539 degrees of freedom
+Test statistic : Chi-Squared                  681.96     using 544 bins.
+ Null hypothesis probability of 1.09e-05 with 532 degrees of freedom
  Current data and model not fit yet.
 
-Fit statistic  : Chi-Squared                379889.1     using 271 bins, spectrum 1, group 1.
-                 Chi-Squared                376890.7     using 273 bins, spectrum 2, group 2.
-Total fit statistic                         756779.9     with 538 d.o.f.
+Fit statistic  : Chi-Squared                  338.28     using 271 bins, spectrum 1, group 1.
+                 Chi-Squared                 4230.25     using 273 bins, spectrum 2, group 2.
+Total fit statistic                          4568.53     with 532 d.o.f.
 
-Test statistic : Chi-Squared                756779.9     using 544 bins.
- Null hypothesis probability of 0.0e+00 with 538 degrees of freedom
+Test statistic : Chi-Squared                 4568.53     using 544 bins.
+ Null hypothesis probability of 0.00e+00 with 532 degrees of freedom
  Current data and model not fit yet.
- Solar Abundance Vector set to wilm:  Wilms, J., Allen, A. &amp; McCray, R. ApJ 542 914 (2000) (abundances are set to zero for those elements not 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>included in the paper).
+ Solar Abundance Vector set to wilm:  Wilms, J., Allen, A. &amp; McCray, R. ApJ 542 914 (2000) (abundances are set to zero for those elements not included in the paper).
 
-Fit statistic  : Chi-Squared                376147.1     using 271 bins, spectrum 1, group 1.
-                 Chi-Squared                375614.3     using 273 bins, spectrum 2, group 2.
-Total fit statistic                         751761.4     with 538 d.o.f.
+Fit statistic  : Chi-Squared                  338.28     using 271 bins, spectrum 1, group 1.
+                 Chi-Squared                 4230.25     using 273 bins, spectrum 2, group 2.
+Total fit statistic                          4568.53     with 532 d.o.f.
 
-Test statistic : Chi-Squared                751761.4     using 544 bins.
- Null hypothesis probability of 0.0e+00 with 538 degrees of freedom
+Test statistic : Chi-Squared                 4568.53     using 544 bins.
+ Null hypothesis probability of 0.00e+00 with 532 degrees of freedom
  Current data and model not fit yet.
 Default fit statistic is set to: Chi-Squared
    This will apply to all current and newly loaded spectra.
 
-Fit statistic  : Chi-Squared                376147.1     using 271 bins, spectrum 1, group 1.
-                 Chi-Squared                375614.3     using 273 bins, spectrum 2, group 2.
-Total fit statistic                         751761.4     with 538 d.o.f.
+Fit statistic  : Chi-Squared                  338.28     using 271 bins, spectrum 1, group 1.
+                 Chi-Squared                 4230.25     using 273 bins, spectrum 2, group 2.
+Total fit statistic                          4568.53     with 532 d.o.f.
 
-Test statistic : Chi-Squared                751761.4     using 544 bins.
- Null hypothesis probability of 0.0e+00 with 538 degrees of freedom
+Test statistic : Chi-Squared                 4568.53     using 544 bins.
+ Null hypothesis probability of 0.00e+00 with 532 degrees of freedom
  Current data and model not fit yet.
-Test statisti
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c is set to: Chi-Squared
+Test statistic is set to: Chi-Squared
 
-Fit statistic  : Chi-Squared                376147.1     using 271 bins, spectrum 1, group 1.
-                 Chi-Squared                375614.3     using 273 bins, spectrum 2, group 2.
-Total fit statistic                         751761.4     with 538 d.o.f.
+Fit statistic  : Chi-Squared                  338.28     using 271 bins, spectrum 1, group 1.
+                 Chi-Squared                 4230.25     using 273 bins, spectrum 2, group 2.
+Total fit statistic                          4568.53     with 532 d.o.f.
 
-Test statistic : Chi-Squared                751761.4     using 544 bins.
- Null hypothesis probability of 0.0e+00 with 538 degrees of freedom
+Test statistic : Chi-Squared                 4568.53     using 544 bins.
+ Null hypothesis probability of 0.00e+00 with 532 degrees of freedom
  Current data and model not fit yet.
 
-Fit statistic  : Chi-Squared                292164.1     using 271 bins, spectrum 1, group 1.
-                 Chi-Squared                255434.4     using 273 bins, spectrum 2, group 2.
-Total fit statistic                         547598.5     with 538 d.o.f.
+Fit statistic  : Chi-Squared                 1309.92     using 271 bins, spectrum 1, group 1.
+                 Chi-Squared                 1323.02     using 273 bins, spectrum 2, group 2.
+Total fit statistic                          2632.94     with 532 d.o.f.
 
-Test statistic : Chi-Squared                547598.5     using 544 bins.
- Null hypothesis probability of 0.0e+00 with 538 degrees of freedom
+Test statistic : Chi-Squared                 2632.94     using 544 bins.
+ Null hypothesis probability of 2.11e-274 with 532 degrees of freedom
  Current data and model not fit yet.
- renorm: no renormalization necessary
                                    Parameters
-Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm    5:PhoIndex    6:HighECut        7:norm      8:factor
-502564       118243        1       1.47004       3.30096       1.00016       14.9908      0.870439      0.999854
-435988       150002        0       1.62915       5.51439       1.00221       14.8916      0.869043      0.997281
-289069       177011        0       1.87120       11.9512       1.01676       14.4731      0.852858      0.979222
-171163       274724       -1       1.79844       18.9142       1.06797       16.2184      0.769342      0.964843
-116114       34982.6      -1       1.75893       25.5419       1.10402       19.4271      0.706510      0.965953
-72832.2      64571.9      -1       1.73058       31.0072       1.13051       23.8503      0.655759      0.967524
-43573.4      61922.3      -1       1.71046       35.4125       1.14912       29.1011      0.618058      0.968803
-32566.9      45127.8      -2       1.63075       46.9049       1.18619       40.0305      0.570724      0.971466
-17737        138917       -3       1.52871       58.9393       1.24449       46.6699      0.671629      0.971576
-12313.3      77677.8      -3       1.50247       63.2269       1.29545       51.4560      0.758163      0.971530
-11716.5      25431.9      -3       1.48888       63.5938       1.33858       56.2380      0.835489      0.971470
-11441.1      14896.1      -3       1.47917       63.3396       1.37423       61.0235      0.903898      0.971463
-11274.5      10183.1      -3       1.47160       62.9756       1.40340       65.6286      0.963510      0.971461
-11172.5      6931.54      -3       1.46555       62.6021       1.42714       69.9257       1.01464      0.971459
-11109.7      4651.66      -3       1.46068       62.2514       1.44638       73.8384       1.05791      0.971458
-11070.7      3086.21      -3       1.45677       61.9361       1.46193       77.3271       1.09413      0.971456
-11046.3      2026.95      -3       1.45363       61.6606       1.47447       80.3807       1.12415      0.971454
-11031        1318.68      -3       1.45112       61.4242       1.48457       83.0157       1.14889      0.971452
-11021.2      852.872      -3       1.44910       61.2254       1.49268       85.2528       1.16912      0.971451
-11018.1      544.1        -4       1.44427       60.6815       1.51304       91.0546       1.22008      0.971445
-11004.9      3485.49      -5       1.44180       60.3967       1.52277       94.5619       1.24663      0.971441
-11004        964.585      -6       1.44120       60.3428       1.52486       95.3884       1.25255      0.971443
-11003.9      43.1968      -7       1.44109       60.3343       1.52524       95.5211       1.25361      0.971444
-======================================================================
+Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:Index1          11:a       12:Incl      16:gamma      17:logxi        18:Afe       19:Ecut       21:norm     22:factor
+686.763      5750.56      -3      0.560168       2607.66       2.49630       7.64878      0.800207       50.0655       1.91601       3.20841       4.49867       1000.00     0.0375962      0.971796
+681.747      2739.12      -4      0.557243       2715.61       2.50627       7.21399      0.786422       49.2022       1.91562       3.20761       4.55888       1000.00     0.0365919      0.972122
+681.678      207.542      -5      0.552980       2849.97       2.50618       7.11175      0.775938       48.7153       1.91527       3.21011       4.57569       1000.00     0.0361212      0.972123
+681.67       226.412      -4      0.549968       2953.52       2.50788       6.98325      0.767686       48.3078       1.91527       3.21109       4.58744       1000.00     0.0357772      0.972125
+681.663      330.995      -1      0.549958       2953.89       2.50798       6.98686      0.767155       48.3101       1.91528       3.21123       4.58851       1000.00     0.0357861      0.972130
+==========================================================================================
  Variances and Principal Axes
-                 3        4        5        6        7        8  
- 2.4717E-08| -0.3481  -0.0015   0.8504  -0.0005  -0.3037  -0.2518  
- 1.8373E-07| -0.8408  -0.0044  -0.4476   0.0006  -0.0393  -0.3019  
- 4.3578E-07|  0.3720   0.0018  -0.0867  -0.0001   0.0931  -0.9195  
- 5.2750E-05|  0.1830   0.0055  -0.2626   0.0076  -0.9474   0.0029  
- 2.4450E-01|  0.0060  -0.9940  -0.0012  -0.1095  -0.0052   0.0000  
- 7.1371E+00| -0.0004  -0.1095   0.0025   0.9940   0.0065   0.0000  
-----------------------------------------------------------------------
+                 3        4        7        8       11       12       16       17       18       19       21       22  
+ 2.3102E-09|  0.0472   0.0000   0.0441  -0.0004  -0.0128  -0.0002  -0.2270   0.0659  -0.0027  -0.0000   0.9666   0.0743  
+ 1.7782E-07| -0.4600  -0.0000   0.0426  -0.0001   0.0055   0.0001  -0.8497  -0.1749  -0.0118   0.0000  -0.1720   0.0647  
+ 3.7718E-07| -0.1839  -0.0000  -0.0189   0.0001  -0.0058   0.0001   0.0156  -0.0486   0.0031  -0.0000   0.0918  -0.9771  
+ 6.2109E-07|  0.8453   0.0000   0.0788   0.0004   0.0488  -0.0017  -0.4589   0.1012  -0.0152   0.0000  -0.1446  -0.1869  
+ 6.4119E-06| -0.1262  -0.0000   0.2591  -0.0194  -0.6116   0.0216  -0.0588   0.7293  -0.0235  -0.0000  -0.0757  -0.0220  
+ 1.0249E-05| -0.1471  -0.0000   0.2339   0.0141   0.7878  -0.0216  -0.0101   0.5473  -0.0398  -0.0000  -0.0319  -0.0120  
+ 3.0663E-04|  0.0155   0.0000   0.9199   0.0474  -0.0354  -0.0102   0.1094  -0.3470  -0.1325  -0.0002   0.0059  -0.0014  
+ 9.0077E-03| -0.0015   0.0000  -0.1425   0.0355  -0.0152  -0.0354   0.0047   0.0086  -0.9884  -0.0003   0.0041   0.0000  
+ 9.2616E-02|  0.0017   0.0003   0.0357  -0.9231   0.0305   0.3772   0.0065  -0.0236  -0.0524  -0.0006   0.0014   0.0000  
+ 1.9443E+00|  0.0005   0.0028  -0.0103   0.3792   0.0194   0.9249  -0.0009   0.0022  -0.0183  -0.0041   0.0007   0.0000  
+ 3.9566E+05|  0.0000  -0.7458   0.0001   0.0013   0.0001   0.0047   0.0000  -0.0000  -0.0004   0.6662   0.0000  -0.0000  
+ 6.8964E+05| -0.0000   0.6662   0.0001   0.0003   0.0000   0.0012   0.0000  -0.0000  -0.0003   0.7458   0.0000   0.0000  
+------------------------------------------------------------------------------------------
 
-========================================================================
+================================================================================================================================================
   Covariance Matrix
-        1           2           3           4           5           6   
-   1.167e-05  -1.178e-03  -1.081e-05  -2.699e-03  -3.337e-05  -2.467e-08
-  -1.178e-03   3.271e-01  -1.688e-03  -7.502e-01  -3.847e-03  -9.063e-06
-  -1.081e-05  -1.688e-03   5.033e-05   1.809e-02   1.333e-04   2.175e-08
-  -2.699e-03  -7.502e-01   1.809e-02   7.054e+00   4.645e-02   6.215e-06
-  -3.337e-05  -3.847e-03   1.333e-04   4.645e-02   3.580e-04  -1.754e-07
-  -2.467e-08  -9.063e-06   2.175e-08   6.215e-06  -1.754e-07   3.875e-07
-------------------------------------------------------------------------
+        1           2           3           4           5           6           7           8           9          10          11          12   
+   4.946e-04  -1.578e+01  -8.494e-04   4.232e-03   3.441e-04   1.335e-02  -2.173e-04   1.927e-04   1.879e-03  -7.561e+00  -3.079e-05  -2.956e-07
+  -1.578e+01   5.261e+05   1.728e+01  -2.443e+02  -1.929e+01  -8.373e+02   3.964e+00  -1.196e+00  -1.721e+01   1.461e+05   7.382e-02   9.703e-03
+  -8.494e-04   1.728e+01   6.990e-03   3.817e-02   3.495e-03   1.729e-01   1.878e-03  -3.017e-03  -2.260e-02   5.896e+01   4.926e-04  -1.760e-07
+   4.232e-03  -2.443e+02   3.817e-02   1.043e+00   6.486e-02   3.224e+00   1.387e-02  -2.348e-02  -2.370e-01   4.763e+02   5.386e-03  -1.989e-06
+   3.441e-04  -1.929e+01   3.495e-03   6.486e-02   4.961e-03   2.359e-01   1.149e-03  -2.079e-03  -1.833e-02   3.681e+01   4.170e-04  -1.629e-07
+   1.335e-02  -8.373e+02   1.729e-01   3.224e+00   2.359e-01   1.137e+01   5.706e-02  -1.008e-01  -9.088e-01   1.850e+03   2.045e-02  -6.765e-06
+  -2.173e-04   3.964e+00   1.878e-03   1.387e-02   1.149e-03   5.706e-02   5.406e-04  -8.572e-04  -7.156e-03   1.722e+01   1.503e-04   8.816e-08
+   1.927e-04  -1.196e+00  -3.017e-03  -2.348e-02  -2.079e-03  -1.008e-01  -8.572e-04   1.445e-03   1.142e-02  -2.667e+01  -2.457e-04  -6.412e-08
+   1.879e-03  -1.721e+01  -2.260e-02  -2.370e-01  -1.833e-02  -9.088e-01  -7.156e-03   1.142e-02   1.075e-01  -2.293e+02  -2.153e-03  -8.997e-07
+  -7.561e+00   1.461e+05   5.896e+01   4.763e+02   3.681e+01   1.850e+03   1.722e+01  -2.667e+01  -2.293e+02   5.592e+05   4.832e+00   3.152e-03
+  -3.079e-05   7.382e-02   4.926e-04   5.386e-03   4.170e-04   2.045e-02   1.503e-04  -2.457e-04  -2.153e-03   4.832e+00   4.594e-05   5.743e-09
+  -2.956e-07   9.703e-03  -1.760e-07  -1.989e-06  -1.629e-07  -6.765e-06   8.816e-08  -6.412e-08  -8.997e-07   3.152e-03   5.743e-09   3.879e-07
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 ========================================================================
-Model constant&lt;1&gt;*TBabs&lt;2&gt;(diskbb&lt;3&gt; + cutoffpl&lt;4&gt;) Source No.: 1   Active/On
+Model constant&lt;1&gt;*TBabs&lt;2&gt;(diskbb&lt;3&gt; + cutoffpl&lt;4&gt; + relxill&lt;5&gt;) Source No.: 1   Active/On
 Model Model Component  Parameter  Unit     Value
  par  comp
                            Data group: 1
    1    1   constant   factor              1.00000      frozen
    2    2   TBabs      nH         10^22    0.600000     frozen
-   3    3   diskbb     Tin        keV      1.44109      +/-  3.41612E-03  
-   4    3   diskbb     norm                60.3343      +/-  0.571954     
-   5    4   cutoffpl   PhoIndex            1.52524      +/-  7.09418E-03  
-   6    4   cutoffpl   HighECut   keV      95.5211      +/-  2.65596      
-   7    4   cutoffpl   norm                1.25361      +/-  1.89208E-02  
+   3    3   diskbb     Tin        keV      0.549958     +/-  2.22387E-02  
+   4    3   diskbb     norm                2953.89      +/-  725.346      
+   5    4   cutoffpl   PhoIndex            1.91528      = p16
+   6    4   cutoffpl   HighECut   keV      1000.00      = p19
+   7    4   cutoffpl   norm                2.50798      +/-  8.36083E-02  
+   8    5   relxill    Index1              6.98686      +/-  1.02125      
+   9    5   relxill    Index2              6.98686      = p8
+  10    5   relxill    Rbr                 15.0000      frozen
+  11    5   relxill    a                   0.767155     +/-  7.04344E-02  
+  12    5   relxill    Incl       deg      48.3101      +/-  3.37235      
+  13    5   relxill    Rin                 -1.00000     frozen
+  14    5   relxill    Rout                400.000      frozen
+  15    5   relxill    z                   0.0          frozen
+  16    5   relxill    gamma               1.91528      +/-  2.32507E-02  
+  17    5   relxill    logxi               3.21123      +/-  3.80088E-02  
+  18    5   relxill    Afe                 4.58851      +/-  0.327874     
+  19    5   relxill    Ecut       keV      1000.00      +/-  747.769      
+  20    5   relxill    refl_frac           -1.00000     frozen
+  21    5   relxill    norm                3.57861E-02  +/-  6.77775E-03  
                            Data group: 2
-   8    1   constant   factor              0.971444     +/-  6.22475E-04  
-   9    2   TBabs      nH         10^22    0.600000     = p2
-  10    3   diskbb     Tin        keV      1.44109      = p3
-  11    3   diskbb     norm                60.3343      = p4
-  12    4   cutoffpl   PhoIndex            1.52524      = p5
-  13    4   cutoffpl   HighECut   keV      95.5211      = p6
-  14    4   cutoffpl   norm                1.25361      = p7
+  22    1   constant   factor              0.972130     +/-  6.22847E-04  
+  23    2   TBabs      nH         10^22    0.600000     = p2
+  24    3   diskbb     Tin        keV      0.549958     = p3
+  25    3   diskbb     norm                2953.89      = p4
+  26    4   cutoffpl   PhoIndex            1.91528      = p5
+  27    4   cutoffpl   HighECut   keV      1000.00      = p6
+  28    4   cutoffpl   norm                2.50798      = p7
+  29    5   relxill    Index1              6.98686      = p8
+  30    5   relxill    Index2              6.98686      = p9
+  31    5   relxill    Rbr                 15.0000      = p10
+  32    5   relxill    a                   0.767155     = p11
+  33    5   relxill    Incl       deg      48.3101      = p12
+  34    5   relxill    Rin                 -1.00000     = p13
+  35    5   relxill    Rout                400.000      = p14
+  36    5   relxill    z                   0.0          = p15
+  37    5   relxill    gamma               1.91528      = p16
+  38    5   relxill    logxi               3.21123      = p17
+  39    5   relxill    Afe                 4.58851      = p18
+  40    5   relxill    Ecut       keV      1000.00      = p19
+  41    5   relxill    refl_frac           -1.00000     = p20
+  42    5   relxill    norm                3.57861E-02  = p21
 ________________________________________________________________________
 
 
-Fit statistic  : Chi-Squared                 6240.94     using 271 bins, spectrum 1, group 1.
-                 Chi-Squared                 4763.01     using 273 bins, spectrum 2, group 2.
-Total fit statistic                         11003.95     with 538 d.o.f.
+Fit statistic  : Chi-Squared                  337.83     using 271 bins, spectrum 1, group 1.
+                 Chi-Squared                  343.83     using 273 bins, spectrum 2, group 2.
+Total fit statistic                           681.66     with 532 d.o.f.
 
-Test statistic : Chi-Squared                11003.95     using 544 bins.
- Null hypothesis probability of 0.00e+00 with 538 degrees of freedom
+Test statistic : Chi-Squared                  681.66     using 544 bins.
+ Null hypothesis probability of 1.13e-05 with 532 degrees of freedom
 </pre></div>
 </div>
 </div>
@@ -1147,7 +1141,7 @@ Test statistic : Chi-Squared                11003.95     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 43.792224447732075)
 </pre></div>
 </div>
-<img alt="../_images/0cdd8f1f9705cbbcf26310b4501b74cb8bd9463c86ee13e79ead4253901f5615.svg" src="../_images/0cdd8f1f9705cbbcf26310b4501b74cb8bd9463c86ee13e79ead4253901f5615.svg" /></div>
+<img alt="../_images/da988c0aa54697af1746439fe441eb2500ae04615e4908e80f26211868b7c145.svg" src="../_images/da988c0aa54697af1746439fe441eb2500ae04615e4908e80f26211868b7c145.svg" /></div>
 </div>
 <p>In the plot above, we can see that when fitting the data without a reflection model, there are large residuals around the <strong>iron line</strong> region (6-7 keV) and the <strong>Compton hump</strong> region (20-30 keV). To resolve these residuals, we should include a full reflection model (see below).</p>
 </section>
@@ -1189,10 +1183,7 @@ Model Model Component  Parameter  Unit     Value
    8    5   relxill    Index1              3.00000      frozen
    9    5   relxill    Index2              3.00000      frozen
   10    5   relxill    Rbr                 15.0000      frozen
-  11    5   relxill    a                   0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.998000     +/-  0.0          
+  11    5   relxill    a                   0.998000     +/-  0.0          
   12    5   relxill    Incl       deg      30.0000      +/-  0.0          
   13    5   relxill    Rin                 -1.00000     frozen
   14    5   relxill    Rout                400.000      frozen
@@ -1308,10 +1299,7 @@ Model Model Component  Parameter  Unit     Value
    8    5   relxill    Index1              3.00000      +/-  0.0          
    9    5   relxill    Index2              3.00000      = p8
   10    5   relxill    Rbr                 15.0000      frozen
-  11    5   relxill    a                   0.998000     +/-  0.0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          
+  11    5   relxill    a                   0.998000     +/-  0.0          
   12    5   relxill    Incl       deg      30.0000      +/-  0.0          
   13    5   relxill    Rin                 -1.00000     frozen
   14    5   relxill    Rout                400.000      frozen
@@ -1343,10 +1331,7 @@ Model Model Component  Parameter  Unit     Value
   39    5   relxill    Afe                 1.00000      = p18
   40    5   relxill    Ecut       keV      300.000      = p19
   41    5   relxill    refl_frac           -1.00000     = p20
-  42    5   relxill    norm                1.0000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      = p21
+  42    5   relxill    norm                1.00000      = p21
 ________________________________________________________________________
 </pre></div>
 </div>
@@ -1373,18 +1358,12 @@ Test statistic : Chi-Squared                103479.4     using 544 bins.
                                    Parameters
 Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:Index1          11:a       12:Incl      16:gamma      17:logxi        18:Afe       19:Ecut       21:norm     22:factor
 100199       27495.5       1       1.74044      0.592688      0.100600       3.00116      0.998000       30.0180       2.00008       3.10021      0.998716       300.079      0.100125      0.999855
-95087.1      59928.9       0       1.82179      0.743443      0.103002       3.01500      0.998000       30.2700       2.00118       3.10173   
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   0.988915       303.487      0.100063      0.997987
+95087.1      59928.9       0       1.82179      0.743443      0.103002       3.01500      0.998000       30.2700       2.00118       3.10173      0.988915       303.487      0.100063      0.997987
 66673.2      60801.7       0       2.19333       1.58105      0.122718       3.10578      0.998000       32.3575       2.00745       3.11272      0.929116       357.204     0.0996281      0.986695
 34879.9      153370       -1       2.30463       2.47087      0.217027       3.25213      0.998000       39.1647       2.01640       3.15826      0.791231       761.959     0.0986573      0.973348
 26749.7      177021        0       2.28580       2.42519      0.220750       3.27480      0.998000       39.7586       2.01616       3.15997      0.783623       952.765     0.0985112      0.971965
 25975.8      10339.7       0       2.27753       2.43427      0.231466       3.27689      0.998000       40.0920       2.01461       3.16383      0.774641       989.051     0.0985884      0.972315
-25569.6      44506.6       0       2.26673       2.43258      0.239995       3.28073      0.998000       40.4616       2.01339       3.16717      0.769645       998.158     0.0986183
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      0.972281
+25569.6      44506.6       0       2.26673       2.43258      0.239995       3.28073      0.998000       40.4616       2.01339       3.16717      0.769645       998.158     0.0986183      0.972281
 25156.9      60833         0       2.25451       2.42452      0.247408       3.28545      0.998000       40.8411       2.01228       3.17016      0.766382       999.120     0.0986258      0.972132
 24657.4      67010.7       0       2.24158       2.41332      0.254295       3.29036      0.998000       41.2344       2.01117       3.17294      0.763835       999.641     0.0986254      0.971989
 24145.1      67944         0       2.22830       2.40096      0.260872       3.29515      0.998000       41.5968       2.01003       3.17558      0.761759       999.911     0.0986221      0.971879
@@ -1579,7 +1558,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/9be47186275db3af9b77ae031e40a83626790d101be781bb2a9fff3840b9fad4.svg" src="../_images/9be47186275db3af9b77ae031e40a83626790d101be781bb2a9fff3840b9fad4.svg" /></div>
+<img alt="../_images/89c5457723cdffbd023041b34ded8f5b12fc34a18c494e4bfad64fe39a95df94.svg" src="../_images/89c5457723cdffbd023041b34ded8f5b12fc34a18c494e4bfad64fe39a95df94.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1596,7 +1575,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/1d71497c9a539b7ed75a9d410a060c023b720a8b0995952facf5ef3eaf5a4b48.svg" src="../_images/1d71497c9a539b7ed75a9d410a060c023b720a8b0995952facf5ef3eaf5a4b48.svg" /></div>
+<img alt="../_images/c687598edeba22c6a3820997714cd25173e2d45e280902fff1947999e2b4b041.svg" src="../_images/c687598edeba22c6a3820997714cd25173e2d45e280902fff1947999e2b4b041.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1629,6 +1608,417 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Parameter   Confidence Range (2.706)
+                                   Parameters
+Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:Index1          11:a       12:Incl      16:gamma      17:logxi        18:Afe       19:Ecut       21:norm     22:factor
+757.043      24.8394      -3      0.548707       3377.71       2.36098       2.71777      0.929657       30.4739       1.87166       3.30541       5.04087       517.071     0.0210667      0.972144
+755.976      488.237      -1      0.548895       3387.88       2.36036       2.71573      0.928876       30.4032       1.87169       3.30481       5.00555       520.160     0.0210577      0.972121
+755.937      56.4814      -1      0.548922       3389.17       2.36024       2.71449      0.929581       30.3675       1.87164       3.30463       5.00798       520.955     0.0210544      0.972137
+755.916      147.591      -2      0.549191       3384.80       2.35923       2.71438      0.929749       30.3450       1.87125       3.30455       5.02006       515.817     0.0210281      0.972142
+755.728      359.863      -2      0.549570       3377.16       2.35782       2.71465      0.923185       30.3666       1.87105       3.30435       4.99280       512.328     0.0209924      0.972141
+755.639      99.436       -1      0.549591       3375.83       2.35785       2.71483      0.923932       30.3609       1.87099       3.30444       5.00059       512.284     0.0209905      0.972148
+755.637      185.763      -1      0.549610       3374.61       2.35787       2.71495      0.924735       30.3613       1.87094       3.30452       5.00414       511.648     0.0209880      0.972148
+==========================================================================================
+ Variances and Principal Axes
+                 3        4        7        8       11       12       16       17       18       19       21       22  
+ 9.5442E-10|  0.0360   0.0000   0.0303  -0.0031  -0.0041  -0.0001  -0.1496   0.0329  -0.0008   0.0000   0.9859   0.0472  
+ 1.3527E-07| -0.3962  -0.0000   0.0737   0.0064   0.0159   0.0001  -0.8985  -0.0374  -0.0072   0.0000  -0.1281   0.1104  
+ 3.6514E-07|  0.4541   0.0000   0.0349   0.0154   0.0185  -0.0001  -0.0808   0.0639  -0.0033   0.0000  -0.0741   0.8808  
+ 4.7011E-07|  0.7869   0.0000   0.0688   0.0314   0.0368  -0.0002  -0.3901   0.0839  -0.0072   0.0000  -0.0707  -0.4576  
+ 1.2403E-05|  0.1207   0.0000  -0.4472   0.0005  -0.0477  -0.0035  -0.0562  -0.8822   0.0241   0.0001   0.0293   0.0179  
+ 1.6147E-04| -0.0360  -0.0000  -0.1739   0.9536   0.2227  -0.0225   0.0086   0.0699  -0.0622   0.0001   0.0094   0.0004  
+ 4.1349E-04| -0.0035  -0.0000  -0.8552  -0.1408  -0.1893   0.0235  -0.0914   0.4499   0.0407   0.0004  -0.0037   0.0009  
+ 3.8865E-03|  0.0176  -0.0000   0.1604   0.2619  -0.9006  -0.0014  -0.0090  -0.0214   0.3060   0.0011  -0.0089   0.0000  
+ 1.4880E-01| -0.0063  -0.0007  -0.0112  -0.0112   0.3120   0.1627  -0.0011   0.0130   0.9358   0.0027   0.0020  -0.0000  
+ 1.5878E+00|  0.0010   0.0009   0.0170   0.0273  -0.0433   0.9861   0.0023  -0.0144  -0.1563  -0.0057   0.0002   0.0000  
+ 1.2113E+04| -0.0000  -0.0990   0.0004  -0.0001  -0.0001   0.0052   0.0001  -0.0002  -0.0038   0.9951   0.0000  -0.0000  
+ 1.1778E+06| -0.0000   0.9951   0.0000  -0.0000   0.0002  -0.0002   0.0000   0.0000   0.0004   0.0990   0.0000  -0.0000  
+------------------------------------------------------------------------------------------
+
+================================================================================================================================================
+  Covariance Matrix
+        1           2           3           4           5           6           7           8           9          10          11          12   
+   1.070e-03  -3.511e+01  -3.269e-04   7.128e-04  -8.914e-03   8.354e-03  -2.826e-04  -3.677e-04  -1.538e-02  -3.671e+00  -8.062e-05   8.598e-08
+  -3.511e+01   1.166e+06   9.677e+00  -2.050e+01   2.826e+02  -2.691e+02   8.780e+00   1.238e+01   5.013e+02   1.148e+05   2.549e+00  -1.444e-03
+  -3.269e-04   9.677e+00   2.864e-03   8.809e-05  -1.624e-04   4.897e-02   6.595e-04  -1.443e-03  -1.953e-02   5.771e+00   5.429e-05  -3.427e-07
+   7.128e-04  -2.050e+01   8.809e-05   2.231e-03  -8.122e-03   3.827e-02  -2.333e-04  -5.539e-04  -1.034e-02  -3.751e+00  -6.187e-05   3.875e-07
+  -8.914e-03   2.826e+02  -1.624e-04  -8.122e-03   8.918e-02  -1.296e-01   1.874e-03   4.799e-03   1.776e-01   2.701e+01   7.246e-04  -2.540e-06
+   8.354e-03  -2.691e+02   4.897e-02   3.827e-02  -1.296e-01   1.937e+00   8.070e-03  -3.778e-02  -5.753e-01   3.677e+01   1.924e-04   5.993e-06
+  -2.826e-04   8.780e+00   6.595e-04  -2.333e-04   1.874e-03   8.070e-03   2.083e-04  -2.296e-04  -1.689e-03   2.123e+00   2.955e-05  -1.830e-08
+  -3.677e-04   1.238e+01  -1.443e-03  -5.539e-04   4.799e-03  -3.778e-02  -2.296e-04   1.074e-03   1.990e-02  -1.233e+00   8.351e-06  -1.664e-07
+  -1.538e-02   5.013e+02  -1.953e-02  -1.034e-02   1.776e-01  -5.753e-01  -1.689e-03   1.990e-02   5.575e-01   3.406e+00   9.711e-04  -5.823e-06
+  -3.671e+00   1.148e+05   5.771e+00  -3.751e+00   2.701e+01   3.677e+01   2.123e+00  -1.233e+00   3.406e+00   2.353e+04   3.444e-01  -4.222e-04
+  -8.062e-05   2.549e+00   5.429e-05  -6.187e-05   7.246e-04   1.924e-04   2.955e-05   8.351e-06   9.711e-04   3.444e-01   7.259e-06  -2.059e-08
+   8.598e-08  -1.444e-03  -3.427e-07   3.875e-07  -2.540e-06   5.993e-06  -1.830e-08  -1.664e-07  -5.823e-06  -4.222e-04  -2.059e-08   3.880e-07
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+========================================================================
+Model constant&lt;1&gt;*TBabs&lt;2&gt;(diskbb&lt;3&gt; + cutoffpl&lt;4&gt; + relxill&lt;5&gt;) Source No.: 1   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 1
+   1    1   constant   factor              1.00000      frozen
+   2    2   TBabs      nH         10^22    0.600000     frozen
+   3    3   diskbb     Tin        keV      0.549610     +/-  3.27102E-02  
+   4    3   diskbb     norm                3374.61      +/-  1080.00      
+   5    4   cutoffpl   PhoIndex            1.87094      = p16
+   6    4   cutoffpl   HighECut   keV      511.648      = p19
+   7    4   cutoffpl   norm                2.35787      +/-  5.35186E-02  
+   8    5   relxill    Index1              2.71495      +/-  4.72351E-02  
+   9    5   relxill    Index2              2.71495      = p8
+  10    5   relxill    Rbr                 15.0000      frozen
+  11    5   relxill    a                   0.924735     +/-  0.298624     
+  12    5   relxill    Incl       deg      30.3613      +/-  1.39189      
+  13    5   relxill    Rin                 -1.00000     frozen
+  14    5   relxill    Rout                400.000      frozen
+  15    5   relxill    z                   0.0          frozen
+  16    5   relxill    gamma               1.87094      +/-  1.44321E-02  
+  17    5   relxill    logxi               3.30452      +/-  3.27661E-02  
+  18    5   relxill    Afe                 5.00414      +/-  0.746629     
+  19    5   relxill    Ecut       keV      511.648      +/-  153.393      
+  20    5   relxill    refl_frac           -1.00000     frozen
+  21    5   relxill    norm                2.09880E-02  +/-  2.69431E-03  
+                           Data group: 2
+  22    1   constant   factor              0.972148     +/-  6.22876E-04  
+  23    2   TBabs      nH         10^22    0.600000     = p2
+  24    3   diskbb     Tin        keV      0.549610     = p3
+  25    3   diskbb     norm                3374.61      = p4
+  26    4   cutoffpl   PhoIndex            1.87094      = p5
+  27    4   cutoffpl   HighECut   keV      511.648      = p6
+  28    4   cutoffpl   norm                2.35787      = p7
+  29    5   relxill    Index1              2.71495      = p8
+  30    5   relxill    Index2              2.71495      = p9
+  31    5   relxill    Rbr                 15.0000      = p10
+  32    5   relxill    a                   0.924735     = p11
+  33    5   relxill    Incl       deg      30.3613      = p12
+  34    5   relxill    Rin                 -1.00000     = p13
+  35    5   relxill    Rout                400.000      = p14
+  36    5   relxill    z                   0.0          = p15
+  37    5   relxill    gamma               1.87094      = p16
+  38    5   relxill    logxi               3.30452      = p17
+  39    5   relxill    Afe                 5.00414      = p18
+  40    5   relxill    Ecut       keV      511.648      = p19
+  41    5   relxill    refl_frac           -1.00000     = p20
+  42    5   relxill    norm                2.09880E-02  = p21
+________________________________________________________________________
+
+
+Fit statistic  : Chi-Squared                  375.85     using 271 bins, spectrum 1, group 1.
+                 Chi-Squared                  379.79     using 273 bins, spectrum 2, group 2.
+Total fit statistic                           755.64     with 532 d.o.f.
+
+Test statistic : Chi-Squared                  755.64     using 544 bins.
+ Null hypothesis probability of 5.36e-10 with 532 degrees of freedom
+***Warning: New best fit found, fit parameters will be set to new values.
+                                   Parameters
+Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:Index1          11:a       12:Incl      16:gamma      17:logxi        18:Afe       19:Ecut       21:norm     22:factor
+691.377      1.98791      -2      0.552462       3557.46       2.16752       5.15418      0.459109       38.5488       1.83855       3.37303       6.75622       359.988     0.0219034      0.972155
+689.866      900.488      -3      0.553800       3454.78       2.16609       5.33984      0.494991       39.4342       1.83928       3.37233       6.77174       363.690     0.0224482      0.972147
+689.378      392.882      -4      0.554862       3334.95       2.19671       5.42159      0.537457       40.3219       1.84565       3.35432       6.41563       382.773     0.0232685      0.972143
+688.238      2220.47      -4      0.554116       3324.64       2.22538       5.45981      0.552069       40.6846       1.85051       3.33972       6.15944       397.753     0.0236907      0.972141
+687.9        800.413      -4      0.552778       3349.26       2.24769       5.47245      0.559948       40.8873       1.85407       3.32900       5.98547       409.003     0.0239460      0.972140
+687.78       367.081      -4      0.551508       3377.05       2.26608       5.48296      0.565836       41.0435       1.85701       3.32039       5.85453       418.595     0.0241624      0.972140
+687.706      52.938       -3      0.551469       3375.92       2.26845       5.48904      0.567489       41.0798       1.85729       3.31917       5.83526       419.465     0.0241838      0.972140
+687.688      94.7232      -3      0.551418       3375.61       2.27068       5.48915      0.568141       41.0963       1.85761       3.31804       5.81850       420.383     0.0242034      0.972140
+687.671      96.5557      -3      0.551345       3376.10       2.27288       5.48970      0.568838       41.1136       1.85794       3.31695       5.80228       421.345     0.0242243      0.972140
+687.656      92.3894      -3      0.551270       3376.50       2.27506       5.49102      0.569708       41.1343       1.85826       3.31587       5.78638       422.337     0.0242477      0.972140
+687.647      111.946      -3      0.551190       3377.12       2.27724       5.49240      0.570547       41.1547       1.85859       3.31480       5.77054       423.338     0.0242709      0.972140
+==========================================================================================
+ Variances and Principal Axes
+                 3        4        7        8       11       12       16       17       18       19       21       22  
+ 1.1564E-09|  0.0407   0.0000   0.0342  -0.0004  -0.0045  -0.0001  -0.1655   0.0358  -0.0004  -0.0000   0.9827   0.0521  
+ 1.3400E-07| -0.4183  -0.0000   0.0745  -0.0001   0.0024   0.0004  -0.8879  -0.0246  -0.0029   0.0000  -0.1394   0.1048  
+ 3.6732E-07| -0.4332  -0.0000  -0.0329  -0.0010  -0.0096   0.0003   0.0848  -0.0594   0.0018  -0.0000   0.0828  -0.8908  
+ 4.7202E-07|  0.7888   0.0000   0.0699   0.0023   0.0223  -0.0009  -0.4068   0.0865  -0.0044   0.0001  -0.0834  -0.4387  
+ 1.3059E-05| -0.1109  -0.0000   0.4552  -0.0140  -0.0860   0.0091   0.0689   0.8757  -0.0033  -0.0002  -0.0311  -0.0166  
+ 5.9886E-05| -0.0306  -0.0000   0.0378   0.0772   0.9904  -0.0640   0.0175   0.0744  -0.0287   0.0000   0.0047  -0.0002  
+ 4.9059E-04|  0.0136   0.0000   0.8796   0.0521  -0.0022  -0.0013   0.0799  -0.4609   0.0669  -0.0013  -0.0008  -0.0007  
+ 3.8312E-02| -0.0023  -0.0002  -0.0055   0.8102  -0.0947  -0.2483   0.0017   0.0067  -0.5224  -0.0018  -0.0000  -0.0000  
+ 1.6051E-01|  0.0002   0.0005   0.0672  -0.4639   0.0286   0.2507   0.0097  -0.0461  -0.8451  -0.0128   0.0005   0.0000  
+ 9.7140E-01| -0.0006   0.0014  -0.0201   0.3457   0.0358   0.9332  -0.0016   0.0102   0.0864  -0.0186   0.0005   0.0000  
+ 4.3251E+03| -0.0001  -0.0598   0.0017   0.0020   0.0008   0.0202   0.0003  -0.0008  -0.0101   0.9980   0.0000  -0.0000  
+ 3.8363E+05| -0.0000   0.9982   0.0001  -0.0000  -0.0000  -0.0003   0.0000  -0.0000  -0.0004   0.0598   0.0000   0.0000  
+------------------------------------------------------------------------------------------
+
+================================================================================================================================================
+  Covariance Matrix
+        1           2           3           4           5           6           7           8           9          10          11          12   
+   2.883e-04  -1.015e+01  -1.187e-03  -6.873e-04   2.383e-05  -2.879e-03  -2.165e-04   4.135e-04   6.895e-03  -8.766e-01  -1.516e-05  -2.023e-07
+  -1.015e+01   3.823e+05   2.804e+01  -5.964e+00  -9.711e+00  -1.195e+02   5.251e+00  -8.030e+00  -1.563e+02   2.263e+04   2.799e-01   8.138e-03
+  -1.187e-03   2.804e+01   1.572e-02   2.523e-03   4.752e-03   1.222e-01   2.623e-03  -7.085e-03  -9.537e-02   8.925e+00   2.112e-04  -2.880e-07
+  -6.873e-04  -5.964e+00   2.523e-03   1.940e-01   1.425e-02   4.676e-01   1.243e-03   3.416e-04  -1.124e-02   8.511e+00   3.761e-04  -1.610e-06
+   2.383e-05  -9.711e+00   4.752e-03   1.425e-02   4.826e-03   1.078e-01   8.424e-04  -2.360e-03  -3.013e-02   2.908e+00   1.085e-04  -3.774e-07
+  -2.879e-03  -1.195e+02   1.222e-01   4.676e-01   1.078e-01   2.658e+00   2.218e-02  -5.759e-02  -7.834e-01   8.034e+01   2.783e-03  -8.338e-06
+  -2.165e-04   5.251e+00   2.623e-03   1.243e-03   8.424e-04   2.218e-02   4.447e-04  -1.167e-03  -1.608e-02   1.546e+00   3.714e-05   3.034e-08
+   4.135e-04  -8.030e+00  -7.085e-03   3.416e-04  -2.360e-03  -5.759e-02  -1.167e-03   3.309e-03   4.398e-02  -3.822e+00  -9.494e-05  -2.751e-09
+   6.895e-03  -1.563e+02  -9.537e-02  -1.124e-02  -3.013e-02  -7.834e-01  -1.608e-02   4.398e-02   6.372e-01  -5.299e+01  -1.322e-03  -1.067e-06
+  -8.766e-01   2.263e+04   8.925e+00   8.511e+00   2.908e+00   8.034e+01   1.546e+00  -3.822e+00  -5.299e+01   5.678e+03   1.336e-01   1.506e-04
+  -1.516e-05   2.799e-01   2.112e-04   3.761e-04   1.085e-04   2.783e-03   3.714e-05  -9.494e-05  -1.322e-03   1.336e-01   3.717e-06  -6.641e-09
+  -2.023e-07   8.138e-03  -2.880e-07  -1.610e-06  -3.774e-07  -8.338e-06   3.034e-08  -2.751e-09  -1.067e-06   1.506e-04  -6.641e-09   3.879e-07
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+========================================================================
+Model constant&lt;1&gt;*TBabs&lt;2&gt;(diskbb&lt;3&gt; + cutoffpl&lt;4&gt; + relxill&lt;5&gt;) Source No.: 1   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 1
+   1    1   constant   factor              1.00000      frozen
+   2    2   TBabs      nH         10^22    0.600000     frozen
+   3    3   diskbb     Tin        keV      0.551190     +/-  1.69780E-02  
+   4    3   diskbb     norm                3377.12      +/-  618.281      
+   5    4   cutoffpl   PhoIndex            1.85859      = p16
+   6    4   cutoffpl   HighECut   keV      423.338      = p19
+   7    4   cutoffpl   norm                2.27724      +/-  0.125388     
+   8    5   relxill    Index1              5.49240      +/-  0.440463     
+   9    5   relxill    Index2              5.49240      = p8
+  10    5   relxill    Rbr                 15.0000      frozen
+  11    5   relxill    a                   0.570547     +/-  6.94700E-02  
+  12    5   relxill    Incl       deg      41.1547      +/-  1.63033      
+  13    5   relxill    Rin                 -1.00000     frozen
+  14    5   relxill    Rout                400.000      frozen
+  15    5   relxill    z                   0.0          frozen
+  16    5   relxill    gamma               1.85859      +/-  2.10881E-02  
+  17    5   relxill    logxi               3.31480      +/-  5.75237E-02  
+  18    5   relxill    Afe                 5.77054      +/-  0.798241     
+  19    5   relxill    Ecut       keV      423.338      +/-  75.3535      
+  20    5   relxill    refl_frac           -1.00000     frozen
+  21    5   relxill    norm                2.42709E-02  +/-  1.92796E-03  
+                           Data group: 2
+  22    1   constant   factor              0.972140     +/-  6.22814E-04  
+  23    2   TBabs      nH         10^22    0.600000     = p2
+  24    3   diskbb     Tin        keV      0.551190     = p3
+  25    3   diskbb     norm                3377.12      = p4
+  26    4   cutoffpl   PhoIndex            1.85859      = p5
+  27    4   cutoffpl   HighECut   keV      423.338      = p6
+  28    4   cutoffpl   norm                2.27724      = p7
+  29    5   relxill    Index1              5.49240      = p8
+  30    5   relxill    Index2              5.49240      = p9
+  31    5   relxill    Rbr                 15.0000      = p10
+  32    5   relxill    a                   0.570547     = p11
+  33    5   relxill    Incl       deg      41.1547      = p12
+  34    5   relxill    Rin                 -1.00000     = p13
+  35    5   relxill    Rout                400.000      = p14
+  36    5   relxill    z                   0.0          = p15
+  37    5   relxill    gamma               1.85859      = p16
+  38    5   relxill    logxi               3.31480      = p17
+  39    5   relxill    Afe                 5.77054      = p18
+  40    5   relxill    Ecut       keV      423.338      = p19
+  41    5   relxill    refl_frac           -1.00000     = p20
+  42    5   relxill    norm                2.42709E-02  = p21
+________________________________________________________________________
+
+
+Fit statistic  : Chi-Squared                  342.11     using 271 bins, spectrum 1, group 1.
+                 Chi-Squared                  345.54     using 273 bins, spectrum 2, group 2.
+Total fit statistic                           687.65     with 532 d.o.f.
+
+Test statistic : Chi-Squared                  687.65     using 544 bins.
+ Null hypothesis probability of 5.60e-06 with 532 degrees of freedom
+***Warning: New best fit found, fit parameters will be set to new values.
+                                   Parameters
+Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:Index1          11:a       12:Incl      16:gamma      17:logxi        18:Afe       19:Ecut       21:norm     22:factor
+682.448      6.02865      -2      0.520665       4281.56       2.51517       6.19945      0.689467       45.2312       1.91398       3.22292       4.67778       1000.00     0.0330553      0.972145
+682.43       25.2124      -2      0.520711       4278.19       2.51549       6.22002      0.691278       45.2954       1.91406       3.22279       4.67836       1000.00     0.0331134      0.972145
+682.418      301.16       -1      0.520722       4278.14       2.51551       6.22148      0.691521       45.3020       1.91406       3.22275       4.67819       1000.00     0.0331179      0.972144
+682.41       264.556      -1      0.520733       4277.88       2.51552       6.22257      0.691731       45.3082       1.91407       3.22272       4.67813       1000.00     0.0331226      0.972144
+==========================================================================================
+ Variances and Principal Axes
+                 3        4        7        8       11       12       16       17       18       19       21       22  
+ 2.0304E-09|  0.0446   0.0000   0.0414  -0.0004  -0.0084  -0.0002  -0.2134   0.0612  -0.0024  -0.0000   0.9706   0.0695  
+ 1.6914E-07| -0.4597  -0.0000   0.0468   0.0001   0.0062   0.0002  -0.8531  -0.1619  -0.0120   0.0000  -0.1636   0.0752  
+ 3.7604E-07|  0.2223   0.0000   0.0207   0.0001   0.0045  -0.0001  -0.0255   0.0500  -0.0034   0.0000  -0.0892   0.9690  
+ 5.6690E-07|  0.8420   0.0000   0.0735   0.0010   0.0301  -0.0013  -0.4591   0.0813  -0.0142   0.0000  -0.1316  -0.2233  
+ 7.3116E-06|  0.1583   0.0000  -0.3363   0.0148   0.2047  -0.0120   0.0555  -0.8993   0.0367   0.0000   0.0760   0.0249  
+ 2.0561E-05| -0.0563  -0.0000   0.1151   0.0354   0.9751  -0.0399   0.0122   0.1692  -0.0353   0.0000  -0.0018  -0.0028  
+ 2.9576E-04|  0.0138   0.0000   0.9185   0.0476  -0.0546  -0.0038   0.1096  -0.3506  -0.1263  -0.0002   0.0058  -0.0014  
+ 9.4183E-03|  0.0014  -0.0000   0.1380  -0.0559   0.0242   0.0312  -0.0047  -0.0075   0.9880   0.0003  -0.0038  -0.0000  
+ 8.0871E-02| -0.0019  -0.0002  -0.0325   0.9173  -0.0469  -0.3871  -0.0063   0.0237   0.0700   0.0006  -0.0013  -0.0000  
+ 1.0752E+00| -0.0001  -0.0013   0.0138  -0.3896  -0.0241  -0.9205   0.0013  -0.0045   0.0056   0.0036  -0.0006  -0.0000  
+ 4.3916E+05|  0.0000   0.3793  -0.0001  -0.0009  -0.0001  -0.0037  -0.0000   0.0000   0.0004  -0.9253  -0.0000   0.0000  
+ 1.2862E+06| -0.0000   0.9253   0.0000   0.0000   0.0000   0.0002   0.0000  -0.0000  -0.0001   0.3793   0.0000   0.0000  
+------------------------------------------------------------------------------------------
+
+================================================================================================================================================
+  Covariance Matrix
+        1           2           3           4           5           6           7           8           9          10          11          12   
+   4.334e-04  -2.181e+01  -9.370e-04  -1.024e-03   4.717e-06  -3.922e-03  -2.591e-04   3.061e-04   2.927e-03  -8.971e+00  -5.008e-05  -2.801e-07
+  -2.181e+01   1.164e+06   3.227e+01  -1.025e+02  -1.601e+01  -4.179e+02   8.364e+00  -7.892e+00  -8.378e+01   2.973e+05   1.197e+00   1.548e-02
+  -9.370e-04   3.227e+01   6.482e-03   2.961e-02   3.688e-03   1.461e-01   1.769e-03  -2.792e-03  -2.055e-02   5.683e+01   4.235e-04  -2.794e-07
+  -1.024e-03  -1.025e+02   2.961e-02   5.807e-01   4.439e-02   1.817e+00   1.062e-02  -1.524e-02  -1.524e-01   3.802e+02   3.376e-03  -2.270e-06
+   4.717e-06  -1.601e+01   3.688e-03   4.439e-02   4.936e-03   1.832e-01   1.194e-03  -1.950e-03  -1.635e-02   3.932e+01   3.590e-04  -2.523e-07
+  -3.922e-03  -4.179e+02   1.461e-01   1.817e+00   1.832e-01   7.029e+00   4.762e-02  -7.536e-02  -6.553e-01   1.593e+03   1.413e-02  -8.307e-06
+  -2.591e-04   8.364e+00   1.769e-03   1.062e-02   1.194e-03   4.762e-02   5.181e-04  -7.977e-04  -6.564e-03   1.689e+01   1.301e-04   5.673e-08
+   3.061e-04  -7.892e+00  -2.792e-03  -1.524e-02  -1.950e-03  -7.536e-02  -7.977e-04   1.291e-03   9.943e-03  -2.539e+01  -2.006e-04  -3.512e-08
+   2.927e-03  -8.378e+01  -2.055e-02  -1.524e-01  -1.635e-02  -6.553e-01  -6.564e-03   9.943e-03   9.283e-02  -2.149e+02  -1.721e-03  -6.493e-07
+  -8.971e+00   2.973e+05   5.683e+01   3.802e+02   3.932e+01   1.593e+03   1.689e+01  -2.539e+01  -2.149e+02   5.610e+05   4.289e+00   2.067e-03
+  -5.008e-05   1.197e+00   4.235e-04   3.376e-03   3.590e-04   1.413e-02   1.301e-04  -2.006e-04  -1.721e-03   4.289e+00   3.464e-05  -1.450e-09
+  -2.801e-07   1.548e-02  -2.794e-07  -2.270e-06  -2.523e-07  -8.307e-06   5.673e-08  -3.512e-08  -6.493e-07   2.067e-03  -1.450e-09   3.879e-07
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+========================================================================
+Model constant&lt;1&gt;*TBabs&lt;2&gt;(diskbb&lt;3&gt; + cutoffpl&lt;4&gt; + relxill&lt;5&gt;) Source No.: 1   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 1
+   1    1   constant   factor              1.00000      frozen
+   2    2   TBabs      nH         10^22    0.600000     frozen
+   3    3   diskbb     Tin        keV      0.520733     +/-  2.08171E-02  
+   4    3   diskbb     norm                4277.88      +/-  1079.06      
+   5    4   cutoffpl   PhoIndex            1.91407      = p16
+   6    4   cutoffpl   HighECut   keV      1000.000     = p19
+   7    4   cutoffpl   norm                2.51552      +/-  8.05132E-02  
+   8    5   relxill    Index1              6.22257      +/-  0.762013     
+   9    5   relxill    Index2              6.22257      = p8
+  10    5   relxill    Rbr                 15.0000      frozen
+  11    5   relxill    a                   0.691731     +/-  7.02536E-02  
+  12    5   relxill    Incl       deg      45.3082      +/-  2.65113      
+  13    5   relxill    Rin                 -1.00000     frozen
+  14    5   relxill    Rout                400.000      frozen
+  15    5   relxill    z                   0.0          frozen
+  16    5   relxill    gamma               1.91407      +/-  2.27609E-02  
+  17    5   relxill    logxi               3.22272      +/-  3.59317E-02  
+  18    5   relxill    Afe                 4.67813      +/-  0.304676     
+  19    5   relxill    Ecut       keV      1000.000     +/-  748.996      
+  20    5   relxill    refl_frac           -1.00000     frozen
+  21    5   relxill    norm                3.31226E-02  +/-  5.88529E-03  
+                           Data group: 2
+  22    1   constant   factor              0.972144     +/-  6.22820E-04  
+  23    2   TBabs      nH         10^22    0.600000     = p2
+  24    3   diskbb     Tin        keV      0.520733     = p3
+  25    3   diskbb     norm                4277.88      = p4
+  26    4   cutoffpl   PhoIndex            1.91407      = p5
+  27    4   cutoffpl   HighECut   keV      1000.000     = p6
+  28    4   cutoffpl   norm                2.51552      = p7
+  29    5   relxill    Index1              6.22257      = p8
+  30    5   relxill    Index2              6.22257      = p9
+  31    5   relxill    Rbr                 15.0000      = p10
+  32    5   relxill    a                   0.691731     = p11
+  33    5   relxill    Incl       deg      45.3082      = p12
+  34    5   relxill    Rin                 -1.00000     = p13
+  35    5   relxill    Rout                400.000      = p14
+  36    5   relxill    z                   0.0          = p15
+  37    5   relxill    gamma               1.91407      = p16
+  38    5   relxill    logxi               3.22272      = p17
+  39    5   relxill    Afe                 4.67813      = p18
+  40    5   relxill    Ecut       keV      1000.000     = p19
+  41    5   relxill    refl_frac           -1.00000     = p20
+  42    5   relxill    norm                3.31226E-02  = p21
+________________________________________________________________________
+
+
+Fit statistic  : Chi-Squared                  337.56     using 271 bins, spectrum 1, group 1.
+                 Chi-Squared                  344.85     using 273 bins, spectrum 2, group 2.
+Total fit statistic                           682.41     with 532 d.o.f.
+
+Test statistic : Chi-Squared                  682.41     using 544 bins.
+ Null hypothesis probability of 1.04e-05 with 532 degrees of freedom
+***Warning: New best fit found, fit parameters will be set to new values.
+Apparent non-monotonicity in statistic space detected.
+Current bracket values 0.691731, 0.596995
+and delta stat 0, 3.45192
+but latest trial 0.621033 gives 3.49642
+Suggest that you check this result using the steppar command.
+                                   Parameters
+Chi-Squared  |beta|/N    Lvl         3:Tin        4:norm        7:norm      8:Index1          11:a       12:Incl      16:gamma      17:logxi        18:Afe       19:Ecut       21:norm     22:factor
+681.964      0.981312      4      0.564018       2525.45       2.50233       7.61735      0.807340       50.3371       1.91563       3.20462       4.52607       1000.00     0.0375577      0.972119
+681.964      0.981311      9      0.564018       2525.45       2.50233       7.61735      0.807340       50.3371       1.91563       3.20462       4.52607       1000.00     0.0375577      0.972119
+==========================================================================================
+ Variances and Principal Axes
+                 3        4        7        8       11       12       16       17       18       19       21       22  
+ 2.5073E-09|  0.0494   0.0000   0.0459  -0.0003  -0.0168  -0.0002  -0.2360   0.0690  -0.0029  -0.0000   0.9637   0.0775  
+ 1.8183E-07| -0.4678  -0.0000   0.0398  -0.0002   0.0033   0.0001  -0.8439  -0.1818  -0.0116   0.0000  -0.1761   0.0568  
+ 3.7723E-07| -0.1739  -0.0000  -0.0188   0.0001  -0.0088   0.0001   0.0196  -0.0473   0.0032  -0.0000   0.0965  -0.9785  
+ 6.3627E-07|  0.8393   0.0000   0.0807   0.0003   0.0764  -0.0020  -0.4643   0.1067  -0.0158   0.0000  -0.1524  -0.1809  
+ 4.1949E-06| -0.0129   0.0000   0.1094  -0.0169  -0.9292   0.0237  -0.0540   0.3422  -0.0043  -0.0000  -0.0573  -0.0147  
+ 8.4314E-06| -0.2087  -0.0000   0.3288  -0.0002   0.3589  -0.0050  -0.0360   0.8435  -0.0443  -0.0000  -0.0664  -0.0207  
+ 3.1207E-04|  0.0164   0.0000   0.9207   0.0439  -0.0263  -0.0132   0.1091  -0.3456  -0.1337  -0.0002   0.0060  -0.0013  
+ 8.8025E-03| -0.0015   0.0000  -0.1431   0.0279  -0.0111  -0.0358   0.0049   0.0086  -0.9885  -0.0003   0.0043   0.0000  
+ 1.0541E-01|  0.0016   0.0005   0.0343  -0.9202   0.0221   0.3859   0.0062  -0.0224  -0.0453  -0.0006   0.0014   0.0000  
+ 3.3941E+00|  0.0006   0.0043  -0.0076   0.3875   0.0159   0.9214  -0.0006   0.0008  -0.0215  -0.0049   0.0007   0.0000  
+ 2.7379E+05|  0.0000  -0.9028   0.0000   0.0017   0.0001   0.0057   0.0000  -0.0000  -0.0003   0.4301   0.0000  -0.0000  
+ 6.4048E+05| -0.0000   0.4301   0.0001   0.0007   0.0000   0.0025   0.0000  -0.0000  -0.0003   0.9028   0.0000   0.0000  
+------------------------------------------------------------------------------------------
+
+================================================================================================================================================
+  Covariance Matrix
+        1           2           3           4           5           6           7           8           9          10          11          12   
+   5.068e-04  -1.291e+01  -9.196e-04   5.522e-03   3.271e-04   1.618e-02  -2.368e-04   1.943e-04   1.917e-03  -8.268e+00  -3.390e-05  -2.896e-07
+  -1.291e+01   3.416e+05   1.587e+01  -2.317e+02  -1.376e+01  -7.352e+02   3.843e+00  -1.117e+00  -1.709e+01   1.424e+05   1.562e-01   7.546e-03
+  -9.196e-04   1.587e+01   7.659e-03   5.118e-02   3.485e-03   2.073e-01   2.030e-03  -3.329e-03  -2.470e-02   6.283e+01   5.686e-04  -1.154e-07
+   5.522e-03  -2.317e+02   5.118e-02   1.676e+00   8.245e-02   4.897e+00   1.784e-02  -3.360e-02  -3.243e-01   5.907e+02   7.762e-03  -1.218e-06
+   3.271e-04  -1.376e+01   3.485e-03   8.245e-02   4.680e-03   2.707e-01   1.116e-03  -2.179e-03  -1.890e-02   3.486e+01   4.526e-04  -8.734e-08
+   1.618e-02  -7.352e+02   2.073e-01   4.897e+00   2.707e-01   1.577e+01   6.664e-02  -1.276e-01  -1.124e+00   2.101e+03   2.671e-02  -4.084e-06
+  -2.368e-04   3.843e+00   2.030e-03   1.784e-02   1.116e-03   6.664e-02   5.720e-04  -9.318e-04  -7.631e-03   1.793e+01   1.697e-04   1.079e-07
+   1.943e-04  -1.117e+00  -3.329e-03  -3.360e-02  -2.179e-03  -1.276e-01  -9.318e-04   1.633e-03   1.276e-02  -2.849e+01  -2.912e-04  -8.825e-08
+   1.917e-03  -1.709e+01  -2.470e-02  -3.243e-01  -1.890e-02  -1.124e+00  -7.631e-03   1.276e-02   1.169e-01  -2.400e+02  -2.501e-03  -1.143e-06
+  -8.268e+00   1.424e+05   6.283e+01   5.907e+02   3.486e+01   2.101e+03   1.793e+01  -2.849e+01  -2.400e+02   5.726e+05   5.346e+00   3.826e-03
+  -3.390e-05   1.562e-01   5.686e-04   7.762e-03   4.526e-04   2.671e-02   1.697e-04  -2.912e-04  -2.501e-03   5.346e+00   5.659e-05   1.233e-08
+  -2.896e-07   7.546e-03  -1.154e-07  -1.218e-06  -8.734e-08  -4.084e-06   1.079e-07  -8.825e-08  -1.143e-06   3.826e-03   1.233e-08   3.879e-07
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+========================================================================
+Model constant&lt;1&gt;*TBabs&lt;2&gt;(diskbb&lt;3&gt; + cutoffpl&lt;4&gt; + relxill&lt;5&gt;) Source No.: 1   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+                           Data group: 1
+   1    1   constant   factor              1.00000      frozen
+   2    2   TBabs      nH         10^22    0.600000     frozen
+   3    3   diskbb     Tin        keV      0.564018     +/-  2.25113E-02  
+   4    3   diskbb     norm                2525.45      +/-  584.491      
+   5    4   cutoffpl   PhoIndex            1.91563      = p16
+   6    4   cutoffpl   HighECut   keV      1000.00      = p19
+   7    4   cutoffpl   norm                2.50233      +/-  8.75159E-02  
+   8    5   relxill    Index1              7.61735      +/-  1.29471      
+   9    5   relxill    Index2              7.61735      = p8
+  10    5   relxill    Rbr                 15.0000      frozen
+  11    5   relxill    a                   0.807340     +/-  6.84121E-02  
+  12    5   relxill    Incl       deg      50.3371      +/-  3.97152      
+  13    5   relxill    Rin                 -1.00000     frozen
+  14    5   relxill    Rout                400.000      frozen
+  15    5   relxill    z                   0.0          frozen
+  16    5   relxill    gamma               1.91563      +/-  2.39161E-02  
+  17    5   relxill    logxi               3.20462      +/-  4.04046E-02  
+  18    5   relxill    Afe                 4.52607      +/-  0.341924     
+  19    5   relxill    Ecut       keV      1000.00      +/-  756.720      
+  20    5   relxill    refl_frac           -1.00000     frozen
+  21    5   relxill    norm                3.75577E-02  +/-  7.52257E-03  
+                           Data group: 2
+  22    1   constant   factor              0.972119     +/-  6.22793E-04  
+  23    2   TBabs      nH         10^22    0.600000     = p2
+  24    3   diskbb     Tin        keV      0.564018     = p3
+  25    3   diskbb     norm                2525.45      = p4
+  26    4   cutoffpl   PhoIndex            1.91563      = p5
+  27    4   cutoffpl   HighECut   keV      1000.00      = p6
+  28    4   cutoffpl   norm                2.50233      = p7
+  29    5   relxill    Index1              7.61735      = p8
+  30    5   relxill    Index2              7.61735      = p9
+  31    5   relxill    Rbr                 15.0000      = p10
+  32    5   relxill    a                   0.807340     = p11
+  33    5   relxill    Incl       deg      50.3371      = p12
+  34    5   relxill    Rin                 -1.00000     = p13
+  35    5   relxill    Rout                400.000      = p14
+  36    5   relxill    z                   0.0          = p15
+  37    5   relxill    gamma               1.91563      = p16
+  38    5   relxill    logxi               3.20462      = p17
+  39    5   relxill    Afe                 4.52607      = p18
+  40    5   relxill    Ecut       keV      1000.00      = p19
+  41    5   relxill    refl_frac           -1.00000     = p20
+  42    5   relxill    norm                3.75577E-02  = p21
+________________________________________________________________________
+
+
+Fit statistic  : Chi-Squared                  338.28     using 271 bins, spectrum 1, group 1.
+                 Chi-Squared                  343.68     using 273 bins, spectrum 2, group 2.
+Total fit statistic                           681.96     with 532 d.o.f.
+
+Test statistic : Chi-Squared                  681.96     using 544 bins.
+ Null hypothesis probability of 1.09e-05 with 532 degrees of freedom
+***Warning: New best fit found, fit parameters will be set to new values.
+    11     0.638479     0.887005    (-0.168861,0.0796647)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1645,7 +2035,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/33246e59898a45c31041e67b4a67412cc218eb8543772e0a015f21f08ab555ab.svg" src="../_images/33246e59898a45c31041e67b4a67412cc218eb8543772e0a015f21f08ab555ab.svg" /></div>
+<img alt="../_images/f8265c97d3e3a45225c0d97e8468062974ffb99d9535c2c148bb7acaf0206f8d.svg" src="../_images/f8265c97d3e3a45225c0d97e8468062974ffb99d9535c2c148bb7acaf0206f8d.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1662,7 +2052,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.1, 30.0)
 </pre></div>
 </div>
-<img alt="../_images/6a497e0d2dd7aba7bbdc3dcc5ac41d746f3db76e9a4939c0f740b25e5da806f0.svg" src="../_images/6a497e0d2dd7aba7bbdc3dcc5ac41d746f3db76e9a4939c0f740b25e5da806f0.svg" /></div>
+<img alt="../_images/c3b0af836a86763b62b55fe15d184f59c8f344729be18c6aa888e269ba54cb0a.svg" src="../_images/c3b0af836a86763b62b55fe15d184f59c8f344729be18c6aa888e269ba54cb0a.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1679,7 +2069,7 @@ Test statistic : Chi-Squared                  766.26     using 544 bins.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Plot command list is now empty
 </pre></div>
 </div>
-<img alt="../_images/71d774bb80d3f83cc417b250505af5596482b0cfe2e8a57973fe96bcfb71e728.svg" src="../_images/71d774bb80d3f83cc417b250505af5596482b0cfe2e8a57973fe96bcfb71e728.svg" /></div>
+<img alt="../_images/7efd1d19838fb71c1e5c78eca26ec65f0fda08ebe6fa5013c15044fbd2560245.svg" src="../_images/7efd1d19838fb71c1e5c78eca26ec65f0fda08ebe6fa5013c15044fbd2560245.svg" /></div>
 </div>
 </section>
 </section>

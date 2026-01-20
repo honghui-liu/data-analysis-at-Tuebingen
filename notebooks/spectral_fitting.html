@@ -193,6 +193,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Reflection_models.html"><strong>X-ray Reflection spectroscopy</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="eROSITA_example.html"><strong>eRosita Data Analysis Workflow</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Statistics.html"><strong>Statistics for X-ray data analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Phase_Resolved_Analysis.html">Phase Resolved Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About This Website</a></li>
 </ul>
 
@@ -421,6 +422,20 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1">#import bxa.xspec as bxa</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Image</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">xspec</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;load_ext&#39;</span><span class="p">,</span> <span class="s1">&#39;wurlitzer&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">import</span> <span class="nn">IPython.display</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;xspec&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -524,10 +539,7 @@ joern.wilms@fau.de
 
 http://pulsar.sternwarte.uni-erlangen.de/wilms/research/tbabs/
 
-PLEASE NOTI
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CE:
+PLEASE NOTICE:
 To get the model described by the above paper
 you will also have to set the abundances:
    abund wilm
@@ -576,9 +588,8 @@ Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
 Test statistic : Chi-Squared              1.495996e+06     using 541 bins.
  Null hypothesis probability of 0.000000e+00 with 537 degrees of freedom
  Current data and model not fit yet.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
+
+Fit statistic  : Chi-Squared              1.495996e+06     using 541 bins.
 
 Test statistic : Chi-Squared              1.495996e+06     using 541 bins.
  Null hypothesis probability of 0.000000e+00 with 537 degrees of freedom
@@ -641,10 +652,7 @@ Test statistic : Chi-Squared              1.412720e+06     using 541 bins.
  Null hypothesis probability of 0.000000e+00 with 537 degrees of freedom
  Current data and model not fit yet.
                                    Parameters
-Chi-Squared  |beta|/N    Lvl          1:nH       
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2:Gamma        3:kT_e        7:norm
+Chi-Squared  |beta|/N    Lvl          1:nH       2:Gamma        3:kT_e        7:norm
 570676       289670       -3      0.973020       2.74758       191.055       6.79607
 240244       230461       -3       1.57327       2.99467       78.6918       22.0427
 145629       176760        0       1.82804       2.99776       25.8726       21.4214
@@ -680,10 +688,7 @@ Chi-Squared  |beta|/N    Lvl          1:nH
 91519        4368.87       0       2.00000       2.97152       10.0000       20.1854
 85875.3      4358.25      -1       2.00000       2.90704       10.0000       18.4573
 83739.8      50136.3       0       2.00000       2.90612       10.0000       18.2317
-82861.4      32331.6       0       2.00000       2.90364     
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  10.0000       18.0722
+82861.4      32331.6       0       2.00000       2.90364       10.0000       18.0722
 82376.9      25777.9       0       2.00000       2.90055       10.0000       17.9435
 82049.8      23933.3       0       2.00000       2.89727       10.0000       17.8303
 79847.3      36048.7      -1       2.00000       2.88533       10.0000       17.1118
@@ -830,10 +835,7 @@ Chi-Squared  |beta|/N    Lvl          1:nH         2:Tin        3:norm          
 2.14499e+06  609987        3      0.949495       4.60292      0.101186     0.0999950       49.9987    0.00500887       6.40001      0.100023    0.00501482
 2.13845e+06  1.30135e+06   2      0.745659       4.60691      0.101727     0.0998510       49.9758    0.00500743       6.40008      0.100253    0.00506891
 2.10053e+06  1.29256e+06   1      0.254323       4.64537      0.106982     0.0983574       49.7416    0.00499247       6.40075      0.102808    0.00559479
-1.85911e+06  1.29028e+06   0    0.00880542       4.91479      0.147670     0.0801503       47.09
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64    0.00480721       6.40355      0.144401    0.00981130
+1.85911e+06  1.29028e+06   0    0.00880542       4.91479      0.147670     0.0801503       47.0964    0.00480721       6.40355      0.144401    0.00981130
 1.36941e+06  1.37717e+06   0    0.00211778       5.17529      0.243423     0.0289586       31.8117    0.00351507       6.38073      0.496886     0.0236766
 1.28224e+06  455384       -1   0.000175361       4.74646      0.274586    0.00996071       23.1045    0.00164924       6.12856       1.25687     0.0551295
 1.14964e+06  387043       -2   5.65468e-05       3.84966      0.493520    0.00995291       33.8850   0.000228248       6.00729       2.15115      0.111436
@@ -1013,42 +1015,48 @@ Test statistic : Chi-Squared                  729.06     using 541 bins.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit statistic  : Chi-Squared                  833.66     using 541 bins.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit statistic  : Chi-Squared                  819.66     using 541 bins.
 
-Test statistic : Chi-Squared                  833.66     using 541 bins.
- Null hypothesis probability of 1.30e-15 with 533 degrees of freedom
+Test statistic : Chi-Squared                  819.66     using 541 bins.
+ Null hypothesis probability of 1.63e-14 with 533 degrees of freedom
  Current data and model not fit yet.
                                    Parameters
 Chi-Squared  |beta|/N    Lvl         2:Tin        3:norm          5:T0          6:kT        9:norm      10:LineE      11:Sigma       12:norm
-732.121      906.411      -2       2.61771       3.80262      0.663713       3.87863      0.494730       6.00000       1.35731     0.0368547
-726.9        380.989      -3       2.61840       3.79787      0.660119       3.87897      0.498763       6.00000       1.34029     0.0365952
-726.863      36.8728      -4       2.61942       3.79492      0.659646       3.87799      0.499273       6.00000       1.33828     0.0366215
-726.862      1.24817      -5       2.61933       3.79604      0.659614       3.87804      0.499261       6.00000       1.33797     0.0366135
-726.862      2.64778       2       2.61933       3.79604      0.659614       3.87804      0.499261       6.00000       1.33797     0.0366135
+715.58       2001.21      -3       1.39954       127.771       2.05431       3.63842      0.127634       6.28870       1.18015     0.0206567
+715.247      177.776      -4       1.38490       132.563       2.03405       3.63898      0.130763       6.24144       1.21238     0.0222691
+713.785      765.155      -4       1.37469       136.237       2.02091       3.63951      0.132874       6.21395       1.23483     0.0234177
+713.177      402.846      -4       1.36693       139.112       2.01164       3.63940      0.134448       6.19011       1.25427     0.0243999
+712.866      233.892      -4       1.36092       141.389       2.00484       3.63913      0.135645       6.17065       1.27006     0.0252186
+712.693      139.98       -4       1.35621       143.206       1.99968       3.63883      0.136574       6.15486       1.28272     0.0258915
+712.592      85.0678      -4       1.35250       144.660       1.99569       3.63856      0.137303       6.14210       1.29281     0.0264396
+712.53       53.1189      -4       1.34955       145.826       1.99257       3.63833      0.137878       6.13181       1.30085     0.0268844
+712.505      33.0805      -5       1.34286       148.468       1.98466       3.63830      0.139248       6.10984       1.31599     0.0277853
+712.433      167.138      -6       1.33981       149.745       1.98170       3.63798      0.139825       6.09864       1.32474     0.0282964
+712.425      37.6317      -7       1.33879       150.178       1.98102       3.63768      0.139995       6.09413       1.32876     0.0285154
 ==========================================================================================
  Variances and Principal Axes
                  2        3        5        6        9       10       11       12  
- 5.7454E-08| -0.2038  -0.0338  -0.5045  -0.1062  -0.4301  -0.0028   0.0053  -0.7116  
- 4.4112E-07|  0.2009   0.0292   0.4047   0.1221   0.5459  -0.0085   0.0243  -0.6938  
- 4.8274E-06|  0.7789   0.0580   0.1497   0.2805  -0.5316   0.0320   0.0498  -0.0523  
- 2.7344E-05|  0.4058   0.0397  -0.7445   0.1697   0.4806   0.0829   0.0636   0.0941  
- 2.0545E-04|  0.1620   0.1349   0.0468  -0.6263   0.0142   0.2063   0.7200   0.0035  
- 3.9966E-04| -0.3215  -0.0909   0.0198   0.6779  -0.0490   0.1974   0.6220   0.0147  
- 3.1719E-02| -0.0117  -0.1445   0.0488  -0.0434  -0.0098   0.9460  -0.2819  -0.0178  
- 7.4825E-02| -0.1304   0.9725  -0.0056   0.1128  -0.0272   0.1253  -0.0898  -0.0063  
+ 2.3058E-08|  0.5075   0.0008   0.0173   0.0424   0.7542   0.0031  -0.0010   0.4142  
+ 1.5506E-07|  0.6196   0.0013  -0.1487  -0.0722  -0.6410  -0.0055  -0.0111   0.4216  
+ 3.3301E-07|  0.5929   0.0015   0.0053   0.0090   0.0420  -0.0158   0.0161  -0.8038  
+ 5.3443E-05| -0.0730  -0.0026  -0.7655  -0.5735   0.1298   0.1147   0.2158  -0.0565  
+ 3.9314E-04| -0.0101  -0.0010   0.0339  -0.4141   0.0378  -0.5741  -0.7044  -0.0127  
+ 7.3413E-04| -0.0403  -0.0047  -0.5924   0.6838   0.0141  -0.4134  -0.0919  -0.0189  
+ 5.3956E-03|  0.0042  -0.0083   0.1985  -0.1583  -0.0107  -0.6972   0.6697   0.0292  
+ 1.8877E+02| -0.0025   0.9999  -0.0029   0.0000   0.0005  -0.0080   0.0050   0.0003  
 ------------------------------------------------------------------------------------------
 
 ================================================================================================
   Covariance Matrix
         1           2           3           4           5           6           7           8   
-   1.331e-03  -9.420e-03   2.798e-05  -1.190e-03   2.797e-04  -1.590e-03   9.252e-04   6.731e-05
-  -9.420e-03   7.143e-02  -6.313e-04   8.364e-03  -1.935e-03   4.779e-03  -5.242e-03  -3.787e-04
-   2.798e-05  -6.313e-04   9.373e-05  -1.183e-04  -1.398e-05   1.413e-03  -3.879e-04  -2.680e-05
-  -1.190e-03   8.364e-03  -1.183e-04   1.277e-03  -2.301e-04  -2.168e-04  -2.934e-04  -2.500e-05
-   2.797e-04  -1.935e-03  -1.398e-05  -2.301e-04   6.740e-05  -5.504e-04   2.609e-04   1.934e-05
-  -1.590e-03   4.779e-03   1.413e-03  -2.168e-04  -5.504e-04   2.958e-02  -9.221e-03  -5.920e-04
-   9.252e-04  -5.242e-03  -3.879e-04  -2.934e-04   2.609e-04  -9.221e-03   3.385e-03   2.060e-04
-   6.731e-05  -3.787e-04  -2.680e-05  -2.500e-05   1.934e-05  -5.920e-04   2.060e-04   1.363e-05
+   1.137e-03  -4.628e-01   1.381e-03  -2.761e-05  -2.371e-04   3.700e-03  -2.305e-03  -1.505e-04
+  -4.628e-01   1.887e+02  -5.531e-01   3.151e-03   9.614e-02  -1.509e+00   9.480e-01   6.195e-02
+   1.381e-03  -5.531e-01   2.123e-03  -4.582e-04  -3.042e-04   3.844e-03  -2.039e-03  -1.400e-04
+  -2.761e-05   3.151e-03  -4.582e-04   5.634e-04   7.717e-06   4.526e-04  -4.941e-04  -2.956e-05
+  -2.371e-04   9.614e-02  -3.042e-04   7.717e-06   5.127e-05  -7.406e-04   4.343e-04   2.905e-05
+   3.700e-03  -1.509e+00   3.844e-03   4.526e-04  -7.406e-04   1.495e-02  -9.912e-03  -5.969e-04
+  -2.305e-03   9.480e-01  -2.039e-03  -4.941e-04   4.343e-04  -9.912e-03   7.385e-03   4.207e-04
+  -1.505e-04   6.195e-02  -1.400e-04  -2.956e-05   2.905e-05  -5.969e-04   4.207e-04   2.567e-05
 ------------------------------------------------------------------------------------------------
 
 ========================================================================
@@ -1056,24 +1064,24 @@ Model TBabs&lt;1&gt;(diskbb&lt;2&gt; + compTT&lt;3&gt; + gaussian&lt;4&gt;) Sour
 Model Model Component  Parameter  Unit     Value
  par  comp
    1    1   TBabs      nH         10^22    0.120000     frozen
-   2    2   diskbb     Tin        keV      2.61933      +/-  3.64855E-02  
-   3    2   diskbb     norm                3.79604      +/-  0.267267     
+   2    2   diskbb     Tin        keV      1.33879      +/-  3.37162E-02  
+   3    2   diskbb     norm                150.178      +/-  13.7385      
    4    3   compTT     Redshift            0.0          frozen
-   5    3   compTT     T0         keV      0.659614     +/-  9.68163E-03  
-   6    3   compTT     kT         keV      3.87804      +/-  3.57334E-02  
+   5    3   compTT     T0         keV      1.98102      +/-  4.60775E-02  
+   6    3   compTT     kT         keV      3.63768      +/-  2.37359E-02  
    7    3   compTT     taup                3.00000      frozen
    8    3   compTT     approx              1.00000      frozen
-   9    3   compTT     norm                0.499261     +/-  8.20952E-03  
-  10    4   gaussian   LineE      keV      6.00000      +/-  0.171995     
-  11    4   gaussian   Sigma      keV      1.33797      +/-  5.81808E-02  
-  12    4   gaussian   norm                3.66135E-02  +/-  3.69231E-03  
+   9    3   compTT     norm                0.139995     +/-  7.16064E-03  
+  10    4   gaussian   LineE      keV      6.09413      +/-  0.122262     
+  11    4   gaussian   Sigma      keV      1.32876      +/-  8.59370E-02  
+  12    4   gaussian   norm                2.85154E-02  +/-  5.06639E-03  
 ________________________________________________________________________
 
 
-Fit statistic  : Chi-Squared                  726.86     using 541 bins.
+Fit statistic  : Chi-Squared                  712.43     using 541 bins.
 
-Test statistic : Chi-Squared                  726.86     using 541 bins.
- Null hypothesis probability of 4.16e-08 with 533 degrees of freedom
+Test statistic : Chi-Squared                  712.43     using 541 bins.
+ Null hypothesis probability of 2.91e-07 with 533 degrees of freedom
 </pre></div>
 </div>
 </div>
@@ -1090,17 +1098,17 @@ Test statistic : Chi-Squared                  726.86     using 541 bins.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Chi-Squared    Delta            LineE
                  Chi-Squared            10
 
-          726.86 -3.4838e-05    0           6
-          737.18      10.316    1         6.1
-          752.25       25.39    2         6.2
-          774.06      47.194    3         6.3
-          805.29      78.427    4         6.4
-          849.26       122.4    5         6.5
-          909.28      182.42    6         6.6
-           987.5      260.64    7         6.7
-          1083.9         357    8         6.8
-            1196      469.09    9         6.9
-          1319.6      592.72   10           7
+          712.72     0.29437    0           6
+          712.43   0.0045085    1         6.1
+          713.11      0.6812    2         6.2
+          715.42      2.9927    3         6.3
+          720.57      8.1444    4         6.4
+          730.73      18.306    5         6.5
+          749.38      36.952    6         6.6
+          780.42      67.999    7         6.7
+           825.4      112.98    8         6.8
+          881.89      169.46    9         6.9
+          945.42         233   10           7
 </pre></div>
 </div>
 </div>
@@ -1115,8 +1123,8 @@ Test statistic : Chi-Squared                  726.86     using 541 bins.
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Parameter   Confidence Range (2.706)
-     2      2.56056      2.68294    (-0.0587717,0.0636018)
-     3       3.3571      4.28997    (-0.438943,0.493922)
+     2      1.29289      1.39642    (-0.0458832,0.0576526)
+     3      128.789       163.06    (-21.4014,12.8694)
 </pre></div>
 </div>
 </div>
@@ -1127,32 +1135,6 @@ Test statistic : Chi-Squared                  726.86     using 541 bins.
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save the fit</span>
 <span class="n">xspec</span><span class="o">.</span><span class="n">Xset</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;savefit.xcm&quot;</span><span class="p">,</span> <span class="n">info</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>savefit.xcm exists. Replace? (y/n) 
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">Exception</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># save the fit</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">xspec</span><span class="o">.</span><span class="n">Xset</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;savefit.xcm&quot;</span><span class="p">,</span> <span class="n">info</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~/heasoft/heasoft-6.35.2/aarch64-apple-darwin24.6.0/lib/python/xspec/xset.py:695,</span> in <span class="ni">XspecSettings.save</span><span class="nt">(self, fileName, info)</span>
-<span class="g g-Whitespace">    </span><span class="mi">692</span>     <span class="n">fileName</span> <span class="o">+=</span> <span class="s2">&quot;.xcm&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">693</span> <span class="n">saveArgs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">695</span> <span class="n">_pyXspec</span><span class="o">.</span><span class="n">doXspecCmd</span><span class="p">(</span><span class="n">saveArgs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">697</span> <span class="c1"># If doXspecCmd didn&#39;t raise an exception, assume save file has</span>
-<span class="g g-Whitespace">    </span><span class="mi">698</span> <span class="c1"># been written to disk.  Add a PyXspec identifier to top of file.</span>
-<span class="g g-Whitespace">    </span><span class="mi">699</span> 
-<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="c1"># The key here is the &#39;inplace&#39; specifier.  While iterating through</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="c1"># the FileInput object, standard output is automatically rerouted</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># to the file given by &#39;fileName&#39;.  </span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="n">saveFile</span> <span class="o">=</span> <span class="n">fileinput</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="ne">Exception</span>: Error executing command: save
 </pre></div>
 </div>
 </div>
