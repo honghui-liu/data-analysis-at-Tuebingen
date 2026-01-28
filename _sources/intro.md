@@ -41,7 +41,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Lecturer: Florian Sanzenbacher
 - 28.01.2026: Talk by Professor Ingyin Zaw (NYU Abu Dhabi)
     - PhD, Postdoc and other opportunities at NYU Abu Dhabi
-- 04.02.2026Constructing table models in XSPEC for returning radiation effects
+- 04.02.2026: Constructing table models in XSPEC for returning radiation effects
     - Lecturer: Konstantinos Kourmpetis
 - Next: From equation of state (EoS) to mass-radius relation of neutron stars
     - Lecturer: Konstantinos Kourmpetis
