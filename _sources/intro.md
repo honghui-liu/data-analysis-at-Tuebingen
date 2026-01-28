@@ -39,9 +39,11 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Lecturers: Honghui Liu & Menglei Zhou
 - 21.01.2026: Phase-resolved analysis for `heartbeat' data
     - Lecturer: Florian Sanzenbacher
-- 28.01.2026: Constructing table models in XSPEC for returning radiation effects
+- 28.01.2026: Talk by Professor Ingyin Zaw (NYU Abu Dhabi)
+    - PhD, Postdoc and other opportunities at NYU Abu Dhabi
+- 04.02.2026Constructing table models in XSPEC for returning radiation effects
     - Lecturer: Konstantinos Kourmpetis
-- 04.02.2026: From equation of state (EoS) to mass-radius relation of neutron stars
+- Next: From equation of state (EoS) to mass-radius relation of neutron stars
     - Lecturer: Konstantinos Kourmpetis
 - Next: Pulsar timing (Part II)
     - Lecturers: Menglei Zhou & Honghui Liu
