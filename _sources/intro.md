@@ -43,6 +43,9 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - PhD, Postdoc and other opportunities at NYU Abu Dhabi
 - 04.02.2026: Constructing table models in XSPEC for returning radiation effects
     - Lecturer: Konstantinos Kourmpetis
+
+**Semester break until 01.04.2026**
+
 - Next: From equation of state (EoS) to mass-radius relation of neutron stars
     - Lecturer: Konstantinos Kourmpetis
 - Next: Pulsar timing (Part II)
@@ -57,7 +60,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - Next: Coded masking
 - Next: How to write an observational proposal?
 
-*Updated on 10 Jan 2026.*
+*Updated on 09 Feb 2026.*
 
 ## Tutorials & scripts
 
