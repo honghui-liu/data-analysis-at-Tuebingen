@@ -16,7 +16,9 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 
 - 29.04.2026: Assessing systematic uncertainties from spectral re-analysis of Cyg X-1 with different coronal geometries
     - Speaker: Abdurakhmon Nosirov
-- 12.05.2026: Pulsar timing (Part II)
+- 06.05.2026: eROSITA data analysis for extended sources
+    - Speaker: Aditya Pandya
+- 13.05.2026: Pulsar timing (Part II)
     - Lecturers: Shuaitongze Zhao
     - Phase-resolved spectroscopy, phase-resolved X-ray polarimetric analysis, RVM model for X-ray pulsars 
 - Next: From equation of state (EoS) to mass-radius relation of neutron stars
