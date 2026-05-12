@@ -23,7 +23,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Phase-resolved spectroscopy, phase-resolved X-ray polarimetric analysis, RVM model for X-ray pulsars 
 - Next: From equation of state (EoS) to mass-radius relation of neutron stars
     - Lecturer: Konstantinos Kourmpetis
-
+- Next: How to use the sciserver
 - Next: Walkthrough of XMM-Newton data analysis
 - Next: Walkthrough of Insight-HXMT data analysis
 - Next: Data analysis for extended sources (e.g., SNR, bubbles, Galactic center, galaxy clusters)
@@ -33,7 +33,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - Next: Coded masking
 - Next: How to write an observational proposal?
 
-*Updated on 09 Feb 2026.*
+*Updated on 07 May 2026.*
 
 ## Tutorials & scripts
 
