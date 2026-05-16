@@ -21,7 +21,9 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - 13.05.2026: Pulsar timing (Part II)
     - Lecturers: Shuaitongze Zhao
     - Phase-resolved spectroscopy, phase-resolved X-ray polarimetric analysis, RVM model for X-ray pulsars 
-- Next: From equation of state (EoS) to mass-radius relation of neutron stars
+- 20.05.2026: A bright flare in the obscured state of GRS 1915+105 as seen by NICER and Swift
+    - Speaker: Shuaitongze Zhao
+- 03.06.2026: From equation of state (EoS) to mass-radius relation of neutron stars
     - Lecturer: Konstantinos Kourmpetis
 - Next: How to use the sciserver
 - Next: Walkthrough of XMM-Newton data analysis
