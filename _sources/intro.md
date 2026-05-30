@@ -25,6 +25,8 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Speaker: Shuaitongze Zhao
 - 03.06.2026: From equation of state (EoS) to mass-radius relation of neutron stars
     - Lecturer: Konstantinos Kourmpetis
+- 17.06.2026 (**13:00-14:00 s.t.**): JWST data analysis
+    - Lecturer: Sinan Allak
 - Next: How to use the sciserver
 - Next: Walkthrough of XMM-Newton data analysis
 - Next: Walkthrough of Insight-HXMT data analysis
