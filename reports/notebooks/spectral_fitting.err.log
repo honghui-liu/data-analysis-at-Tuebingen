@@ -18,28 +18,25 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Import necessary packages
+# Run error
 
-import numpy as np
-import os
-#import bxa.xspec as bxa
-from IPython.display import display, HTML, Image
-
-import xspec
-
-%load_ext wurlitzer
-import IPython.display
+xspec.Fit.error("2.706 2 3") # on parameter 2 and 3
 ------------------
 
+----- stdout -----
+Cannot do error calc: Reduced Chi^2 (= 2.16702) > maximum (2)
+------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 8[0m
-[1;32m      5[0m [38;5;66;03m#import bxa.xspec as bxa[39;00m
-[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdisplay[39;00m [38;5;28;01mimport[39;00m display, HTML, Image
-[0;32m----> 8[0m [38;5;28;01mimport[39;00m [38;5;21;01mxspec[39;00m
-[1;32m     10[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124mload_ext[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mwurlitzer[39m[38;5;124m'[39m)
-[1;32m     11[0m [38;5;28;01mimport[39;00m [38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdisplay[39;00m
+[0;31mException[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[14], line 3[0m
+[1;32m      1[0m [38;5;66;03m# Run error[39;00m
+[0;32m----> 3[0m xspec[38;5;241m.[39mFit[38;5;241m.[39merror([38;5;124m"[39m[38;5;124m2.706 2 3[39m[38;5;124m"[39m)
 
-[0;31mModuleNotFoundError[0m: No module named 'xspec'
+File [0;32m~/heasoft/heasoft-6.35.2/aarch64-apple-darwin24.6.0/lib/python/xspec/fit.py:425[0m, in [0;36mFitManager.error[0;34m(self, argString, respPar)[0m
+[1;32m    423[0m     errorArgs [38;5;241m=[39m [[38;5;124m"[39m[38;5;124merror[39m[38;5;124m"[39m]
+[1;32m    424[0m errorArgs [38;5;241m+[39m[38;5;241m=[39m argString[38;5;241m.[39msplit()
+[0;32m--> 425[0m _pyXspec[38;5;241m.[39mdoXspecCmd(errorArgs)
+
+[0;31mException[0m: Error executing command: error
 

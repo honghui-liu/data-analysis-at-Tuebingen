@@ -193,6 +193,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Statistics.html"><strong>Statistics for X-ray data analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Phase_Resolved_Analysis.html"><strong>Phase Resolved Analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Pulsar_Timing_and_Phase-resolved_Spectroscopy.html">Pulsar Timing and Phase-resolved Spectroscopy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TOV_Sand_workshop.html">Building Neutron Stars: Equation of State and TOV Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Monte-Carlo-simulations.html">Monte-Carlo simulation in X-ray data analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About This Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../past_agenda.html">Past agenda</a></li>
 </ul>
@@ -410,18 +412,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">xspec</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">os</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">glob</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;xspec&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -482,15 +472,18 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;HEADASNOQUERY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;HEADASPROMPT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;/dev/null&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Uncomment the following lines to do simulations</span>
 
-    <span class="c1"># Simulate spectra for all models in the dir</span>
-    <span class="k">for</span> <span class="n">infile</span> <span class="ow">in</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*.fits&quot;</span><span class="p">):</span>
-        <span class="c1">#infile = sys.argv[1]</span>
 
-        <span class="n">fake_pha</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span>
+<span class="c1"># if __name__ == &quot;__main__&quot;:</span>
+<span class="c1">#     os.environ[&#39;HEADASNOQUERY&#39;] = &#39;&#39;</span>
+<span class="c1">#     os.environ[&#39;HEADASPROMPT&#39;] = &#39;/dev/null&#39;</span>
+
+<span class="c1">#     # Simulate spectra for all models in the dir</span>
+<span class="c1">#     for infile in glob.glob(&quot;*.fits&quot;):</span>
+<span class="c1">#         #infile = sys.argv[1]</span>
+
+<span class="c1">#         fake_pha(infile)</span>
 </pre></div>
 </div>
 </div>
