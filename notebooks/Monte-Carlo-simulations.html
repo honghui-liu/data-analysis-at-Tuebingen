@@ -196,7 +196,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Phase_Resolved_Analysis.html"><strong>Phase Resolved Analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Pulsar_Timing_and_Phase-resolved_Spectroscopy.html">Pulsar Timing and Phase-resolved Spectroscopy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TOV_Sand_workshop.html">Building Neutron Stars: Equation of State and TOV Equations</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Monte-Carlo simulation in X-ray data analysis</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Monte-Carlo simulation in X-ray data analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About This Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../past_agenda.html">Past agenda</a></li>
 </ul>
@@ -400,6 +400,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exact-error-propagation-from-q-u-to-pd-pa">Exact error propagation from <span class="math notranslate nohighlight">\(q,u\)</span> to <span class="math notranslate nohighlight">\(PD,PA\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#high-significance-approximation">High-significance approximation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-caveat-at-low-significance">Important caveat at low significance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation">Simulation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-ii-xspec-spectral-fitting-with-mcmc">Case II: XSPEC spectral fitting with MCMC</a><ul class="nav section-nav flex-column">
@@ -428,7 +429,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="monte-carlo-simulation-in-x-ray-data-analysis">
-<h1>Monte-Carlo simulation in X-ray data analysis<a class="headerlink" href="#monte-carlo-simulation-in-x-ray-data-analysis" title="Link to this heading">#</a></h1>
+<h1><strong>Monte-Carlo simulation in X-ray data analysis</strong><a class="headerlink" href="#monte-carlo-simulation-in-x-ray-data-analysis" title="Link to this heading">#</a></h1>
 <p>Contact: Honghui Liu (honghui.liu&lt;at&gt;uni-tuebingen.de)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1392,6 +1393,9 @@ q=u=0.
 </div>
 </div>
 </div>
+</section>
+<section id="simulation">
+<h3>Simulation<a class="headerlink" href="#simulation" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ============================================================</span>
@@ -1435,12 +1439,12 @@ q=u=0.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Autocorrelation time: [30.70942391 31.84985789]
-Chain length / tau: [325.63294026 313.97314344]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Autocorrelation time: [31.49730552 30.77112295]
+Chain length / tau: [317.48747508 324.98001505]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Autocorrelation time: [31.52722477 31.43914755]
-Chain length / tau: [317.18618026 318.07478191]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Autocorrelation time: [30.25205667 30.46948776]
+Chain length / tau: [330.55603816 328.1971813 ]
 </pre></div>
 </div>
 </div>
@@ -1523,7 +1527,7 @@ Chain length / tau: [317.18618026 318.07478191]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0e6c8ce6f6585e28ceddcf8a351b7f39e039de13800b20e0c9d153236f589201.svg" src="../_images/0e6c8ce6f6585e28ceddcf8a351b7f39e039de13800b20e0c9d153236f589201.svg" /></div>
+<img alt="../_images/ed7bd89cac6c1a19360855e2040dc17bec0f1c0fb4734a7756abb11e546fc079.svg" src="../_images/ed7bd89cac6c1a19360855e2040dc17bec0f1c0fb4734a7756abb11e546fc079.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1592,7 +1596,7 @@ Chain length / tau: [317.18618026 318.07478191]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/804f5e7570c7f61aff029591362987a68def410aa707648ebd38e9687889071f.svg" src="../_images/804f5e7570c7f61aff029591362987a68def410aa707648ebd38e9687889071f.svg" /></div>
+<img alt="../_images/36feb75e7d8933e941ec82f7afa836a36510beb56e422d2793726841d4767a9c.svg" src="../_images/36feb75e7d8933e941ec82f7afa836a36510beb56e422d2793726841d4767a9c.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1643,15 +1647,15 @@ Chain length / tau: [317.18618026 318.07478191]
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>======================================================================
 Low significance
 ======================================================================
-Acceptance fraction = 0.714
+Acceptance fraction = 0.715
 Observed q = 0.02000
 Observed u = 0.03464
 Observed PD = 4.00 %
 Observed PA = 30.00 deg
 
 MCMC transformed posterior:
-PD = 4.54 +1.91 -1.82 %
-PA = 29.85 +14.70 -14.65 deg
+PD = 4.51 +1.88 -1.83 %
+PA = 29.92 +14.63 -14.66 deg
 
 Simplified high-significance approximation:
 sigma_PD ≈ 2.00 %
@@ -1667,8 +1671,8 @@ Observed PD = 4.00 %
 Observed PA = 30.00 deg
 
 MCMC transformed posterior:
-PD = 4.04 +0.49 -0.49 %
-PA = 29.90 +3.58 -3.53 deg
+PD = 4.03 +0.48 -0.49 %
+PA = 30.01 +3.60 -3.56 deg
 
 Simplified high-significance approximation:
 sigma_PD ≈ 0.50 %
@@ -1861,6 +1865,14 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Energy grid: 300 channels  0.30–10.00 keV
+Grid continuous? True
+ARF written -&gt; diag.arf
+RMF written -&gt; diag.rmf  diagonal, 300 x 300
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <hr class="docutils" />
@@ -1921,6 +1933,69 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tbvabs Version 2.3
+Cosmic absorption with grains and H2, modified from
+Wilms, Allen, &amp; McCray, 2000, ApJ 542, 914-924
+Questions: Joern Wilms
+joern.wilms@sternwarte.uni-erlangen.de
+joern.wilms@fau.de
+
+http://pulsar.sternwarte.uni-erlangen.de/wilms/research/tbabs/
+
+PLEASE NOTICE:
+&gt;&gt;&gt; Parameters reset
+To get the model described by the above paper
+you will also have to set the abundances:
+   abund wilm
+
+Note that this routine ignores the current cross section setting
+as it always HAS to use the Verner cross sections as a baseline.
+
+========================================================================
+Model TBabs&lt;1&gt;*powerlaw&lt;2&gt; Source No.: 1   Active/Off
+Model Model Component  Parameter  Unit     Value
+ par  comp
+   1    1   TBabs      nH         10^22    1.00000      +/-  0.0          
+   2    2   powerlaw   PhoIndex            1.00000      +/-  0.0          
+   3    2   powerlaw   norm                1.00000      +/-  0.0          
+________________________________________________________________________
+
+
+All model energies will be taken from non-extended response energies.
+
+xsFakeit cmd string:
+fakeit 1 &amp; diag.rmf &amp; diag.arf &amp; y &amp; / &amp; sim_spectrum.fak &amp; 50000.0, ,  
+
+
+No background will be applied to fake spectrum #1
+
+1 spectrum  in use
+ 
+
+Fit statistic  : Chi-Squared                  347.07     using 300 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number: 1
+
+Test statistic : Chi-Squared                  347.07     using 300 bins.
+
+***Warning: Chi-square may not be valid due to bins with zero variance
+            in spectrum number(s): 1 
+
+ Null hypothesis probability of 2.41e-02 with 297 degrees of freedom
+ Current data and model not fit yet.
+     7 channels (1-7) ignored in spectrum #     1
+    62 channels (239-300) ignored in spectrum #     1
+
+Fit statistic  : Chi-Squared                  278.06     using 231 bins.
+
+Test statistic : Chi-Squared                  278.06     using 231 bins.
+ Null hypothesis probability of 1.31e-02 with 228 degrees of freedom
+ Current data and model not fit yet.
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1930,6 +2005,11 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>***Warning: Fit is not current.
+</pre></div>
+</div>
+<img alt="../_images/64a014c74b467389fc47705324f2bcddcf4a70e8c7dbe4f810c1c941e2f11db7.svg" src="../_images/64a014c74b467389fc47705324f2bcddcf4a70e8c7dbe4f810c1c941e2f11db7.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1939,6 +2019,57 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 
 <span class="c1"># ── Print fit results ────────────────────────────────────────────────────────</span>
 <span class="n">xspec</span><span class="o">.</span><span class="n">Fit</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Default fit statistic is set to: C-Statistic
+   This will apply to all current and newly loaded spectra.
+
+Fit statistic  : C-Statistic                  277.37     using 231 bins.
+
+Test statistic : Chi-Squared                  278.06     using 231 bins.
+ Null hypothesis probability of 1.31e-02 with 228 degrees of freedom
+ Current data and model not fit yet.
+                                   Parameters
+C-Statistic  |beta|/N    Lvl          1:nH    2:PhoIndex        3:norm
+272.489      606.949      -3      0.503234       2.00144     0.0100475
+272.488      229.921      -4      0.503231       2.00147     0.0100479
+========================================
+ Variances and Principal Axes
+                 1        2        3  
+ 2.8885E-10| -0.0099  -0.0074   0.9999  
+ 1.3785E-06|  0.9333  -0.3590   0.0066  
+ 2.2852E-05|  0.3589   0.9333   0.0105  
+----------------------------------------
+
+====================================
+  Covariance Matrix
+        1           2           3   
+   4.145e-06   7.194e-06   9.455e-08
+   7.194e-06   2.008e-05   2.207e-07
+   9.455e-08   2.207e-07   2.867e-09
+------------------------------------
+
+========================================================================
+Model TBabs&lt;1&gt;*powerlaw&lt;2&gt; Source No.: 1   Active/On
+Model Model Component  Parameter  Unit     Value
+ par  comp
+   1    1   TBabs      nH         10^22    0.503231     +/-  2.03591E-03  
+   2    2   powerlaw   PhoIndex            2.00147      +/-  4.48141E-03  
+   3    2   powerlaw   norm                1.00479E-02  +/-  5.35444E-05  
+________________________________________________________________________
+
+
+Fit statistic  : C-Statistic                  272.49     using 231 bins.
+
+Test statistic : Chi-Squared                  274.02     using 231 bins.
+ Null hypothesis probability of 1.99e-02 with 228 degrees of freedom
+
+Fit statistic  : C-Statistic                  272.49     using 231 bins.
+
+Test statistic : Chi-Squared                  274.02     using 231 bins.
+ Null hypothesis probability of 1.99e-02 with 228 degrees of freedom
 </pre></div>
 </div>
 </div>
@@ -2019,6 +2150,11 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  New chain mcmc_chain.fits is now loaded.
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2044,6 +2180,11 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">names</span><span class="p">,</span> <span class="n">n_walkers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([&#39;nH__1&#39;, &#39;PhoIndex__2&#39;, &#39;norm__3&#39;, &#39;FIT_STATISTIC&#39;], 10)
 </pre></div>
 </div>
 </div>
@@ -2077,6 +2218,14 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chain_matrix shape: (50000, 4)
+chain shape: (5000, 10, 4)
+First step, first walker:
+[5.05828403e-01 2.00522964e+00 1.01143128e-02 2.74734028e+02]
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -2104,6 +2253,8 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/69a6230bd8f1cd8ef9c518c12cb5ea2d81dab5d3a069bff697690b1331810432.svg" src="../_images/69a6230bd8f1cd8ef9c518c12cb5ea2d81dab5d3a069bff697690b1331810432.svg" /><img alt="../_images/31fcbccda23d35be979b0c52308724f4b1031876b51630a8e35b7fddd5b85500.svg" src="../_images/31fcbccda23d35be979b0c52308724f4b1031876b51630a8e35b7fddd5b85500.svg" /><img alt="../_images/b79728d650e25c71a13cb75b3a314f49cd1877996ce6c77e91432398d7f67ea1.svg" src="../_images/b79728d650e25c71a13cb75b3a314f49cd1877996ce6c77e91432398d7f67ea1.svg" /><img alt="../_images/57da9a4cb617a4cb9d363251be384a377dafba0d08c064dffc32144cae469b2f.svg" src="../_images/57da9a4cb617a4cb9d363251be384a377dafba0d08c064dffc32144cae469b2f.svg" /></div>
 </div>
 </section>
 <section id="compare-the-2d-distribution-from-the-first-and-second-halves-of-the-chain">
@@ -2334,6 +2485,11 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Final sample shape: (50000, 3)
+</pre></div>
+</div>
+<img alt="../_images/16377ce86a354b19675a4f6ab87fc05307d07ce2fa86ebc02191f3657bc30541.svg" src="../_images/16377ce86a354b19675a4f6ab87fc05307d07ce2fa86ebc02191f3657bc30541.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2416,6 +2572,8 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/289587836b33848ef5a0a7321783f6f3fb0df8e964caddeb13e5cd84c9536978.svg" src="../_images/289587836b33848ef5a0a7321783f6f3fb0df8e964caddeb13e5cd84c9536978.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2458,8 +2616,20 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nH__1:   56.194066949399165
+PhoIndex__2:   48.77866166188472
+norm__3:   53.91735914884981
+Length:   5000.0
+</pre></div>
 </div>
-<p><strong>(Note) The autocorrelation length only converges when the chain is long enough (see below).</strong></p>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([&#39;nH__1&#39;, &#39;PhoIndex__2&#39;, &#39;norm__3&#39;],
+ [56.194066949399165, 48.77866166188472, 53.91735914884981])
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>(Note) The autocorrelation length only converges when the chain is long enough (Length/acl &gt; 50, see below).</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_steps</span><span class="p">,</span> <span class="n">n_walkers</span><span class="p">,</span> <span class="n">n_params</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">shape</span>
@@ -2536,6 +2706,8 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
         <span class="n">label</span><span class="o">=</span><span class="n">label</span>
     <span class="p">)</span>
 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sample_sizes</span><span class="p">,</span> <span class="n">sample_sizes</span><span class="o">/</span><span class="mf">50.0</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Length = 50$\times \tau$&quot;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
 
@@ -2565,6 +2737,25 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using first 100 steps
+Using first 132 steps
+Using first 174 steps
+Using first 231 steps
+Using first 305 steps
+Using first 404 steps
+Using first 534 steps
+Using first 707 steps
+Using first 935 steps
+Using first 1236 steps
+Using first 1635 steps
+Using first 2162 steps
+Using first 2859 steps
+Using first 3781 steps
+Using first 4999 steps
+</pre></div>
+</div>
+<img alt="../_images/c4b26d7917bba50828ac7135c9f711fcec779904b994933f14c8cb8cd48d18bf.svg" src="../_images/c4b26d7917bba50828ac7135c9f711fcec779904b994933f14c8cb8cd48d18bf.svg" /></div>
 </div>
 <p><strong>It is recommended to make sure the chain length is &gt; 50 times of the autocorrelation length.</strong></p>
 </section>
@@ -2641,6 +2832,7 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exact-error-propagation-from-q-u-to-pd-pa">Exact error propagation from <span class="math notranslate nohighlight">\(q,u\)</span> to <span class="math notranslate nohighlight">\(PD,PA\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#high-significance-approximation">High-significance approximation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-caveat-at-low-significance">Important caveat at low significance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation">Simulation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-ii-xspec-spectral-fitting-with-mcmc">Case II: XSPEC spectral fitting with MCMC</a><ul class="nav section-nav flex-column">
