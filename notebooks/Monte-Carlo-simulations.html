@@ -1439,12 +1439,12 @@ q=u=0.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Autocorrelation time: [30.91237456 30.34694776]
-Chain length / tau: [323.49504503 329.52243106]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Autocorrelation time: [29.55402092 31.52579552]
+Chain length / tau: [338.36343374 317.20056016]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Autocorrelation time: [33.34964624 35.13719139]
-Chain length / tau: [299.85325562 284.59872873]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Autocorrelation time: [31.18991631 32.95341224]
+Chain length / tau: [320.61644219 303.45871096]
 </pre></div>
 </div>
 </div>
@@ -1527,7 +1527,7 @@ Chain length / tau: [299.85325562 284.59872873]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4a86bb3ec848902d18c08c8dc262dda159b8aa38d75958fbb43bdc0441343823.svg" src="../_images/4a86bb3ec848902d18c08c8dc262dda159b8aa38d75958fbb43bdc0441343823.svg" /></div>
+<img alt="../_images/30bee602d9f6bd2c9c585ff3ccdb9dc75a802f9cc5e6b65add0644a43363940c.svg" src="../_images/30bee602d9f6bd2c9c585ff3ccdb9dc75a802f9cc5e6b65add0644a43363940c.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1596,7 +1596,7 @@ Chain length / tau: [299.85325562 284.59872873]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/acae942121c0d4213da4e98f2828bfb6c6226ca3cedc81e4935e70052a660ad4.svg" src="../_images/acae942121c0d4213da4e98f2828bfb6c6226ca3cedc81e4935e70052a660ad4.svg" /></div>
+<img alt="../_images/48516b8ccc47b7ff06633737c0904f9290feafdc3cf43ad5ccd7b44d53b07745.svg" src="../_images/48516b8ccc47b7ff06633737c0904f9290feafdc3cf43ad5ccd7b44d53b07745.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1647,15 +1647,15 @@ Chain length / tau: [299.85325562 284.59872873]
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>======================================================================
 Low significance
 ======================================================================
-Acceptance fraction = 0.716
+Acceptance fraction = 0.713
 Observed q = 0.02000
 Observed u = 0.03464
 Observed PD = 4.00 %
 Observed PA = 30.00 deg
 
 MCMC transformed posterior:
-PD = 4.50 +1.91 -1.82 %
-PA = 29.67 +14.61 -14.92 deg
+PD = 4.48 +1.90 -1.82 %
+PA = 29.79 +14.80 -15.01 deg
 
 Simplified high-significance approximation:
 sigma_PD ≈ 2.00 %
@@ -1671,8 +1671,8 @@ Observed PD = 4.00 %
 Observed PA = 30.00 deg
 
 MCMC transformed posterior:
-PD = 4.03 +0.49 -0.49 %
-PA = 30.00 +3.59 -3.56 deg
+PD = 4.02 +0.50 -0.49 %
+PA = 30.01 +3.58 -3.61 deg
 
 Simplified high-significance approximation:
 sigma_PD ≈ 0.50 %
@@ -1856,7 +1856,9 @@ S^2 = \sum_{i=1}^{N}\frac{(X_i - M_i)^2}{\sigma_i^2}
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Energy grid: 300 channels  0.30–10.00 keV
 Grid continuous? True
-ARF written -&gt; diag.arf
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ARF written -&gt; diag.arf
 RMF written -&gt; diag.rmf  diagonal, 300 x 300
 </pre></div>
 </div>
@@ -1870,7 +1872,7 @@ RMF written -&gt; diag.rmf  diagonal, 300 x 300
 <ul class="simple">
 <li><p>nH = 0.5*10^22 cm^-2</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Gamma\)</span>  = 2.0</p></li>
-<li><p>norm = 1<span class="math notranslate nohighlight">\(\times\)</span> 10<span class="math notranslate nohighlight">\(^{-3}\)</span> photons/cm^2/s/keV at 1 keV</p></li>
+<li><p>norm = 0.01 photons/cm^2/s/keV at 1 keV</p></li>
 </ul>
 <p>Exposure: 50 ks.</p>
 <div class="cell docutils container">
@@ -1943,11 +1945,11 @@ as it always HAS to use the Verner cross sections as a baseline.
 Model TBabs&lt;1&gt;*powerlaw&lt;2&gt; Source No.: 1   Active/Off
 Model Model Component  Parameter  Unit     Value
  par  comp
+
    1    1   TBabs      nH         10^22    1.00000      +/-  0.0          
    2    2   powerlaw   PhoIndex            1.00000      +/-  0.0          
    3    2   powerlaw   norm                1.00000      +/-  0.0          
 ________________________________________________________________________
-
 
 
 All model energies will be taken from non-extended response energies.
@@ -1961,27 +1963,20 @@ No background will be applied to fake spectrum #1
 1 spectrum  in use
  
 
-Fit statistic  : Chi-Squared                  344.75     using 300 bins.
+Fit statistic  : Chi-Squared                  301.59     using 300 bins.
 
-***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number: 1
-
-Test statistic : Chi-Squared                  344.75     using 300 bins.
-
-***Warning: Chi-square may not be valid due to bins with zero variance
-            in spectrum number(s): 1 
-
- Null hypothesis probability of 2.94e-02 with 297 degrees of freedom
+Test statistic : Chi-Squared                  301.59     using 300 bins.
+ Null hypothesis probability of 4.15e-01 with 297 degrees of freedom
  Current data and model not fit yet.
+     7 channels (1-7) ignored in spectrum #     1
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     7 channels (1-7) ignored in spectrum #     1
-    62 channels (239-300) ignored in spectrum #     1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    62 channels (239-300) ignored in spectrum #     1
 
-Fit statistic  : Chi-Squared                  286.30     using 231 bins.
+Fit statistic  : Chi-Squared                  211.12     using 231 bins.
 
-Test statistic : Chi-Squared                  286.30     using 231 bins.
- Null hypothesis probability of 5.27e-03 with 228 degrees of freedom
+Test statistic : Chi-Squared                  211.12     using 231 bins.
+ Null hypothesis probability of 7.82e-01 with 228 degrees of freedom
  Current data and model not fit yet.
 </pre></div>
 </div>
@@ -1999,7 +1994,7 @@ Test statistic : Chi-Squared                  286.30     using 231 bins.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>***Warning: Fit is not current.
 </pre></div>
 </div>
-<img alt="../_images/a14030a90ee0fb2e8133654aa73966225a248da0d315339f1e4663095a9ad84c.svg" src="../_images/a14030a90ee0fb2e8133654aa73966225a248da0d315339f1e4663095a9ad84c.svg" /></div>
+<img alt="../_images/1236e5bb459e7746e1f1ec5efc73ad1731356c7f5812065b863284fb6d534488.svg" src="../_images/1236e5bb459e7746e1f1ec5efc73ad1731356c7f5812065b863284fb6d534488.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2015,52 +2010,51 @@ Test statistic : Chi-Squared                  286.30     using 231 bins.
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Default fit statistic is set to: C-Statistic
    This will apply to all current and newly loaded spectra.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit statistic  : C-Statistic                  282.98     using 231 bins.
 
-Test statistic : Chi-Squared                  286.30     using 231 bins.
- Null hypothesis probability of 5.27e-03 with 228 degrees of freedom
+Fit statistic  : C-Statistic                  210.80     using 231 bins.
+
+Test statistic : Chi-Squared                  211.12     using 231 bins.
+ Null hypothesis probability of 7.82e-01 with 228 degrees of freedom
  Current data and model not fit yet.
                                    Parameters
 C-Statistic  |beta|/N    Lvl          1:nH    2:PhoIndex        3:norm
-281.043      162.856      -3      0.501215       2.00485     0.0100605
-281.042      204.222      -4      0.501243       2.00491     0.0100615
+209.9        135.412      -3      0.498347       1.99711    0.00995467
+209.9        54.5927      -4      0.498320       1.99705    0.00995399
 ========================================
  Variances and Principal Axes
                  1        2        3  
- 2.8938E-10| -0.0100  -0.0074   0.9999  
- 1.3658E-06|  0.9339  -0.3575   0.0066  
- 2.2839E-05|  0.3574   0.9339   0.0105  
+ 2.8390E-10| -0.0099  -0.0074   0.9999  
+ 1.3629E-06|  0.9340  -0.3572   0.0066  
+ 2.2769E-05|  0.3571   0.9340   0.0104  
 ----------------------------------------
 
 ====================================
   Covariance Matrix
         1           2           3   
-   4.109e-06   7.167e-06   9.418e-08
-   7.167e-06   2.009e-05   2.207e-07
-   9.418e-08   2.207e-07   2.867e-09
+   4.093e-06   7.140e-06   9.291e-08
+   7.140e-06   2.004e-05   2.179e-07
+   9.291e-08   2.179e-07   2.804e-09
 ------------------------------------
 
 ========================================================================
 Model TBabs&lt;1&gt;*powerlaw&lt;2&gt; Source No.: 1   Active/On
 Model Model Component  Parameter  Unit     Value
  par  comp
-   1    1   TBabs      nH         10^22    0.501243     +/-  2.02702E-03  
-   2    2   powerlaw   PhoIndex            2.00491      +/-  4.48255E-03  
-   3    2   powerlaw   norm                1.00615E-02  +/-  5.35443E-05  
+   1    1   TBabs      nH         10^22    0.498320     +/-  2.02304E-03  
+   2    2   powerlaw   PhoIndex            1.99705      +/-  4.47623E-03  
+   3    2   powerlaw   norm                9.95399E-03  +/-  5.29516E-05  
 ________________________________________________________________________
 
 
-Fit statistic  : C-Statistic                  281.04     using 231 bins.
+Fit statistic  : C-Statistic                  209.90     using 231 bins.
 
-Test statistic : Chi-Squared                  283.64     using 231 bins.
- Null hypothesis probability of 7.14e-03 with 228 degrees of freedom
+Test statistic : Chi-Squared                  210.33     using 231 bins.
+ Null hypothesis probability of 7.93e-01 with 228 degrees of freedom
 
-Fit statistic  : C-Statistic                  281.04     using 231 bins.
+Fit statistic  : C-Statistic                  209.90     using 231 bins.
 
-Test statistic : Chi-Squared                  283.64     using 231 bins.
- Null hypothesis probability of 7.14e-03 with 228 degrees of freedom
+Test statistic : Chi-Squared                  210.33     using 231 bins.
+ Null hypothesis probability of 7.93e-01 with 228 degrees of freedom
 </pre></div>
 </div>
 </div>
@@ -2213,7 +2207,7 @@ Test statistic : Chi-Squared                  283.64     using 231 bins.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chain_matrix shape: (50000, 4)
 chain shape: (5000, 10, 4)
 First step, first walker:
-[5.00026027e-01 2.00244245e+00 1.00193410e-02 2.81896099e+02]
+[4.99948106e-01 1.99888430e+00 9.99400046e-03 2.11062114e+02]
 </pre></div>
 </div>
 </div>
@@ -2245,7 +2239,7 @@ First step, first walker:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fedfeb13ac71dc9ade4b9e70af4b31068fee6a825fc0ebb212b412e399ee3c24.svg" src="../_images/fedfeb13ac71dc9ade4b9e70af4b31068fee6a825fc0ebb212b412e399ee3c24.svg" /><img alt="../_images/0e8157bc123cebef02fa227f93da9f9ba4fc983052ec6eb56ac16a4969be2fdf.svg" src="../_images/0e8157bc123cebef02fa227f93da9f9ba4fc983052ec6eb56ac16a4969be2fdf.svg" /><img alt="../_images/0d1bcf6624a197adbdc59b311bd7db4b2104f942809aef8f865a90ac1c49050b.svg" src="../_images/0d1bcf6624a197adbdc59b311bd7db4b2104f942809aef8f865a90ac1c49050b.svg" /><img alt="../_images/4a86e1afa4ead739f3ca5e2b8630e88b51ac83808b12a480934665c28d6da57e.svg" src="../_images/4a86e1afa4ead739f3ca5e2b8630e88b51ac83808b12a480934665c28d6da57e.svg" /></div>
+<img alt="../_images/99836fba06259990fcd2b289baef3351e50c589eb035c5bcbdc2be90c79977b5.svg" src="../_images/99836fba06259990fcd2b289baef3351e50c589eb035c5bcbdc2be90c79977b5.svg" /><img alt="../_images/6f849df789e18853ab21cc5cc450d0db5ed0c48045d111fcdb78504e0ef5a189.svg" src="../_images/6f849df789e18853ab21cc5cc450d0db5ed0c48045d111fcdb78504e0ef5a189.svg" /><img alt="../_images/f8b9bf8312c1a997d20779bebedea0f7fdb15bbb38c6ecba61018f03ef74d3b4.svg" src="../_images/f8b9bf8312c1a997d20779bebedea0f7fdb15bbb38c6ecba61018f03ef74d3b4.svg" /><img alt="../_images/d5431c30f252477238d66c8657de296a6c2278aac72afb78b4de47f1c2e2b574.svg" src="../_images/d5431c30f252477238d66c8657de296a6c2278aac72afb78b4de47f1c2e2b574.svg" /></div>
 </div>
 </section>
 <section id="compare-the-2d-distribution-from-the-first-and-second-halves-of-the-chain">
@@ -2480,7 +2474,7 @@ First step, first walker:
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Final sample shape: (50000, 3)
 </pre></div>
 </div>
-<img alt="../_images/01083fe5fc32451ec26208d77ea567c08e91c8c300b5454025c5c88062a10a4c.svg" src="../_images/01083fe5fc32451ec26208d77ea567c08e91c8c300b5454025c5c88062a10a4c.svg" /></div>
+<img alt="../_images/4b70a65ce0d66a3e82e2fbd3c9a54e1db778d2269eb9271c964eef4305639d8d.svg" src="../_images/4b70a65ce0d66a3e82e2fbd3c9a54e1db778d2269eb9271c964eef4305639d8d.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2564,7 +2558,7 @@ First step, first walker:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a22c92a52cbf07244f4aab9130e8103a77f8e6e519479758d861d309a43da342.svg" src="../_images/a22c92a52cbf07244f4aab9130e8103a77f8e6e519479758d861d309a43da342.svg" /></div>
+<img alt="../_images/e3fdfacf3c5aa5ea8cf22fa43a444927c277d9b529f8d999cb073fe819be757f.svg" src="../_images/e3fdfacf3c5aa5ea8cf22fa43a444927c277d9b529f8d999cb073fe819be757f.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2608,14 +2602,14 @@ First step, first walker:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nH__1:   49.75097683359492
-PhoIndex__2:   44.081034447747506
-norm__3:   46.6639435921555
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nH__1:   53.3503204558191
+PhoIndex__2:   50.900434699943425
+norm__3:   52.84232808955329
 Length:   5000.0
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([&#39;nH__1&#39;, &#39;PhoIndex__2&#39;, &#39;norm__3&#39;],
- [49.75097683359492, 44.081034447747506, 46.6639435921555])
+ [53.3503204558191, 50.900434699943425, 52.84232808955329])
 </pre></div>
 </div>
 </div>
@@ -2746,7 +2740,7 @@ Using first 3781 steps
 Using first 4999 steps
 </pre></div>
 </div>
-<img alt="../_images/b760c0576afddcf5f77000b2c45f73a2b685979e9c6ec82d76d154902bf75534.svg" src="../_images/b760c0576afddcf5f77000b2c45f73a2b685979e9c6ec82d76d154902bf75534.svg" /></div>
+<img alt="../_images/f52eb639b85ab19f36ff542d308d48ea5b05dfe2d7331f35a1f92bd1e8f5b2a6.svg" src="../_images/f52eb639b85ab19f36ff542d308d48ea5b05dfe2d7331f35a1f92bd1e8f5b2a6.svg" /></div>
 </div>
 <p><strong>It is recommended to make sure the chain length is &gt; 50 times of the autocorrelation length.</strong></p>
 </section>
