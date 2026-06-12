@@ -25,6 +25,8 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Speaker: Shuaitongze Zhao
 - 03.06.2026: From equation of state (EoS) to mass-radius relation of neutron stars
     - Lecturer: Konstantinos Kourmpetis
+- 10.06.2026: Monte-Carlo simulations for X-ray data analysis
+    - Lecturer: Honghui Liu
 - 17.06.2026 (**13:00-14:00 s.t.**): JWST data analysis
     - Lecturer: Sinan Allak
 - Next: How to use the sciserver
@@ -36,6 +38,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - Next: Multi-wavelength analysis
 - Next: Coded masking
 - Next: How to write an observational proposal?
+- Next: Gaussian process
 
 *Updated on 07 May 2026.*
 
