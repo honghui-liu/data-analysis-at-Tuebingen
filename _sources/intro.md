@@ -29,6 +29,8 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Lecturer: Honghui Liu
 - 17.06.2026 (**13:00-14:00 s.t.**): JWST data analysis
     - Lecturer: Sinan Allak
+- 01.07.2026 (**13:00-14:00 s.t.**): HST data analysis
+    - Lecturer: Sinan Allak
 - Next: How to use the sciserver
 - Next: Walkthrough of XMM-Newton data analysis
 - Next: Walkthrough of Insight-HXMT data analysis

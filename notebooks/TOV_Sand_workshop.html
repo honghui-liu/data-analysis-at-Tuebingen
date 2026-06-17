@@ -196,7 +196,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Phase_Resolved_Analysis.html"><strong>Phase Resolved Analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Pulsar_Timing_and_Phase-resolved_Spectroscopy.html">Pulsar Timing and Phase-resolved Spectroscopy</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Building Neutron Stars: Equation of State and TOV Equations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Monte-Carlo-simulations.html">Monte-Carlo simulation in X-ray data analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Monte-Carlo-simulations.html"><strong>Monte-Carlo simulation in X-ray data analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="JWST_data_analysis.html"><strong>JWST data analysis</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About This Website</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../past_agenda.html">Past agenda</a></li>
 </ul>
@@ -437,8 +438,8 @@ document.write(`
 <p>Newtonian hydrostatic equilibrium is inadequate for describing neutron stars, since they are highly compact, relativistic objects in which strong gravity significantly alters the spacetime geometry and the relation between pressure, energy density, and gravity must be treated within general relativity.</p>
 <p>The structure of neutron stars is encapsulated in the so-called TOV equations, named after Tolman, Oppenheimer and Volkov. These equations represent the generalization of Newtonian gravity to the domain of general relativity. The gross properties of a neutron star can be determined under the assumption that the star has a spherically symmetric mass distribution on hydrostatic equilibrium and that the star is extremely cold <span class="math notranslate nohighlight">\(T=0 \ \rm{(K)}\)</span>.
 The TOV equation is given by the formula:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-32d7145f-095b-439c-b900-48c76d7480d4">
-<span class="eqno">(1)<a class="headerlink" href="#equation-32d7145f-095b-439c-b900-48c76d7480d4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-491b8136-928b-4a77-b15c-0f8a37e1c8a0">
+<span class="eqno">(1)<a class="headerlink" href="#equation-491b8136-928b-4a77-b15c-0f8a37e1c8a0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dP(r)}{dr}
 =
 -\frac{G m(r)\,\rho(r)}{r^2}
@@ -447,19 +448,19 @@ The TOV equation is given by the formula:</p>
 \left(1-\frac{2Gm(r)}{rc^2}\right)^{-1}}.
 \end{equation}\]</div>
 <p>The mass function satisfies:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7a6e48d7-bebc-4095-8988-62da39b3dd4e">
-<span class="eqno">(2)<a class="headerlink" href="#equation-7a6e48d7-bebc-4095-8988-62da39b3dd4e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-dc4b073c-0484-4ee1-a83a-232da89475b6">
+<span class="eqno">(2)<a class="headerlink" href="#equation-dc4b073c-0484-4ee1-a83a-232da89475b6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dm(r)}{dr} = 4\pi r^2 \varepsilon(r)/c^2,
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\varepsilon(r)\)</span> is the energy density.</p>
 <p>To close the system, one must specify an equation of state (EOS), which relates pressure and energy density:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4b800a1b-0478-49b7-ad0a-31e7fd0ea8b9">
-<span class="eqno">(3)<a class="headerlink" href="#equation-4b800a1b-0478-49b7-ad0a-31e7fd0ea8b9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-06b77042-7e66-4321-a184-fdffa4cab456">
+<span class="eqno">(3)<a class="headerlink" href="#equation-06b77042-7e66-4321-a184-fdffa4cab456" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P = P(\varepsilon),
 \end{equation}\]</div>
 <p>or in the case of a polytropic EOS:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3d365529-eaed-4528-8d6c-efb3b270ed20">
-<span class="eqno">(4)<a class="headerlink" href="#equation-3d365529-eaed-4528-8d6c-efb3b270ed20" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-38f05b34-9e2d-4480-bb69-13a68b16bab5">
+<span class="eqno">(4)<a class="headerlink" href="#equation-38f05b34-9e2d-4480-bb69-13a68b16bab5" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P = K \varepsilon^\Gamma.
 \end{equation}\]</div>
 <p>The three additional terms of the TOV equation are corrections from general relativity:</p>
@@ -472,14 +473,14 @@ function <span class="math notranslate nohighlight">\(m(r)\)</span> and adds ano
 <section id="scaling-of-the-tov-equations">
 <h3>Scaling of the TOV Equations<a class="headerlink" href="#scaling-of-the-tov-equations" title="Link to this heading">#</a></h3>
 <p>Our initial step involves the transformation of the TOV equations, tailoring them to ensure their compatibility with numerical integration techniques. This critical process is essential for effectively leveraging computational methods in our analysis. We define the energy density in <span class="math notranslate nohighlight">\(\rm (MeV \cdot fm^{-3})\)</span> units, the mass in <span class="math notranslate nohighlight">\(M_{\odot}\)</span> and the radius in <span class="math notranslate nohighlight">\(\rm (km)\)</span>. The modified TOV Equations read:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-985de839-4608-488c-b9bd-d98104ca1fd5">
-<span class="eqno">(5)<a class="headerlink" href="#equation-985de839-4608-488c-b9bd-d98104ca1fd5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-215028a7-d941-433b-8683-0c2fd7cbe5a8">
+<span class="eqno">(5)<a class="headerlink" href="#equation-215028a7-d941-433b-8683-0c2fd7cbe5a8" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{d \bar{P}(r)}{dr} &amp;= -1.474\frac{\bar{\varepsilon}(r) \bar{m}_r (r)}{r^2} \left(1+\frac{\bar{P}(r)}{\bar{\varepsilon}(r)}\right) \left(1+ \frac{11.2 r^3}{10^6} \frac{\bar{P}(r)}{\bar{m}_r(r)}\right) \left(1-2.948\frac{\bar{m}_r(r)}{ r}\right)^{-1} \notag \\
 \frac{d \bar{m}_r(r)}{dr} &amp;= 11.2 \cdot 10^{-6}r^2 \bar{\varepsilon}(r),
 \end{align}\]</div>
 <p>where:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-de55b8a5-db2f-445f-af22-9eb386ec6578">
-<span class="eqno">(6)<a class="headerlink" href="#equation-de55b8a5-db2f-445f-af22-9eb386ec6578" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-443c3d20-5793-428c-adcd-8e1debecef15">
+<span class="eqno">(6)<a class="headerlink" href="#equation-443c3d20-5793-428c-adcd-8e1debecef15" title="Permalink to this equation">#</a></span>\[\begin{align}
     m_r(r) &amp;= \bar{m}_r(r)M_{\odot} \notag\\
     \varepsilon(r) &amp;= \bar{\varepsilon}(r)\varepsilon_o \notag\\
     P(r) &amp;= \bar{P}(r)\varepsilon_o \notag\\
@@ -491,27 +492,27 @@ function <span class="math notranslate nohighlight">\(m(r)\)</span> and adds ano
 <section id="numerical-solution">
 <h3>Numerical Solution<a class="headerlink" href="#numerical-solution" title="Link to this heading">#</a></h3>
 <p>We employ numerical methods to solve the modified system of TOV equations, incorporating equations of state in the form <span class="math notranslate nohighlight">\(\varepsilon(P)\)</span>. To prevent division by zero, we set boundary conditions to be exceedingly small and not exacty zero <span class="math notranslate nohighlight">\((r_{center} \rightarrow 0 \text{ and } m_{center} \rightarrow 0)\)</span>. The differential equations system is then solved for central pressure values <span class="math notranslate nohighlight">\(P_c\)</span> ranging from <span class="math notranslate nohighlight">\(1\)</span> to  <span class="math notranslate nohighlight">\(1000 \ (\rm{MeV \cdot fm^{-3}})\)</span>, which serve as boundary conditions. From the resulting solution, we obtain values for mass <span class="math notranslate nohighlight">\(M\)</span> and radius <span class="math notranslate nohighlight">\(R\)</span>. Using these values, we construct mass-radius (M-R) diagrams corresponding to each EOS utilized. We implement the numerical solution using the fourth-order Runge-Kutta method, defined by the following formulas:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0048cec1-2f09-4f97-b5a1-cd046a3e7d73">
-<span class="eqno">(7)<a class="headerlink" href="#equation-0048cec1-2f09-4f97-b5a1-cd046a3e7d73" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-684be045-01fa-419d-b77c-953f6dce8ee5">
+<span class="eqno">(7)<a class="headerlink" href="#equation-684be045-01fa-419d-b77c-953f6dce8ee5" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \frac{dP}{dr}=f(r,P,m;\varepsilon) \quad\quad \frac{dm_r}{dr}=g(r,P,m;\varepsilon),
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\varepsilon=\varepsilon(P)\)</span> was added as a parameter function. In each iteration, the values of <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(m\)</span> will change as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c5d2d9d2-7918-459a-9535-618e66e55dd8">
-<span class="eqno">(8)<a class="headerlink" href="#equation-c5d2d9d2-7918-459a-9535-618e66e55dd8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e6b58db1-0f76-48d3-aaf5-f8925932aab0">
+<span class="eqno">(8)<a class="headerlink" href="#equation-e6b58db1-0f76-48d3-aaf5-f8925932aab0" title="Permalink to this equation">#</a></span>\[\begin{align}
     P_{n+1} &amp;= P_n + \frac{1}{6}(k_1 + 2 k_2 + 2 k_3 + k_4), \\
     m_{n+1} &amp;= m_n + \frac{1}{6}(l_1 + 2 l_2 + 2 l_3 + l_4),
 \end{align}\]</div>
 <p>where:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6c95d108-1c06-4601-90d3-b72f04ae1ddc">
-<span class="eqno">(9)<a class="headerlink" href="#equation-6c95d108-1c06-4601-90d3-b72f04ae1ddc" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fe556154-5062-4e24-b153-3e25accb7f0c">
+<span class="eqno">(9)<a class="headerlink" href="#equation-fe556154-5062-4e24-b153-3e25accb7f0c" title="Permalink to this equation">#</a></span>\[\begin{align}
     k_1 &amp;= h f(r_n, P_n, m_n; \varepsilon) &amp; l_1 &amp;= h g(r_n, P_n, m_n; \varepsilon) \notag \\   
     k_2 &amp;= h f(r_n+\frac{h}{2}, P_n+\frac{k_1}{2}, m_n+\frac{l_1}{2}; \varepsilon) &amp; l_2 &amp;= h g(r_n+\frac{h}{2}, P_n+\frac{k_1}{2}, m_n+\frac{l_1}{2}; \varepsilon) \notag \\    
     k_3 &amp;= h f(r_n+\frac{h}{2}, P_n+\frac{k_2}{2}, m_n+\frac{l_2}{2}; \varepsilon) &amp; l_3 &amp;= h g(r_n+\frac{h}{2}, P_n+\frac{k_2}{2}, m_n+\frac{l_2}{2}; \varepsilon) \notag \\  
     k_4 &amp;= h f(r_n+h, P_n+k_3, m_n+l_3; \varepsilon) &amp; l_4 &amp;= h g(r_n+h, P_n+k_3, m_n+l_3; \varepsilon), \notag
 \end{align}\]</div>
 <p>in which <span class="math notranslate nohighlight">\(h\)</span> is the step of the iteration, defined by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-be5a3684-8a70-4c8d-8102-d9af51bc21dd">
-<span class="eqno">(10)<a class="headerlink" href="#equation-be5a3684-8a70-4c8d-8102-d9af51bc21dd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-98aa7b49-e006-4b4c-8736-82ab30f285b0">
+<span class="eqno">(10)<a class="headerlink" href="#equation-98aa7b49-e006-4b4c-8736-82ab30f285b0" title="Permalink to this equation">#</a></span>\[\begin{equation}
     h=\frac{r_{end}-r_{center}}{N},
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(N\)</span> is the number of points the radial space was divided. The integration stops when the pressure becomes (practically) zero, which means that we have reached the surface of the star.</p>
@@ -683,8 +684,8 @@ function <span class="math notranslate nohighlight">\(m(r)\)</span> and adds ano
 <section id="c-compose-database-tabulated-eos">
 <h4>c) CompOSE database - Tabulated EOS<a class="headerlink" href="#c-compose-database-tabulated-eos" title="Link to this heading">#</a></h4>
 <p>All the EOS above are in the analytic form of:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-08e50080-25c1-453d-9595-d8c366e90269">
-<span class="eqno">(11)<a class="headerlink" href="#equation-08e50080-25c1-453d-9595-d8c366e90269" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9d62bed4-c9ac-42fb-aa3b-b5f4d1382c60">
+<span class="eqno">(11)<a class="headerlink" href="#equation-9d62bed4-c9ac-42fb-aa3b-b5f4d1382c60" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \varepsilon = \sum_i A_i P^{a_i},
 \end{equation}\]</div>
 <p>which can be interpreted as a piecewise-polytropic or multi-polytropic representation of the equation of state. In practise, we use EOS in a tabular form. Tabulated EOS can be found e.g. in the <a class="reference external" href="https://compose.obspm.fr/home/">CompOSE database</a> (CompStar Online Supernovae Equations of State).</p>
@@ -1195,42 +1196,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_img5829e75dc54e4a2dbbdf32ed712cb1df">
+  <img id="_anim_img81c9a6a777044a4a82eb88667817cc8b">
   <div class="anim-controls">
-    <input id="_anim_slider5829e75dc54e4a2dbbdf32ed712cb1df" type="range" class="anim-slider"
+    <input id="_anim_slider81c9a6a777044a4a82eb88667817cc8b" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="anim5829e75dc54e4a2dbbdf32ed712cb1df.set_frame(parseInt(this.value));">
+           oninput="anim81c9a6a777044a4a82eb88667817cc8b.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim5829e75dc54e4a2dbbdf32ed712cb1df.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim81c9a6a777044a4a82eb88667817cc8b.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="anim5829e75dc54e4a2dbbdf32ed712cb1df.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="anim81c9a6a777044a4a82eb88667817cc8b.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="anim5829e75dc54e4a2dbbdf32ed712cb1df.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="anim81c9a6a777044a4a82eb88667817cc8b.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="anim5829e75dc54e4a2dbbdf32ed712cb1df.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="anim81c9a6a777044a4a82eb88667817cc8b.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="anim5829e75dc54e4a2dbbdf32ed712cb1df.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="anim81c9a6a777044a4a82eb88667817cc8b.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="anim5829e75dc54e4a2dbbdf32ed712cb1df.play_animation()">
+      <button title="Play" aria-label="Play" onclick="anim81c9a6a777044a4a82eb88667817cc8b.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="anim5829e75dc54e4a2dbbdf32ed712cb1df.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="anim81c9a6a777044a4a82eb88667817cc8b.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="anim5829e75dc54e4a2dbbdf32ed712cb1df.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="anim81c9a6a777044a4a82eb88667817cc8b.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="anim5829e75dc54e4a2dbbdf32ed712cb1df.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="anim81c9a6a777044a4a82eb88667817cc8b.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select5829e75dc54e4a2dbbdf32ed712cb1df"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select81c9a6a777044a4a82eb88667817cc8b"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_5829e75dc54e4a2dbbdf32ed712cb1df"
+      <input type="radio" name="state" value="once" id="_anim_radio1_81c9a6a777044a4a82eb88667817cc8b"
              >
-      <label for="_anim_radio1_5829e75dc54e4a2dbbdf32ed712cb1df">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_5829e75dc54e4a2dbbdf32ed712cb1df"
+      <label for="_anim_radio1_81c9a6a777044a4a82eb88667817cc8b">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_81c9a6a777044a4a82eb88667817cc8b"
              checked>
-      <label for="_anim_radio2_5829e75dc54e4a2dbbdf32ed712cb1df">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_5829e75dc54e4a2dbbdf32ed712cb1df"
+      <label for="_anim_radio2_81c9a6a777044a4a82eb88667817cc8b">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_81c9a6a777044a4a82eb88667817cc8b"
              >
-      <label for="_anim_radio3_5829e75dc54e4a2dbbdf32ed712cb1df">Reflect</label>
+      <label for="_anim_radio3_81c9a6a777044a4a82eb88667817cc8b">Reflect</label>
     </form>
   </div>
 </div>
@@ -1240,9 +1241,9 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_img5829e75dc54e4a2dbbdf32ed712cb1df";
-    var slider_id = "_anim_slider5829e75dc54e4a2dbbdf32ed712cb1df";
-    var loop_select_id = "_anim_loop_select5829e75dc54e4a2dbbdf32ed712cb1df";
+    var img_id = "_anim_img81c9a6a777044a4a82eb88667817cc8b";
+    var slider_id = "_anim_slider81c9a6a777044a4a82eb88667817cc8b";
+    var loop_select_id = "_anim_loop_select81c9a6a777044a4a82eb88667817cc8b";
     var frames = new Array(100);
     
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAJYCAYAAACadoJwAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
@@ -51927,7 +51928,7 @@ DQEEAAAAgGn+H6f/emWFxJpCAAAAAElFTkSuQmCC\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        anim5829e75dc54e4a2dbbdf32ed712cb1df = new Animation(frames, img_id, slider_id, 149.0,
+        anim81c9a6a777044a4a82eb88667817cc8b = new Animation(frames, img_id, slider_id, 149.0,
                                  loop_select_id);
     }, 0);
   })()
@@ -52018,8 +52019,8 @@ DQEEAAAAgGn+H6f/emWFxJpCAAAAAElFTkSuQmCC\
 <section id="speed-of-sound">
 <h2>3. Speed of Sound<a class="headerlink" href="#speed-of-sound" title="Link to this heading">#</a></h2>
 <p>The EOS employed must satisfy the so-called causality condition, which requires that the speed of sound remain below the speed of light at all densities. The speed of sound is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3fbdf8b8-5c60-4325-9cea-0c93e74f308a">
-<span class="eqno">(12)<a class="headerlink" href="#equation-3fbdf8b8-5c60-4325-9cea-0c93e74f308a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cd7e6a3b-e9cc-4203-b5c7-26f9abc39c36">
+<span class="eqno">(12)<a class="headerlink" href="#equation-cd7e6a3b-e9cc-4203-b5c7-26f9abc39c36" title="Permalink to this equation">#</a></span>\[\begin{equation}
 c_s^2 = \frac{\partial P}{\partial \varepsilon}.
 \end{equation}\]</div>
 <section id="speed-of-sound-calculation-for-all-the-eos">
@@ -52194,7 +52195,7 @@ APR-1 violates causality limit at P = 332.00 [MeV fm^-3]
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Monte-Carlo simulation in X-ray data analysis</p>
+        <p class="prev-next-title"><strong>Monte-Carlo simulation in X-ray data analysis</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
