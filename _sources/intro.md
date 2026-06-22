@@ -29,6 +29,8 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Lecturer: Honghui Liu
 - 17.06.2026 (**13:00-14:00 s.t.**): JWST data analysis
     - Lecturer: Sinan Allak
+- 24.06.2026: Cyclotron lines of GX 301-2 and the accretion structure of Vela X-1
+    - Speaker: Robert McCulloch
 - 01.07.2026 (**13:00-14:00 s.t.**): HST data analysis
     - Lecturer: Sinan Allak
 - Next: How to use the sciserver
