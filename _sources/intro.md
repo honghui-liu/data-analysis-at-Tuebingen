@@ -1,11 +1,11 @@
-# Welcome to the X-ray data analysis workshop at Tuebingen
-*By Menglei Zhou and Honghui Liu*
+# Welcome to the data analysis workshop for high-energy astrophysics at Tuebingen
+*By Honghui Liu and Menglei Zhou*
 
-In November 2025, the Institute for Astronomy and Astrophysics at Eberhard Karls University of Tübingen launched the X-ray Data Analysis Workshop. The workshop is designed to provide hands-on training in the reduction and analysis of X-ray data from major space missions, while fostering collaboration and knowledge exchange among students and researchers in high-energy astrophysics.
+In November 2025, the Institute for Astronomy and Astrophysics at Eberhard Karls University of Tübingen launched the Data Analysis Workshop for High-energy Astrophysics. The workshop is designed to provide hands-on training in the reduction and analysis of X-ray data from major space missions, while fostering collaboration and knowledge exchange among students and researchers in high-energy astrophysics.
 
 ## What?
 
-The goal of this workshop is to provide instruction on data reduction and analysis for data from X-ray missions, including NuSTAR, NICER, IXPE, Insight-HXMT, XMM-Newton, Chandra, XRISM. It will also contain lectures about X-ray spectral fitting, timing techniques and polarimetry. No prior experience is required. The workshop will start from the ground level and is relevant for anyone interested in skills of X-ray data reduction and analysis. 
+The goal of this workshop is to provide instruction on data reduction and analysis for data from high-energy astrophysical missions, including NuSTAR, NICER, IXPE, Insight-HXMT, XMM-Newton, Chandra, XRISM. It will also contain lectures about spectral fitting, timing techniques and polarimetry. No prior experience is required. The workshop will start from the ground level and is relevant for anyone interested in skills of data reduction and analysis. 
 
 
 ## When & Where?
