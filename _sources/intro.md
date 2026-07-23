@@ -33,6 +33,11 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Speaker: Robert McCulloch
 - 01.07.2026 (**13:00-14:00 s.t.**): HST data analysis
     - Lecturer: Sinan Allak
+- 08.07.2026: talk by Chirag Mehrotra (canceled for the Physics Day)
+- 15.07.2026: RXTE data analysis (canceled for the IAAT colloquium)
+    - Speaker: Bhawesh Chandwani
+- 22.07.2026 (**14:00-15:00 s.t.**): eROSITA data analysis for supernova remnants
+    - Speaker: Aditya Pandya
 - Next: How to use the sciserver
 - Next: Walkthrough of XMM-Newton data analysis
 - Next: Walkthrough of Insight-HXMT data analysis
