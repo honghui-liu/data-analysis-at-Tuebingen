@@ -38,6 +38,9 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Speaker: Bhawesh Chandwani
 - 22.07.2026 (**14:00-15:00 s.t.**): eROSITA data analysis for supernova remnants
     - Speaker: Aditya Pandya
+
+**Semester break until October.**
+
 - Next: How to use the sciserver
 - Next: Walkthrough of XMM-Newton data analysis
 - Next: Walkthrough of Insight-HXMT data analysis
