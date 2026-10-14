@@ -1,5 +1,32 @@
 # Past agenda
 
+## 2026 Summer semester
+
+- 29.04.2026: Assessing systematic uncertainties from spectral re-analysis of Cyg X-1 with different coronal geometries
+    - Speaker: Abdurakhmon Nosirov
+- 06.05.2026: Searching for isolated black holes near the Solar system
+    - Speaker: Abdurakhmon Nosirov
+- 13.05.2026: Pulsar timing (Part II)
+    - Lecturers: Shuaitongze Zhao
+    - Phase-resolved spectroscopy, phase-resolved X-ray polarimetric analysis, RVM model for X-ray pulsars 
+- 20.05.2026: A bright flare in the obscured state of GRS 1915+105 as seen by NICER and Swift
+    - Speaker: Shuaitongze Zhao
+- 03.06.2026: From equation of state (EoS) to mass-radius relation of neutron stars
+    - Lecturer: Konstantinos Kourmpetis
+- 10.06.2026: Monte-Carlo simulations for X-ray data analysis
+    - Lecturer: Honghui Liu
+- 17.06.2026 (**13:00-14:00 s.t.**): JWST data analysis
+    - Lecturer: Sinan Allak
+- 24.06.2026: Cyclotron lines of GX 301-2 and the accretion structure of Vela X-1
+    - Speaker: Robert McCulloch
+- 01.07.2026 (**13:00-14:00 s.t.**): HST data analysis
+    - Lecturer: Sinan Allak
+- 08.07.2026: talk by Chirag Mehrotra (canceled for the Physics Day)
+- 15.07.2026: RXTE data analysis (canceled for the IAAT colloquium)
+    - Speaker: Bhawesh Chandwani
+- 22.07.2026 (**14:00-15:00 s.t.**): eROSITA data analysis for supernova remnants
+    - Speaker: Aditya Pandya
+
 ## 2025 Winter semester
 
 - 05.11.2025: Walkthrough of NuSTAR data analysis + Basic concepts of spectral fitting (Part I)

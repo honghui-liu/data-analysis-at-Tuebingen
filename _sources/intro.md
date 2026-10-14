@@ -14,32 +14,13 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 
 ## Agenda
 
-- 29.04.2026: Assessing systematic uncertainties from spectral re-analysis of Cyg X-1 with different coronal geometries
-    - Speaker: Abdurakhmon Nosirov
-- 06.05.2026: Searching for isolated black holes near the Solar system
-    - Speaker: Abdurakhmon Nosirov
-- 13.05.2026: Pulsar timing (Part II)
-    - Lecturers: Shuaitongze Zhao
-    - Phase-resolved spectroscopy, phase-resolved X-ray polarimetric analysis, RVM model for X-ray pulsars 
-- 20.05.2026: A bright flare in the obscured state of GRS 1915+105 as seen by NICER and Swift
-    - Speaker: Shuaitongze Zhao
-- 03.06.2026: From equation of state (EoS) to mass-radius relation of neutron stars
-    - Lecturer: Konstantinos Kourmpetis
-- 10.06.2026: Monte-Carlo simulations for X-ray data analysis
-    - Lecturer: Honghui Liu
-- 17.06.2026 (**13:00-14:00 s.t.**): JWST data analysis
-    - Lecturer: Sinan Allak
-- 24.06.2026: Cyclotron lines of GX 301-2 and the accretion structure of Vela X-1
-    - Speaker: Robert McCulloch
-- 01.07.2026 (**13:00-14:00 s.t.**): HST data analysis
-    - Lecturer: Sinan Allak
-- 08.07.2026: talk by Chirag Mehrotra (canceled for the Physics Day)
-- 15.07.2026: RXTE data analysis (canceled for the IAAT colloquium)
-    - Speaker: Bhawesh Chandwani
-- 22.07.2026 (**14:00-15:00 s.t.**): eROSITA data analysis for supernova remnants
-    - Speaker: Aditya Pandya
+- 21.10.2026: Study of Her-X1 during Alomonous Low State using NuStar
+    - Speaker: Chirag Mehrotra
+- 28.10.2026: TBC
+    - Speaker: TBC
+- 04.11.2026: Radiative transfer calculation in slab geometry
+    - Speaker Zizeng Lv
 
-**Semester break until October.**
 
 - Next: How to use the sciserver
 - Next: Walkthrough of XMM-Newton data analysis
@@ -52,7 +33,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - Next: How to write an observational proposal?
 - Next: Gaussian process
 
-*Updated on 07 May 2026.*
+*Updated on 14 October 2026.*
 
 ## Tutorials & scripts
 
