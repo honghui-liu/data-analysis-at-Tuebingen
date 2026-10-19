@@ -17,10 +17,13 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - 21.10.2026: Study of Her-X1 during Alomonous Low State using NuStar
     - Speaker: Chirag Mehrotra
 - 28.10.2026: TBC
-    - Speaker: TBC
+    - Speaker: Wanchao Dou
 - 04.11.2026: Radiative transfer calculation in slab geometry
     - Speaker Zizeng Lv
-
+- 11.11.2026: Phase-Energy-Dependent Polarization Angle Evolution in X-Ray Pulsar
+    - Speaker: Shuaitongze Zhao
+- 18.11.2026: Testing Novel Atmosphere Models of Neutron Stars using Type-I X-Ray Bursts
+    - Speaker: Bhawesh Chandwani
 
 - Next: How to use the sciserver
 - Next: Walkthrough of XMM-Newton data analysis
