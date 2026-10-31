@@ -24,6 +24,9 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Speaker: Shuaitongze Zhao
 - 18.11.2026: Testing Novel Atmosphere Models of Neutron Stars using Type-I X-Ray Bursts
     - Speaker: Bhawesh Chandwani
+- 25.11.2026: A Multi-Wavelength Search for Nearby Black Holes Accreting from the Interstellar Medium
+    - Speaker: Abdurakhmon Nosirov
+
 
 - Next: How to use the sciserver
 - Next: Walkthrough of XMM-Newton data analysis
