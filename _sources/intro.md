@@ -16,16 +16,20 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 
 - 21.10.2026: Study of Her-X1 during Alomonous Low State using NuStar
     - Speaker: Chirag Mehrotra
-- 28.10.2026: TBC
+- 28.10.2026: NuSTAR and NICER view of neutron star X-ray binary 4U 1728−34
     - Speaker: Wanchao Dou
 - 04.11.2026: Radiative transfer calculation in slab geometry
     - Speaker Zizeng Lv
 - 11.11.2026: Phase-Energy-Dependent Polarization Angle Evolution in X-Ray Pulsar
     - Speaker: Shuaitongze Zhao
-- 18.11.2026: Testing Novel Atmosphere Models of Neutron Stars using Type-I X-Ray Bursts
-    - Speaker: Bhawesh Chandwani
+- 18.11.2026: AGN lecture I
+    - Speaker: Professor Bidzina Kapanadze
+- 19.11.2026: AGN lecture II
+    - Speaker: Professor Bidzina Kapanadze
 - 25.11.2026: A Multi-Wavelength Search for Nearby Black Holes Accreting from the Interstellar Medium
     - Speaker: Abdurakhmon Nosirov
+- 02.12.2026: Testing Novel Atmosphere Models of Neutron Stars using Type-I X-Ray Bursts
+    - Speaker: Bhawesh Chandwani
 
 
 - Next: How to use the sciserver
@@ -39,7 +43,7 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
 - Next: How to write an observational proposal?
 - Next: Gaussian process
 
-*Updated on 14 October 2026.*
+*Updated on 02 November 2026.*
 
 ## Tutorials & scripts
 
