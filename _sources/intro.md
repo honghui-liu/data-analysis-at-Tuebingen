@@ -30,7 +30,12 @@ The workshop will usually be held **weekly** in the afternoon of **Wednesday fro
     - Speaker: Abdurakhmon Nosirov
 - 02.12.2026: Testing Novel Atmosphere Models of Neutron Stars using Type-I X-Ray Bursts
     - Speaker: Bhawesh Chandwani
-
+- 09.12.2026: TBD
+- 16.12.2026: TBD
+- 13.01.2027: Ultra-luminous X-ray sources
+    - Speaker: Sinan Allak
+- 20.01.2027: TBD
+- 27.01.2027: TBD
 
 - Next: How to use the sciserver
 - Next: Walkthrough of XMM-Newton data analysis
